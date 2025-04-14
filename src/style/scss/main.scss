@@ -1,0 +1,15 @@
+@import "variables_colors-fonts.scss";
+@import "fonts.scss";
+@import "header.scss";
+@import "banner.scss";
+@import "card.scss";
+@import "gallery.scss";
+@import "footer.scss";
+
+#root {
+    max-width: 1440px;
+    margin: 0;
+    padding: 0;
+    @extend %font-base;
+    @extend %background-color-white;
+}

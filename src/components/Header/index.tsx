@@ -1,11 +1,9 @@
+import logo_desktop from "../../assets/logo_header_desktop.png";
+
 function Header() {
     return (
-        <div>
-            <img
-                src="../../assets/logo_desktop.png"
-                alt="logo desktop"
-                aria-hidden="true"
-            />
+        <div id="header">
+            <img src={logo_desktop} alt="logo desktop" aria-hidden="true" />
             <nav>
                 <a href="/" aria-label="Allez à l'accueil">
                     Accueil

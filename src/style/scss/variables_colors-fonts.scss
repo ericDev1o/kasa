@@ -1,0 +1,67 @@
+$font-family-primary: "Montserrat", sans-serif;
+
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$font-size-XL: 48px;
+$font-size-L: 24px;
+
+$color-black: black;
+$color-white: white;
+
+@mixin font-family($family) {
+    font-family: $family;
+}
+
+@mixin font-weight($weight) {
+    font-weight: $weight;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+}
+
+@mixin font-color($color) {
+    color: $color;
+}
+
+@mixin background-color($color) {
+    background-color: $color;
+}
+
+/****** placeholders ******/
+%font-base {
+    @include font-family($font-family-primary);
+}
+
+%font-bold {
+    @include font-weight($font-weight-bold);
+}
+
+%font-medium-weight {
+    @include font-weight($font-weight-medium);
+}
+
+%font-XL {
+    @include font-size($font-size-XL);
+}
+
+%font-L {
+    @include font-size($font-size-L);
+}
+
+%font-color-black {
+    @include font-color($color-black);
+}
+
+%font-color-white {
+    @include font-color($color-white);
+}
+
+%background-color-white {
+    @include background-color($color-white);
+}
+
+%background-color-black {
+    @include background-color($color-black);
+}
