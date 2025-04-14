@@ -1,4 +1,4 @@
-import background1 from "../../assets/background1.jpg";
+import { background_home } from "../../config/variables";
 
 function Banner() {
     return (
@@ -9,7 +9,7 @@ function Banner() {
             <div id="banner-overlay" />
             <img
                 id="banner-image"
-                src={background1}
+                src={background_home}
                 aria-hidden="true"
                 alt="falaises"
             ></img>

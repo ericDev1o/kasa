@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router";
-import "../../style/css/index.css";
-import Home from "../../pages/Home";
-import About from "../../pages/About";
-import Flat from "../../pages/Flat";
-import Error from "../../pages/Error";
+import "../style/css/index.css";
+import Home from "../pages/Home";
+import About from "../pages/About";
+import Flat from "../pages/Flat";
+import Error from "../pages/Error";
 
-function KasaRouter() {
+function Routing() {
     return (
         <Router>
             <Routes>
@@ -18,4 +18,4 @@ function KasaRouter() {
     );
 }
 
-export default KasaRouter;
+export default Routing;
