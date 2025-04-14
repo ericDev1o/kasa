@@ -1,12 +1,16 @@
 import HomeBannerState from "../../config/banner/background/HomeBannerState";
 import AboutBannerState from "../../config/banner/background/AboutBannerState";
 
-function toggleImagePath(isHome: boolean) {
-    if (isHome) return HomeBannerState();
-    else return AboutBannerState();
+function toggleImagePath(isHome: string) {
+    if (isHome === "home") return HomeBannerState();
+    else if (isHome === "about") return AboutBannerState();
 }
 
-function Banner(isHome: boolean) {
+interface IsHomeProps {
+    isHome: string;
+}
+
+const Banner = ({ isHome }: IsHomeProps) => {
     return (
         <div id="banner">
             <h1 id="banner-title" className="title__h1home">
@@ -23,6 +27,6 @@ function Banner(isHome: boolean) {
             ></img>
         </div>
     );
-}
+};
 
 export default Banner;
