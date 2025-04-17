@@ -1,12 +1,14 @@
 import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import Routing from "./Routing";
-import IsHomeBannerProvider from "./config/context/BannerProvider";
+import { hydrateRoot } from "react-dom/client";
+import { HydratedRouter } from "react-router/dom";
+/*import Routing from "./Routing";
+import IsHomeBannerProvider from "./config/context/BannerProvider";*/
 
-createRoot(document.getElementById("root")!).render(
+hydrateRoot(
+    document,
     <StrictMode>
-        <IsHomeBannerProvider>
-            <Routing />
-        </IsHomeBannerProvider>
+        <HydratedRouter></HydratedRouter>
     </StrictMode>
 );
+
+//createRoot(document.getElementById("root")!).render(
