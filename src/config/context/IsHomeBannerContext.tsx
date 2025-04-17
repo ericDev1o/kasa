@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 type IsHomeBannerContextType = {
-    isHome: string;
+    page: string;
     toggleBanner: () => void;
 };
 

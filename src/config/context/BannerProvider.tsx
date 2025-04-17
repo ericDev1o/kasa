@@ -1,18 +1,18 @@
 import { useState, ReactNode } from "react";
 import { IsHomeBannerContext } from "./IsHomeBannerContext";
 
-interface BannerProviderProps {
+interface IBannerProviderProps {
     children: ReactNode;
 }
 
-const IsHomeBannerProvider = ({ children }: BannerProviderProps) => {
-    const [isHome, setIsHome] = useState("home");
+const IsHomeBannerProvider = ({ children }: IBannerProviderProps) => {
+    const [page, setPage] = useState("home");
     const toggleBanner = () => {
-        setIsHome(isHome === "home" ? "about" : "home");
+        setPage(page === "home" ? "about" : "home");
     };
 
     return (
-        <IsHomeBannerContext.Provider value={{ isHome, toggleBanner }}>
+        <IsHomeBannerContext.Provider value={{ page, toggleBanner }}>
             {children}
         </IsHomeBannerContext.Provider>
     );

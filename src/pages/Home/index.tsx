@@ -12,10 +12,11 @@ const Home = () => {
             "IsHomeBannerContext doit être utilisé dans IsHomeBannerProvider"
         );
 
-    const { isHome } = bannerContext;
+    const { page } = bannerContext;
+    console.log("bannerContext: " + bannerContext);
     return (
         <Layout>
-            <Banner isHome={isHome} />
+            <Banner page={page} />
             <Gallery />
         </Layout>
     );
