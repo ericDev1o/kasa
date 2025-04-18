@@ -22,5 +22,5 @@
         "noFallthroughCasesInSwitch": true,
         "noUncheckedSideEffectImports": true
     },
-    "include": ["src", "app/routes.ts", "app/root.tsx"]
+    "include": ["src", "routes.ts", "../src/entry.client.tsx"]
 }

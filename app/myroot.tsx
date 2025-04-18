@@ -1,7 +1,7 @@
-import React from "react";
+/*import { ReactNode } from "react";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export function Layout({ children }: { children: ReactNode }) {
     return (
         <html lang="en">
             <head>
@@ -44,3 +44,4 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function Root() {
     return <Outlet />;
 }
+*/

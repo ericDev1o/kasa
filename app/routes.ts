@@ -1,3 +1,3 @@
 import { type RouteConfig, route } from "@react-router/dev/routes";
 
-export default [route("*?", "allroutes.tsx")] satisfies RouteConfig;
+export default [route("*?", "../src/allroutes.tsx")] satisfies RouteConfig;
