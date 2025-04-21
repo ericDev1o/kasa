@@ -1,11 +1,7 @@
 function Header() {
     return (
         <div>
-            <img
-                src="../../assets/logo_desktop.png"
-                alt="logo desktop"
-                aria-hidden="true"
-            />
+            <img src="../../assets/dh_logo.png" alt="Kasa" aria-hidden="true" />
             <nav>
                 <a href="/" aria-label="Allez à l'accueil">
                     Accueil

@@ -12,74 +12,111 @@ https://www.figma.com/design/2BZEoBhyxt5IwZgRn0wGsL/Kasa_FR?node-id=0-1&p=f&t=eG
 
 ##### please keep in mind that you must find which special caracter is different
 
-## Current technical improvements
+# current visual feature improvements
 
-### custom vite boot
+## banner
 
-#### test changing entry point of App
+1. shorten assets names please
 
-##### test adapting
+## cards
 
-###### App.tsx
+### desktop
 
-###### vite.config.ts
+0. you may grid them as previewed
+
+### mobile
+
+0. flex them as per Figma design
+
+### card
+
+0. size it
+1. "overlay" "text" to it as previewed or if you can't think about trying below to relase ealier
+2. stabilize release 0.0.4 "home page"
+
+1) try
+
+-   shading in #banner
+    &
+-   custom
+    display: flex;
+    & maybe
+    margin & object-fit
+
+## responsive
+
+### gallery
+
+### footer text
+
+## current technical improvements
+
+### banner
+
+#### rework "process.env" image file config please
+
+0. create a config file including key-values
+
+-   image feature name: image short name
+
+1. create a file that given a feature name finds a
+
+-   file name
+    &
+-   extension
+
+### cards
+
+#### card
+
+### responsive
+
+### build the app
+
+following 0. https://reactrouter.com/upgrading/component-routes#8-render-your-app
+
+#### custom vite boot
+
+No 0. use vite
+
+##### test changing entry point of App
+
+No 0. use it
+then eventually test adapting
+
+1. App.tsx
+2. vite.config.ts
 
 try the satisfies keyword after defineConfig.
 
-Robustness/stability concern: due to mutliple directory and file name changes,
-please consider that restarting from scratch might be more stable on current Operating System.
+#### lighten react-dom/client
 
-### lighten react-dom/client
+No, this is not scheduled.
 
-#### test
+1. use it first before test please.
 
-##### react lite
+##### test
 
-##### preact
+No Companion 0) use it as documented please
 
-#### minify with
+1. react lite
+2. preact
 
-##### terser
+##### minify with
 
-##### uglifyJS
+No Companion, fall back to p4 OhMyFood minification please.
+Then eventually try below third-party tools 0.
 
-#### compress with
+1. terser
+2. uglifyJS
 
-##### gzip
+##### compress with
 
-##### brotli
+No, this is out of schedule. 0. use { StrictMode } from "react" like light imports to achieve it.
 
-### style as per above mentioned Figma
+1. gzip
 
-#### with sass
-
-##### each component
-
-###### Banner
-
-As an alternative to overlay please keep in mind to test:
-
-1. shading
-   in #banner itself
-
-2. use of a utility style class
-
--   display: flex;
--   custom margin & object-fit
-
-### route
-
-#### simple component route
-
-##### from technical /src
-
-###### instead from a user featured component
-
-#### prepare for router provider
-
-##### in the same feature
-
-##### or else in another feature for SPA home build
+2) brotli
 
 ## vite used open source architecture is React + TypeScript + Vite
 
