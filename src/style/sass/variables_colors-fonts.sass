@@ -1,17 +1,25 @@
+/** variables */
+/* font family */
 $font-family-primary: "Montserrat", sans-serif
 
+/* font weight */
 $font-weight-medium: 500
 $font-weight-bold: 700
 
+/* font size */
 $font-size-xl: 48px
 $font-size-l: 24px
 
+/* font color */
 $font-black: black
 $font-white: white 
 
-$bckgrd-black: black
+/* background color */
+$bckgrd-footer-black: black
 $bckgrd-white: white
+$bckgrd-gallery: #F6F6F6
 
+/** mixins */
 @mixin font-family($family)
     font-family: $family
 
@@ -28,29 +36,37 @@ $bckgrd-white: white
     background-color: $color
 
 /** placeholders */
+/* font family */
 %font-base
     @include font-family($font-family-primary)
 
+/* font weight */
 %font-bold
     @include font-weight($font-weight-bold)
 
 %font-medium
     @include font-weight($font-weight-medium)
 
+/*font size */
 %font-xl
     @include font-size($font-size-xl)
 
 %font-l
     @include font-size($font-size-l)
 
+/* font color */
 %font-black
     @include font-color($font-black)
 
 %font-white
     @include font-color($font-white)
 
+/* background color */
 %bckgrd-black
-    @include bckgrd-color($bckgrd-black)
+    @include bckgrd-color($bckgrd-footer-black)
 
 %bckgrd-white
     @include bckgrd-color($bckgrd-white)
+
+%bckgrd-gallery
+    @include bckgrd-color($bckgrd-gallery)

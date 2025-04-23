@@ -1,10 +1,8 @@
+import defaultCard from "../../assets/card.jpg";
+
 function Card() {
     return (
-        <img
-            src="../../assets/card.jpg"
-            alt="couleur de fond orange comme un mur orange"
-            aria-hidden="true"
-        />
+        <img src={defaultCard} alt="comme un mur orange" aria-hidden="true" />
     );
 }
 

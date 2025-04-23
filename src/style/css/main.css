@@ -1,8 +1,17 @@
+/** variables */
+/* font family */
+/* font weight */
+/* font size */
+/* font color */
+/* background color */
+/** mixins */
 /** placeholders */
+/* font family */
 #root {
   font-family: "Montserrat", sans-serif;
 }
 
+/* font weight */
 .title__h1home {
   font-weight: 700;
 }
@@ -11,6 +20,7 @@ p, a {
   font-weight: 500;
 }
 
+/*font size */
 .title__h1home {
   font-size: 48px;
 }
@@ -19,6 +29,7 @@ p, a {
   font-size: 24px;
 }
 
+/* font color */
 a {
   color: black;
 }
@@ -27,6 +38,7 @@ a {
   color: white;
 }
 
+/* background color */
 #footer {
   background-color: black;
 }

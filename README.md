@@ -2,10 +2,6 @@
 
 ## as per
 
-https://www.figma.com/design/2BZEoBhyxt5lwZgRn0wGsL/Kasa_FR?node-id=0-1&p=f&t=eGJdR3MRCpZpQwsQ-0
-
-### if you don't release quick try the copy-pasted
-
 https://www.figma.com/design/2BZEoBhyxt5IwZgRn0wGsL/Kasa_FR?node-id=0-1&p=f&t=eGJdR3MRCpZpQwsQ-0
 
 #### to continue

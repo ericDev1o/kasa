@@ -1,4 +1,4 @@
-import "../../assets/dhb_bckgrd.jpg";
+import bannerBackground from "../../assets/dhb_bckgrd.jpg";
 
 function Banner() {
     return (
@@ -9,7 +9,7 @@ function Banner() {
             <div id="banner-overlay" />
             <img
                 id="banner-image"
-                src="dhb_bckgrd"
+                src={bannerBackground}
                 aria-hidden="true"
                 alt="falaises"
             />

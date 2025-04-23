@@ -1,7 +1,9 @@
+import headerLogo from "../../assets/dh_logo.png";
+
 function Header() {
     return (
         <div>
-            <img src="../../assets/dh_logo.png" alt="Kasa" aria-hidden="true" />
+            <img src={headerLogo} alt="Kasa" aria-hidden="true" />
             <nav>
                 <a href="/" aria-label="Allez à l'accueil">
                     Accueil
