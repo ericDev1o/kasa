@@ -2,14 +2,14 @@ import Header from "../Header";
 import Main from "../Main";
 import Footer from "../Footer";
 
-function Layout() {
+const Layout = () => {
     return (
-        <div>
+        <body>
             <Header />
             <Main />
             <Footer />
-        </div>
+        </body>
     );
-}
+};
 
 export default Layout;

@@ -1,6 +1,6 @@
 import Layout from "../../components/Layout";
 
-function Flat() {
+function Housing() {
     return (
         <Layout>
             <h1>Title</h1>
@@ -8,4 +8,4 @@ function Flat() {
     );
 }
 
-export default Flat;
+export default Housing;
