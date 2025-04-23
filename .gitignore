@@ -12,6 +12,7 @@ node_modules
 dist
 dist-ssr
 *.local
+*ss.map
 .react-router/
 
 # Editor directories and files

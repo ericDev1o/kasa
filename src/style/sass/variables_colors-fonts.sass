@@ -1,0 +1,56 @@
+$font-family-primary: "Montserrat", sans-serif
+
+$font-weight-medium: 500
+$font-weight-bold: 700
+
+$font-size-xl: 48px
+$font-size-l: 24px
+
+$font-black: black
+$font-white: white 
+
+$bckgrd-black: black
+$bckgrd-white: white
+
+@mixin font-family($family)
+    font-family: $family
+
+@mixin font-weight($weight)
+    font-weight: $weight
+
+@mixin font-size($size)
+    font-size: $size
+
+@mixin font-color($color)
+    color: $color
+
+@mixin bckgrd-color($color)
+    background-color: $color
+
+/** placeholders */
+%font-base
+    @include font-family($font-family-primary)
+
+%font-bold
+    @include font-weight($font-weight-bold)
+
+%font-medium
+    @include font-weight($font-weight-medium)
+
+%font-xl
+    @include font-size($font-size-xl)
+
+%font-l
+    @include font-size($font-size-l)
+
+%font-black
+    @include font-color($font-black)
+
+%font-white
+    @include font-color($font-white)
+
+%bckgrd-black
+    @include bckgrd-color($bckgrd-black)
+
+%bckgrd-white
+    @include bckgrd-color($bckgrd-white)
