@@ -6,13 +6,13 @@ A modern, production-ready template for building full-stack React applications u
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+-   🚀 Server-side rendering
+-   ⚡️ Hot Module Replacement (HMR)
+-   📦 Asset bundling and optimization
+-   🔄 Data loading and mutations
+-   🔒 TypeScript by default
+-   🎉 TailwindCSS for styling
+-   📖 [React Router docs](https://reactrouter.com/)
 
 ## Getting Started
 
@@ -21,7 +21,8 @@ A modern, production-ready template for building full-stack React applications u
 Install the dependencies:
 
 ```bash
-npm install
+yarn install
+# npm install
 ```
 
 ### Development
@@ -29,7 +30,8 @@ npm install
 Start the development server with HMR:
 
 ```bash
-npm run dev
+yarn dev
+# npm run dev
 ```
 
 Your application will be available at `http://localhost:5173`.
@@ -39,7 +41,8 @@ Your application will be available at `http://localhost:5173`.
 Create a production build:
 
 ```bash
-npm run build
+yarn build
+# npm run build
 ```
 
 ## Deployment
@@ -57,12 +60,12 @@ docker run -p 3000:3000 my-app
 
 The containerized application can be deployed to any platform that supports Docker, including:
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+-   AWS ECS
+-   Google Cloud Run
+-   Azure Container Apps
+-   Digital Ocean App Platform
+-   Fly.io
+-   Railway
 
 ### DIY Deployment
 

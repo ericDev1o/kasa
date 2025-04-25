@@ -1,0 +1,11 @@
+{
+    "banner_home": "bckgrd1",
+    "banner_about": "bckgrd2",
+    "card_backgrd_example": "card",
+    "logo_header_desktop": "dh_logo.png",
+    "logo_footer_desktop": "df_logo.png",
+    "logo_header_mobile": "mh_logo.png",
+    "logo_footer_mobile": "mf_logo.png",
+    "room_example_desktop": "d_room.jpg",
+    "room_example_mobile": "m_room.png"
+}

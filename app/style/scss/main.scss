@@ -1,0 +1,15 @@
+@use "variables_colors-fonts";
+@use "fonts";
+@use "header";
+@use "banner";
+@use "card";
+@use "gallery";
+@use "footer";
+
+#root {
+    max-width: 1440px;
+    margin: 0;
+    padding: 0;
+    @extend %font-base;
+    @extend %bckgrd-white;
+}
