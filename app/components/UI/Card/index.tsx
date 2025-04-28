@@ -1,4 +1,4 @@
-import defaultCard from "../../assets/card.jpg";
+import defaultCard from "../../../assets/card.jpg";
 
 function Card() {
     return (
