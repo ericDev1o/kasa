@@ -7,8 +7,7 @@
         "dev": "react-router dev",
         "start": "react-router-serve ./build/server/index.ts",
         "typecheck": "react-router typegen && tsc",
-        "lint": "eslint . --ext .ts",
-        "migrate": "@eslint/migrate-config . .eslintrc.json"
+        "lint": "eslint ."
     },
     "dependencies": {
         "@react-router/node": "^7.4.1",

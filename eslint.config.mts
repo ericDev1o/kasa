@@ -7,8 +7,8 @@ export default defineConfig([
         languageOptions: {
             parser: tsParser,
         },
-        extends: ["plugin:@typescript-eslint/recommended"],
+        extends: ["react-app", "plugin:@typescript-eslint/recommended"],
         files: ["**/*.ts", "**/*.tsx"],
-        rules: {},
+        rules: { "no-console": "error" },
     },
 ]);

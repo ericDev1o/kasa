@@ -1,4 +1,4 @@
-import Layout from "../../components/UI/Layout";
+import Layout from "../../components/containers/Layout";
 
 function About() {
     return (
