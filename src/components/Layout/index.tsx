@@ -1,14 +1,14 @@
+import type { ReactNode } from "react";
 import Header from "../Header";
-import Main from "../Main";
 import Footer from "../Footer";
 
-const Layout = () => {
+const Layout = ({ children }: { children: ReactNode }) => {
     return (
-        <div>
+        <main>
             <Header />
-            <Main />
+            {children}
             <Footer />
-        </div>
+        </main>
     );
 };
 

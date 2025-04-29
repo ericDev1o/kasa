@@ -4,9 +4,10 @@
     "version": "0.0.3",
     "type": "module",
     "scripts": {
-        "dev": "vite",
         "build": "tsc -b && vite build",
-        "start": "vite preview"
+        "start": "vite preview",
+        "dev": "vite",
+        "lint": "eslint ."
     },
     "dependencies": {
         "@react-router/dev": "^7.5.1",
@@ -23,7 +24,7 @@
         "@types/react-router-dom": "^5.3.3",
         "@vitejs/plugin-react": "^4.3.4",
         "eslint": "^9.21.0",
-        "eslint-plugin-react-hooks": "^5.1.0",
+        "eslint-plugin-react-hooks": "^5.2.0",
         "eslint-plugin-react-refresh": "^0.4.19",
         "globals": "^15.15.0",
         "typescript": "~5.7.2",
