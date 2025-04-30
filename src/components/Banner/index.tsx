@@ -1,4 +1,4 @@
-import bannerBackground from "../../assets/dhb_bckgrd.jpg";
+import bannerBackground from '../../assets/bh_bckgrd.jpg';
 
 function Banner() {
     return (

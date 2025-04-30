@@ -1,4 +1,4 @@
-import footerLogo from "../../assets/logo_footer_desktop.png";
+import footerLogo from '../../assets/df_logo.png';
 
 function Footer() {
     return (
