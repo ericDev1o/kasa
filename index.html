@@ -28,6 +28,26 @@
     </head>
     <body>
         <div id="root"></div>
+        <!--script>
+            if (typeof process === 'undefined') {
+                window.process = { env: { NODE_ENV: 'development' } };
+            }
+            if (typeof util === 'undefined') {
+                window.util = {
+                    inherits: function (ctor, superCtor) {
+                        ctor.super_ = superCtor;
+                        ctor.prototype = Object.create(superCtor.prototype, {
+                            constructor: {
+                                value: ctor,
+                                enumerable: false,
+                                writable: true,
+                                configurable: true,
+                            },
+                        });
+                    },
+                };
+            }
+        </script-->
         <script type="module" src="./src/main.tsx"></script>
     </body>
 </html>

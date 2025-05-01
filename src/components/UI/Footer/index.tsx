@@ -1,4 +1,4 @@
-import footerLogo from '../../assets/df_logo.png';
+import { footerLogo } from '../../../../config/loadFileConfig';
 
 function Footer() {
     return (

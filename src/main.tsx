@@ -1,9 +1,11 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import MyRouting from "./MyRouting";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import MyRouting from './MyRouting';
 
-createRoot(document.getElementById("root")!).render(
-    <StrictMode>
-        <MyRouting />
-    </StrictMode>
-);
+const root = document.getElementById('root');
+if (root)
+    createRoot(root).render(
+        <StrictMode>
+            <MyRouting />
+        </StrictMode>
+    );

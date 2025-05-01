@@ -1,4 +1,4 @@
-import bannerBackground from '../../assets/bh_bckgrd.jpg';
+import { bannerBackground } from '../../../../config/loadFileConfig.ts';
 
 function Banner() {
     return (

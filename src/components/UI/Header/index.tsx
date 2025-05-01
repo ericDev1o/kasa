@@ -1,4 +1,4 @@
-import headerLogo from "../../assets/dh_logo.png";
+import { headerLogo } from '../../../../config/loadFileConfig';
 
 function Header() {
     return (

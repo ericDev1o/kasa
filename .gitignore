@@ -14,6 +14,7 @@ dist-ssr
 *.local
 *ss.map
 .react-router/
+.env
 
 # Editor directories and files
 .vscode/*
