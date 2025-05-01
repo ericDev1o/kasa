@@ -7,10 +7,14 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# open source internals
 node_modules
 dist
 dist-ssr
 *.local
+.eslintrc
+.prettierrc
+yarn.lock
 +register.ts
 *.d.ts
 .react-router*
@@ -25,3 +29,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# route
+.react-router/

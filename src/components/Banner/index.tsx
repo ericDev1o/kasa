@@ -1,12 +1,14 @@
 import bannerBackground from "../../assets/bh_bckgrd.jpg"; //"../../config/loadFileConfig";
 
-function Banner() {
+const Banner = () => {
     return (
         <div id="banner">
             <h1 id="banner-title" className="title__h1home">
                 Chez vous, partout et ailleurs
             </h1>
+
             <div id="banner-overlay" />
+
             <img
                 id="banner-image"
                 src={bannerBackground}
@@ -15,6 +17,6 @@ function Banner() {
             ></img>
         </div>
     );
-}
+};
 
 export default Banner;
