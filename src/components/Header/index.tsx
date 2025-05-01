@@ -1,4 +1,4 @@
-import logo_desktop from "../../assets/logo_header_desktop.png";
+import logo_desktop from "../../assets/dh_logo.png";
 
 function Header() {
     return (

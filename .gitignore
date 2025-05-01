@@ -11,6 +11,9 @@ node_modules
 dist
 dist-ssr
 *.local
++register.ts
+*.d.ts
+.react-router*
 
 # Editor directories and files
 .vscode/*
