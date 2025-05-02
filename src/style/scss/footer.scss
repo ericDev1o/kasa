@@ -1,9 +1,13 @@
-#footer {
+footer {
     @extend %background-color-black;
     padding-top: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    img {
+        margin-bottom: 2vh;
+    }
 
     p {
         @extend %font-color-white;

@@ -1,4 +1,4 @@
-$font-family-primary: "Montserrat", sans-serif;
+$font-family-primary: 'Montserrat', sans-serif;
 
 $font-weight-medium: 500;
 $font-weight-bold: 700;
@@ -8,6 +8,8 @@ $font-size-L: 24px;
 
 $color-black: black;
 $color-white: white;
+
+$background-color-gallery: #f6f6f6;
 
 @mixin font-family($family) {
     font-family: $family;
@@ -30,7 +32,7 @@ $color-white: white;
 }
 
 /****** placeholders ******/
-%font-base {
+%font-family-primary {
     @include font-family($font-family-primary);
 }
 
@@ -64,4 +66,8 @@ $color-white: white;
 
 %background-color-black {
     @include background-color($color-black);
+}
+
+%background-color-gallery {
+    @include background-color($background-color-gallery);
 }

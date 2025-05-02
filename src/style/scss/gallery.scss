@@ -1,6 +1,14 @@
 #gallery {
-    margin: 3.5% 8%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1% 2%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+    #gallery-background {
+        padding-top: 6.5vh;
+        padding-bottom: 5vh;
+        padding-left: 3.75vw;
+        @extend %background-color-gallery;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5.5vh 0vw;
+    }
 }

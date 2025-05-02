@@ -1,5 +1,6 @@
 .title {
     &__h1home {
+        @extend %font-color-white;
         @extend %font-bold;
         @extend %font-XL;
         line-height: 143%;
