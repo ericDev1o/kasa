@@ -1,9 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import KasaRouter from "./components/KasaRouter";
+import MyRouting from "./MyRouting";
 
-createRoot(document.getElementById("root")!).render(
-    <StrictMode>
-        <KasaRouter />
-    </StrictMode>
-);
+const root = document.getElementById("root");
+if (root)
+    createRoot(root).render(
+        <StrictMode>
+            <MyRouting />
+        </StrictMode>
+    );

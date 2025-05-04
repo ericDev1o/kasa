@@ -1,0 +1,16 @@
+header {
+    padding: 6vh 7vw;
+    display: flex;
+    justify-content: space-between;
+
+    nav {
+        margin-right: 4vw;
+        display: flex;
+        align-items: center;
+        gap: 30%;
+
+        a {
+            white-space: nowrap;
+        }
+    }
+}
