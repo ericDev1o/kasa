@@ -13,12 +13,12 @@ a {
 }
 
 .title__h1home {
-  font-size: 48px;
+  font-size: 1.5rem;
 }
 
 p,
 a {
-  font-size: 24px;
+  font-size: 0.75rem;
 }
 
 a {
@@ -45,6 +45,15 @@ footer {
   line-height: 143%;
 }
 
+@media (min-width: 1024px) {
+  .title__h1home {
+    font-size: 3rem;
+  }
+  p,
+  a {
+    font-size: 1.5rem;
+  }
+}
 header {
   padding: 6vh 7vw;
   display: flex;
@@ -123,13 +132,18 @@ footer img {
   margin-bottom: 2vh;
 }
 #root {
-  max-width: 1440px;
   margin: 0;
   padding: 0;
 }
 #root main {
   margin-left: 6.945vw;
   margin-right: 6.945vw;
+}
+
+@media (min-width: 1024px) {
+  #root {
+    max-width: 1440px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

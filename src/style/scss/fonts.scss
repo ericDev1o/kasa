@@ -2,7 +2,7 @@
     &__h1home {
         @extend %font-color-white;
         @extend %font-bold;
-        @extend %font-XL;
+        @extend %font-L;
         line-height: 143%;
     }
 }
@@ -10,9 +10,20 @@
 p,
 a {
     @extend %font-medium-weight;
-    @extend %font-L;
+    @extend %font-S;
 }
 
 a {
     @extend %font-color-black;
+}
+
+@media (min-width: 1024px) {
+    .title__h1home {
+        font-size: $font-size-XL;
+    }
+
+    p,
+    a {
+        font-size: $font-size-L;
+    }
 }

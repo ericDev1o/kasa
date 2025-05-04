@@ -7,7 +7,6 @@
 @import 'footer.scss';
 
 #root {
-    max-width: 1440px;
     margin: 0;
     padding: 0;
     @extend %font-family-primary;
@@ -16,5 +15,11 @@
     main {
         margin-left: 6.945vw;
         margin-right: 6.945vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    #root {
+        max-width: 1440px;
     }
 }
