@@ -6,8 +6,11 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+*.scssc
+*.css
 
 # open source internals
+*lock.json
 node_modules
 dist
 dist-ssr

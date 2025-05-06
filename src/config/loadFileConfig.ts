@@ -4,6 +4,11 @@ export let card: string = '../assets/card.jpg';
 export let footerLogo: string = '../assets/df_logo.png';
 export let headerLogo: string = '../assets/dh_logo.png';
 
+const screenWidth = document.documentElement.clientWidth;
+if(screenWidth <= 1024) {
+    headerLogo = '../mh_logo.png';
+}
+
 initFileConfig();
 
 async function initFileConfig() {

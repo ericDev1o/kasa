@@ -1,4 +1,4 @@
-import bannerBackground from '../../assets/bh_bckgrd.jpg'; //'../../config/loadFileConfig';
+import bannerBackground from '../../assets/bh_bckgrd.jpg';
 
 const Banner = () => {
     return (
