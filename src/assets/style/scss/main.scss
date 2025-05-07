@@ -11,15 +11,10 @@
     padding: 0;
     @extend %font-family-primary;
     @extend %background-color-white;
-
-    main {
-        margin-left: 6.945vw;
-        margin-right: 6.945vw;
-    }
+    max-width: 1440px;
 }
 
-@media (min-width: 1024px) {
-    #root {
-        max-width: 1440px;
-    }
+.layout-container {
+    max-width: 1240px;
+    padding: 0 6.945vw;
 }

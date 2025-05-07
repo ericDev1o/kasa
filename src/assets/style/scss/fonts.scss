@@ -1,5 +1,5 @@
-.title {
-    &__h1home {
+.banner {
+    &-title__h1 {
         @extend %font-color-white;
         @extend %font-bold;
         @extend %font-L;
@@ -18,7 +18,7 @@ a {
 }
 
 @media (min-width: 1024px) {
-    .title__h1home {
+    .banner-title__h1 {
         font-size: $font-size-XL;
     }
 

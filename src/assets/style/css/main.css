@@ -2,14 +2,14 @@
 #root {
   font-family: "Montserrat", sans-serif; }
 
-.title__h1home {
+.banner-title__h1 {
   font-weight: 700; }
 
 p,
 a {
   font-weight: 500; }
 
-.title__h1home {
+.banner-title__h1 {
   font-size: 1.5rem; }
 
 p,
@@ -19,7 +19,7 @@ a {
 a {
   color: black; }
 
-.title__h1home, footer p {
+.banner-title__h1, footer p {
   color: white; }
 
 #root {
@@ -31,50 +31,49 @@ footer {
 #gallery #gallery-background {
   background-color: #f6f6f6; }
 
-.title__h1home {
+.banner-title__h1 {
   line-height: 143%; }
 
 @media (min-width: 1024px) {
-  .title__h1home {
+  .banner-title__h1 {
     font-size: 3rem; }
 
   p,
   a {
     font-size: 1.5rem; } }
 header {
-  padding: 6vh 7vw;
+  padding: 6vh 6vw 6vh 0;
   display: flex;
   justify-content: space-between; }
   header nav {
-    margin-right: 4vw;
     display: flex;
     align-items: center;
     gap: 30%; }
     header nav a {
       white-space: nowrap; }
 
-#banner {
+.banner {
   position: relative;
   height: 111px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   overflow: hidden;
   border-radius: 25px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); }
-  #banner #banner-image {
+  .banner-image {
     width: 100%;
-    object-fit: cover;
     display: block;
+    object-fit: cover;
     margin: 0 auto; }
-  #banner #banner-title {
+  .banner-title__h1 {
     position: absolute;
     top: 32%;
     left: 51%;
     transform: translate(-50%, -50%);
-    z-index: 2;
-    white-space: nowrap; }
-  #banner #banner-overlay {
+    z-index: 2; }
+  .banner-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -84,8 +83,12 @@ header {
     z-index: 1; }
 
 @media (min-width: 1024px) {
-  #banner {
-    height: 220px; } }
+  .banner {
+    flex-direction: row;
+    height: 220px;
+    align-items: center; }
+    .banner-title__h1 {
+      white-space: nowrap; } }
 #card {
   border-radius: 10px;
   height: 23.75vw;
@@ -112,13 +115,11 @@ footer {
 
 #root {
   margin: 0;
-  padding: 0; }
-  #root main {
-    margin-left: 6.945vw;
-    margin-right: 6.945vw; }
+  padding: 0;
+  max-width: 1440px; }
 
-@media (min-width: 1024px) {
-  #root {
-    max-width: 1440px; } }
+.layout-container {
+  max-width: 1240px;
+  padding: 0 6.945vw; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,32 +1,32 @@
-#banner {
+.banner {
     position: relative;
     height: 111px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
 
     overflow: hidden;
     border-radius: 25px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 
-    #banner-image {
+    &-image {
         width: 100%;
-        object-fit: cover;
         display: block;
+        object-fit: cover;
         margin: 0 auto;
     }
 
-    #banner-title {
-        position: absolute;
+    &-title__h1 {
+        position: absolute; // to flexify
         top: 32%;
         left: 51%;
         transform: translate(-50%, -50%);
         z-index: 2;
-        white-space: nowrap;
     }
 
-    #banner-overlay {
-        position: absolute;
+    &-overlay { // to replace with ::before or ::after
+        position: absolute; // to flexify
         top: 0;
         left: 0;
         right: 0;
@@ -37,7 +37,13 @@
 }
 
 @media (min-width: 1024px) {
-    #banner {
+    .banner {
+        flex-direction: row;
         height: 220px;
-    }
+        align-items: center;
+
+        &-title__h1 {
+            white-space: nowrap;
+        }
+}
 }

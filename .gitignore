@@ -1,4 +1,7 @@
-# Logs
+# route
+.react-router/
+
+# log
 logs
 *.log
 npm-debug.log*
@@ -6,8 +9,10 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+
+# style
 *.scssc
-*.css
+*.css.map
 
 # open source internals
 *lock.json
@@ -20,9 +25,8 @@ dist-ssr
 yarn.lock
 +register.ts
 *.d.ts
-.react-router*
 
-# Editor directories and files
+# IDE directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -32,6 +36,3 @@ yarn.lock
 *.njsproj
 *.sln
 *.sw?
-
-# route
-.react-router/

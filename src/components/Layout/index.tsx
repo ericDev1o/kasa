@@ -1,17 +1,14 @@
-import React from "react";
-import type { ReactNode } from "react";
-import Header from "../Header";
-import Footer from "../Footer";
+import type { ReactNode } from 'react';
+import Header from '../Header';
+import Footer from '../Footer';
 
-interface LayoutProps {
-    children: ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+function Layout({ children }: {children:ReactNode}){
     return (
-        <div id="layout">
-            <Header />
-            <main>{children}</main>
+        <div id='layout'>
+            <div className='layout-container'>
+                <Header />
+                <main>{children}</main>
+            </div>
             <Footer />
         </div>
     );
