@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/Header/index.tsx
-import logo_mobile from '../../assets/images/mh_logo.png';
+import logo_mobile from '../../../assets/images/mh_logo.png';
 
 /**
  * 
@@ -18,14 +17,6 @@ function Header() {
                 src={logo_mobile} 
                 alt='logo desktop' 
                 aria-hidden='true' />
-=======
-import { headerLogo } from '../../../../config/loadFileConfig';
-
-function Header() {
-    return (
-        <div>
-            <img src={headerLogo} alt="Kasa" aria-hidden="true" />
->>>>>>> refs/remotes/origin/feature/homestyle:src/components/UI/Header/index.tsx
             <nav>
                 <a href='/' aria-label="Allez à l'accueil">
                     Accueil

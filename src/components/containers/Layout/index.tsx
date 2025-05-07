@@ -5,8 +5,10 @@ import Footer from '../../UI/Footer';
 const Layout = ({ children }: { children: ReactNode }) => {
     return (
         <main>
-            <Header />
-            {children}
+            <div className='layout-container'>
+                <Header />
+                {children}
+            </div>
             <Footer />
         </main>
     );

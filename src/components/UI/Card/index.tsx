@@ -1,7 +1,7 @@
-import { card } from '../../../../config/loadFileConfig.ts';
+import card from '../../../assets/images/card.jpg';
 
 function Card() {
-    return <img src={card} alt="comme un mur orange" aria-hidden="true" />;
+    return <img src={card} alt='card' id='card' />;
 }
 
 export default Card;

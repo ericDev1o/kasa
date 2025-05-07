@@ -1,10 +1,10 @@
-import { footerLogo } from '../../../../config/loadFileConfig';
+import logo_footer from '../../../assets/images/df_logo.png';
 
 function Footer() {
     return (
         <footer>
-            <img src={footerLogo} alt="Kasa" aria-hidden="true" />
-            <p>©2020 Kasa. All rights reserved</p>
+            <img src={logo_footer} alt='logo footer' aria-hidden='true' />
+            <p>© 2020 Kasa. All rights reserved</p>
         </footer>
     );
 }

@@ -2,16 +2,15 @@ import Card from '../Card';
 
 function Gallery() {
     return (
-        <section>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+        <section id='gallery'>
+            <article id='gallery-background'>
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+            </article>
         </section>
     );
 }
