@@ -1,50 +1,97 @@
-# How to contribute next?
+# Kasa
+Release definition of done is a home page.
 
-As a dev, I want to move the minimal boot entry files set in /app
+## as per designed
 
-I need to keep in mind that /tsconfig.app.json needs to include both
+https://www.figma.com/design/2BZEoBhyxt5IwZgRn0wGsL/Kasa_FR?node-id=0-1&p=f&t=eGJdR3MRCpZpQwsQ-0
 
-1. pathfile to
-   a routes.ts
-   b entry.client.tsx or root.tsx
-   ii in their
-   iii /app or better
-   iii /src
-2. good configured/structured @react-router
-   a /dev &
-   b /vite
+### current visual feature improvements
 
-As a first recheck,
+#### home page
 
-1. another root.tsx file will be recreated in /app
-   &
-2. entry.client.tsx will be renamed in myentry.client.tsx
-   &
-3. tsconfig.app.json will be rechecked for good
-   including
-   a "src" or "app"
-   b "routes.ts" & where?
-   c "root.tsx" or "entry.client.tsx & where ?
+##### banner
 
-## To do
+1. shorten assets names please
+2. process them in a .env variable please
 
-### when?
+###### responsive mobile-first
+left align h1
 
-before 5pm CET
+##### cards gallery
+1. fill with demo image
 
-### how?
+###### responsive
 
-first step: rewrite entry.client.tsx in /app
+1) desktop
 
-#### reread
+you may grid them as previewed
 
-##### what?
+2) mobile
 
-1. https://vite.dev/config
-2. https://reactrouter.com/upgrading/component-routes#5-shuffle-stuff-around
-3. any unitary not listed source
+flex them as per Figma design
+1. display: flex
+2. flex-direction: column
 
-# React + TypeScript + Vite
+##### card
+
+0. size it
+1. "overlay" "text" to it as previewed or if you can't think about trying below to relase ealier
+
+1) try
+-   pseudo-element solution with ::before or ::after
+-   shading in #banner
+    &
+-   custom
+    display: flex;
+    & maybe
+    margin & object-fit
+
+### current technical improvements
+
+#### assets
+
+##### try a config or "process.env" image file system for one-place one-shot image source change ease
+
+0. create a config file including key-values
+
+-   image feature name: image short name
+
+1. create a file that given a feature name finds a
+
+-   file name
+    &
+-   extension
+
+#### lighten react-dom/client
+
+No, this is not scheduled.
+
+1. use it first before test please.
+
+##### test
+
+No Companion 
+0. use it as documented please
+1. react lite
+2. preact
+
+#### minify files
+
+No Companion, 
+0. fall back to p4 OhMyFood CLI minification please.
+Then eventually try below third-party tools.
+1. terser
+2. uglifyJS
+
+##### compress with
+
+No, this is out of schedule. 
+
+0. use { StrictMode } from "react" for example and all applicable light imports to achieve it. Then eventually use a compression tool
+1. gzip
+2) brotli
+
+### vite used open source architecture is React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -53,7 +100,7 @@ Currently, two official plugins are available:
 -   [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 -   [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+### Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
