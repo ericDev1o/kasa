@@ -2,8 +2,8 @@ import Card from '../Card';
 
 function Gallery() {
     return (
-        <section id='gallery'>
-            <article id='gallery-background'>
+        <section className='gallery'>
+            <article className='gallery-background'>
                 <Card />
                 <Card />
                 <Card />

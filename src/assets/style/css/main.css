@@ -28,7 +28,7 @@ a {
 footer {
   background-color: black; }
 
-#gallery #gallery-background {
+.gallery-background {
   background-color: #f6f6f6; }
 
 .banner-title__h1 {
@@ -89,22 +89,29 @@ header {
     align-items: center; }
     .banner-title__h1 {
       white-space: nowrap; } }
-#card {
+.card {
   border-radius: 10px;
-  height: 23.75vw;
-  width: 23.75vw; }
+  height: 68vw;
+  width: 100%; }
 
-#gallery {
-  margin-top: 5vh;
-  margin-bottom: 5vh; }
-  #gallery #gallery-background {
-    padding-top: 6.5vh;
-    padding-bottom: 5vh;
-    padding-left: 3.75vw;
+@media (min-width: 1024px) {
+  .card {
+    width: 23.75vw;
+    height: 23.75vw; } }
+.gallery {
+  margin: 5vh 0; }
+  .gallery-background {
+    padding: 0;
+    gap: 5.5vh 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+@media (min-width: 1024px) {
+  .gallery-background {
+    padding: 6.5vh 0 5vh 3.75vw;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5.5vh 0vw; }
-
+    grid-template-columns: repeat(3, 1fr); } }
 footer {
   padding-top: 5%;
   display: flex;
@@ -119,7 +126,11 @@ footer {
   max-width: 1440px; }
 
 .layout-container {
-  max-width: 1240px;
-  padding: 0 6.945vw; }
+  padding: 0 3.2vw; }
+
+@media (min-width: 1024px) {
+  .layout-container {
+    max-width: 1240px;
+    padding: 0 6.945vw; } }
 
 /*# sourceMappingURL=main.css.map */
