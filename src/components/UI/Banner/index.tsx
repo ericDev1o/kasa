@@ -20,26 +20,19 @@ import bannerBackground from '../../../assets/images/bh_bckgrd.jpg';
  * 
  * It should be something such as 
  * function Banner({child}: {child:React.ReactNode}){...}
- * 
- * Hint to do the overlay: 
- * don't forget to do/check the pseudo-element ::before or else ::after 
- * instead of repeating another <div> in this codebase.
  */
 const Banner = () => {
     return (
         <section className='banner'>
-            <h1 className='banner-title__h1'>
-                Chez vous, partout et ailleurs
-            </h1>
-
-            <div className='banner-overlay' />
-
             <img
                 className='banner-image'
                 src={bannerBackground}
                 aria-hidden='true'
                 alt='falaises'
             />
+            <h1 className='banner-title__h1'>
+                Chez vous, partout et ailleurs
+            </h1>
         </section>
     );
 };

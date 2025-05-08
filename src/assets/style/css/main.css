@@ -58,37 +58,29 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
   overflow: hidden;
   border-radius: 25px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); }
   .banner-image {
-    width: 100%;
-    display: block;
-    object-fit: cover;
-    margin: 0 auto; }
-  .banner-title__h1 {
-    position: absolute;
-    top: 32%;
-    left: 51%;
-    transform: translate(-50%, -50%);
-    z-index: 2; }
-  .banner-overlay {
+    object-fit: cover; }
+  .banner::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1; }
+    background-color: rgba(0, 0, 0, 0.6); }
+  .banner-title__h1 {
+    position: absolute; }
 
 @media (min-width: 1024px) {
   .banner {
-    flex-direction: row;
     height: 220px;
     align-items: center; }
     .banner-title__h1 {
-      white-space: nowrap; } }
+      white-space: nowrap;
+      min-width: fit-content; } }
 .card {
   border-radius: 10px;
   height: 68vw;
