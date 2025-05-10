@@ -1,5 +1,3 @@
-import bannerBackground from '../../../assets/images/bh_bckgrd.jpg';
-
 /**
  * The banner is the image between
  *     1) header &
@@ -16,17 +14,13 @@ import bannerBackground from '../../../assets/images/bh_bckgrd.jpg';
  *     2) modularize the image as well.
  * 
  * It must be done handing over image | image & title via dynamic props.
- * See useState, useContext and any shorthand though explicit prop syntax.
- * 
- * It should be something such as 
- * function Banner({child}: {child:React.ReactNode}){...}
  */
-const Banner = () => {
+const Banner = ({bannerBackgrnd}: {bannerBackgrnd: string}) => {
     return (
         <section className='banner'>
             <img
                 className='banner-image'
-                src={bannerBackground}
+                src={bannerBackgrnd}
                 aria-hidden='true'
                 alt='falaises'
             />
