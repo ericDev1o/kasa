@@ -15,17 +15,22 @@
  * 
  * It must be done handing over image | image & title via dynamic props.
  */
-const Banner = ({bannerBackgrnd}: {bannerBackgrnd: string}) => {
+type bannerContent = {
+    bannerBackground: string,
+    title: string
+}
+
+const Banner = ( { banner }: { banner: bannerContent } ) => {
     return (
-        <section className='banner'>
+        <section className = 'banner'>
             <img
-                className='banner-image'
-                src={bannerBackgrnd}
-                aria-hidden='true'
-                alt='falaises'
+                className = 'banner-image'
+                src = {banner.bannerBackground}
+                aria-hidden = 'true'
+                alt = 'falaises'
             />
-            <h1 className='banner-title__h1'>
-                Chez vous, partout et ailleurs
+            <h1 className = 'banner-title__h1'>
+                {banner.title}
             </h1>
         </section>
     );
