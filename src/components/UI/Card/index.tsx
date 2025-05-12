@@ -1,7 +1,12 @@
-import card from '../../../assets/images/card.jpg';
+//import card from '../../../assets/images/card.jpg';
 
-function Card() {
-    return <img src = {card} alt = 'card' className = 'card' />;
+/**
+ * The card is a housing picture.
+ * It is a call to click on it to rent.
+ * @returns the housing cover.
+ */
+function Card({cover}: {cover: string}) {
+    return <img src = {cover} alt = 'card' className = 'card' />;
 }
 
 export default Card;
