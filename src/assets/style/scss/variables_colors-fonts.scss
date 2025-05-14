@@ -5,6 +5,7 @@ $font-weight-bold: 700;
 
 $font-size-XL: 3rem;
 $font-size-L: 1.5rem;
+$font-size-M: 1.125rem;
 $font-size-S: 0.75rem;
 
 $color-black: black;
@@ -51,6 +52,10 @@ $background-color-gallery: #f6f6f6;
 
 %font-L {
     @include font-size($font-size-L);
+}
+
+%font-M {
+    @include font-size($font-size-M);
 }
 
 %font-S {

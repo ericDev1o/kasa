@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    border-radius: 25px;
+    border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 
     &-image {
@@ -13,7 +13,7 @@
     }
 
     &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
@@ -24,17 +24,22 @@
 
     &-title__h1 {
         position: absolute;
+        left: 4.26667vw;
+        width: 64%;
     }
 }
 
 @media (min-width: 1024px) {
     .banner {
-        height: 220px;
+        height: 223px;
         align-items: center;
+        border-radius: 25px;
 
         &-title__h1 {
+            position: relative;
             white-space: nowrap;
-            min-width: fit-content;
+            bottom: 413px;
+            left: 0;
         }
     }
 }

@@ -7,6 +7,10 @@
     }
 }
 
+.card-title__h2 {
+    @extend %font-M;
+}
+
 p,
 a {
     @extend %font-medium-weight;

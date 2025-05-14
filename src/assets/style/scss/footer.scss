@@ -4,6 +4,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 209px;
 
     img {
         margin-bottom: 2vh;
@@ -11,5 +13,12 @@ footer {
 
     p {
         @extend %font-color-white;
+        width: 25%;
+    }
+}
+
+@media (min-width: 1024px) {
+    footer {
+        height: 145px;
     }
 }
