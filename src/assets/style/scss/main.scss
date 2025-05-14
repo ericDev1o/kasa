@@ -19,6 +19,14 @@
     gap: 2.6253vh;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
+.no-underline{
+    text-decoration: none;
+}
+
 @media (min-width: 1024px) {
     .layout-container {
         max-width: 1240px;

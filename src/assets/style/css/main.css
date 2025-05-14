@@ -102,7 +102,7 @@ header nav a {
 .banner-title__h1 {
   position: absolute;
   left: 4.26667vw;
-  width: 64%;
+  width: 69%;
 }
 
 @media (min-width: 1024px) {
@@ -133,7 +133,7 @@ header nav a {
   bottom: 8px;
   left: 20px;
   color: white;
-  width: 85px;
+  width: 40%;
 }
 
 @media (min-width: 1024px) {
@@ -171,15 +171,18 @@ footer {
   height: 209px;
 }
 footer img {
-  margin-bottom: 2vh;
+  margin-bottom: 0;
 }
 footer p {
-  width: 25%;
+  width: 27%;
 }
 
 @media (min-width: 1024px) {
   footer {
     height: 145px;
+  }
+  footer img {
+    margin-bottom: 2vh;
   }
 }
 #root {
@@ -191,6 +194,14 @@ footer p {
 .layout-container {
   padding: 0 3.2vw;
   gap: 2.6253vh;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.no-underline {
+  text-decoration: none;
 }
 
 @media (min-width: 1024px) {
