@@ -25,12 +25,12 @@ const Banner = ({ banner }: { banner: bannerContent }) => {
         <section className = 'banner'>
             <img
                 className = 'banner-image'
-                src = {banner.bannerBackground}
+                src = { banner.bannerBackground }
                 aria-hidden = 'true'
                 alt = 'falaises'
             />
             <h1 className = 'banner-title__h1'>
-                {banner.title}
+                { banner.title }
             </h1>
         </section>
     );

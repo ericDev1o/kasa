@@ -5,10 +5,10 @@ import bannerBackground from '../../assets/images/bh_bckgrd.jpg';
 
 const Home = () => {
     const title = "Chez vous, partout et ailleurs";
-    const banner = {...{ bannerBackground }, ...{ title }};
+    const bannerContent = {...{ bannerBackground }, ...{ title }};
     return (
         <Layout>
-            <Banner banner = { banner } />
+            <Banner banner = { bannerContent } />
             <Gallery />
         </Layout>
     );
