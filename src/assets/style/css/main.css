@@ -102,7 +102,6 @@ header nav a {
 .banner-title__h1 {
   position: absolute;
   left: 4.26667vw;
-  width: 69%;
 }
 
 @media (min-width: 1024px) {

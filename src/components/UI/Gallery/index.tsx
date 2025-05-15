@@ -17,9 +17,9 @@ function Gallery() {
                     logements.map(
                         logement => (
                             <Card 
-                                key={logement.id} 
-                                cover={logement.cover} 
-                                title={logement.title} 
+                                key = { logement.id } 
+                                cover = { logement.cover } 
+                                title = { logement.title } 
                             />
                         )
                     )
