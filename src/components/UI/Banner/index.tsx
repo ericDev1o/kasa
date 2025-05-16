@@ -3,6 +3,17 @@ type bannerContent = {
     title: string;
 };
 
+const Img = ({ backGrd }: { backGrd: bannerContent }) => {
+    return(
+        <img
+            className = 'banner-image'
+            src = { backGrd.bannerBackground }
+            aria-hidden = 'true'
+            alt = 'falaises'
+        />
+    );
+}
+
 /**
  * The banner is the image between
  *     1) header &
@@ -20,18 +31,21 @@ type bannerContent = {
  *
  * It must be done handing over image | image & title via dynamic props.
  */
-const Banner = ({ banner }: { banner: bannerContent }) => {
-    return (
-        <section className = 'banner'>
-            <img
-                className = 'banner-image'
-                src = { banner.bannerBackground }
-                aria-hidden = 'true'
-                alt = 'falaises'
-            />
+const Banner = ({ banner, page }: { banner: bannerContent, page: string }) => {
+    if(page === 'home')
+        return(
+        <section className = 'banner banner-home'>
+            <Img backGrd = { banner } />
             <h1 className = 'banner-title__h1'>
                 { banner.title }
             </h1>
+        </section>
+        );
+    else if(page === 'about')
+        return (
+         <section className = 'banner banner-about'>
+            <Img backGrd = { banner }
+            />
         </section>
     );
 };

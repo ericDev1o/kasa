@@ -6,7 +6,7 @@
     justify-content: center;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 
     &-image {
         object-fit: cover;
@@ -19,7 +19,14 @@
         left: 0;
         right: 0;
         bottom: 0;
+    }
+
+    &-home::before {
         background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    &-about::before {
+        background-color: rgba(0, 0, 0, 0.3);
     }
 
     &-title__h1 {

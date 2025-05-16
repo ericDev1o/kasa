@@ -8,7 +8,7 @@ const Home = () => {
     const bannerContent = {...{ bannerBackground }, ...{ title }};
     return (
         <Layout>
-            <Banner banner = { bannerContent } />
+            <Banner banner = { bannerContent } page = 'home' />
             <Gallery />
         </Layout>
     );
