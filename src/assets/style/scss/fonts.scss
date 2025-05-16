@@ -21,6 +21,14 @@ a {
     @extend %font-color-black;
 }
 
+.value__h2 {
+    @extend %font-S2;
+}
+
+.value__p {
+    @extend %font-S;
+}
+
 @media (min-width: 1024px) {
     .banner-title__h1 {
         font-size: $font-size-XL;
@@ -29,5 +37,9 @@ a {
     p,
     a {
         font-size: $font-size-L;
+    }
+
+    .value__p {
+        font-size: $font-size-M;
     }
 }

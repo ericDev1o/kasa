@@ -20,9 +20,13 @@ a {
   font-size: 1.125rem;
 }
 
-p,
+.value__p, p,
 a {
   font-size: 0.75rem;
+}
+
+.value__h2 {
+  font-size: 0.7rem;
 }
 
 a {
@@ -56,6 +60,9 @@ footer {
   p,
   a {
     font-size: 1.5rem;
+  }
+  .value__p {
+    font-size: 1.125rem;
   }
 }
 header {
@@ -206,6 +213,10 @@ footer p {
 
 .no-underline {
   text-decoration: none;
+}
+
+.headings-map-compliance {
+  color: white;
 }
 
 @media (min-width: 1024px) {
