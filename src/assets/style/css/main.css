@@ -3,7 +3,7 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.banner-title__h1 {
+.value__h2, .banner-title__h1 {
   font-weight: 700;
 }
 
@@ -20,13 +20,9 @@ a {
   font-size: 1.125rem;
 }
 
-.value__p, p,
+.value__p, .value__h2, p,
 a {
   font-size: 0.75rem;
-}
-
-.value__h2 {
-  font-size: 0.7rem;
 }
 
 a {
@@ -58,7 +54,8 @@ footer {
     font-size: 3rem;
   }
   p,
-  a {
+  a,
+  .value__h2 {
     font-size: 1.5rem;
   }
   .value__p {

@@ -1,7 +1,7 @@
 .banner {
     &-title__h1 {
         @extend %font-color-white;
-        @extend %font-bold;
+        @extend %font-weight-bold;
         @extend %font-L;
         line-height: 143%;
     }
@@ -13,16 +13,17 @@
 
 p,
 a {
-    @extend %font-medium-weight;
+    @extend %font-weight-medium;
+    @extend %font-S;
+}
+
+.value__h2 {
+    @extend %font-weight-bold;
     @extend %font-S;
 }
 
 a {
     @extend %font-color-black;
-}
-
-.value__h2 {
-    @extend %font-S2;
 }
 
 .value__p {
@@ -35,7 +36,8 @@ a {
     }
 
     p,
-    a {
+    a, 
+    .value__h2 {
         font-size: $font-size-L;
     }
 
