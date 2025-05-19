@@ -6,7 +6,7 @@ function About() {
     const title = '';
     const bannerContent = {...{ bannerBackground }, ...{ title }}
     return (
-        <Layout>
+        <Layout page='about'>
             <Banner banner = { bannerContent } page = 'about' />
             <h1 className='headings-map-compliance'>À propos</h1>
             <h2 className='value__h2'>Fiabilité</h2>
