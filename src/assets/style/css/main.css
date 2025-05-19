@@ -141,10 +141,12 @@ header nav a {
 }
 .card-title__h2 {
   position: absolute;
-  bottom: 8px;
-  left: 20px;
+  padding: 0 20px;
+  bottom: 20px;
+  left: 0;
   color: white;
-  width: 40%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 1024px) {
@@ -174,31 +176,29 @@ header nav a {
   }
 }
 footer {
+  padding: 66px 0 58px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 209px;
-}
-footer img {
-  margin-bottom: 0;
+  gap: 6px;
 }
 footer p {
-  width: 133.59px;
   margin-block-end: 0;
 }
 
 @media (min-width: 1024px) {
   footer {
-    height: 145px;
-  }
-  footer img {
-    margin-bottom: 2vh;
+    padding: 66px 0 29px;
+    gap: 28px;
   }
 }
-#root {
+body, h2 {
   margin: 0;
   padding: 0;
+}
+
+#root {
   max-width: 1440px;
 }
 
