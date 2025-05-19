@@ -79,7 +79,7 @@ function Header() {
     }
 
     let smallScrn = true;
-    if(window.screen.width >= 1024) smallScrn = false;
+    if(window.innerWidth >= 1024) smallScrn = false;
     
     return (
         <header>
