@@ -176,6 +176,17 @@ header nav a {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.values {
+  margin-top: 19px;
+  margin-bottom: 19px;
+}
+
+@media (min-width: 1024px) {
+  .values {
+    margin-top: 38px;
+    margin-bottom: 38px;
+  }
+}
 footer {
   padding: 66px 0 58px;
   display: flex;
@@ -217,6 +228,9 @@ body, h2 {
 
 .headings-map-compliance {
   color: white;
+  line-height: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 @media (min-width: 1024px) {

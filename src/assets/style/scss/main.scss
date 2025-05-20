@@ -4,6 +4,7 @@
 @import 'banner.scss';
 @import 'card.scss';
 @import 'gallery.scss';
+@import 'about.scss';
 @import 'footer.scss';
 
 body, h2 {
@@ -31,6 +32,9 @@ body, h2 {
 
 .headings-map-compliance {
     color: white;
+    line-height: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 @media (min-width: 1024px) {

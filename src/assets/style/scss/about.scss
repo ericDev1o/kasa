@@ -1,0 +1,11 @@
+.values {
+    margin-top: 19px;
+    margin-bottom: 19px;
+}
+
+@media (min-width: 1024px) {
+    .values {
+        margin-top: 38px;
+        margin-bottom: 38px;
+    }
+}
