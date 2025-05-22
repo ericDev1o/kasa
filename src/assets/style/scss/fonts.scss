@@ -20,6 +20,7 @@ a {
 .value__h2 {
     @extend %font-weight-bold;
     @extend %font-S;
+    @extend %font-color-white;
 }
 
 a {
