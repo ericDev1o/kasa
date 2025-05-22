@@ -19,15 +19,15 @@ const Collapse = ({ title, content }: { title: string, content: string }) => {
 
     return (
         <div>
-            <article className='collapse' onClick={toggleCollapse}>
-                <h2 className='value__h2'>{title}</h2>
-                <span className={`collapse-toggle ${isOpen ? 'open' : ''}`}>
+            <article className='collapse' onClick={ toggleCollapse }>
+                <h2 className='value__h2'>{ title }</h2>
+                <span className={ `collapse-toggle ${ isOpen ? 'open' : '' }` }>
                     <i className="material-symbols-outlined">
                         keyboard_control_key
                     </i>
                 </span>
             </article>
-            <p className={`value__p${isOpen ? '-open' : ''}`}>
+            <p className={ `value__p${isOpen ? '-open' : '' }` }>
                 {content}
             </p>
         </div>
