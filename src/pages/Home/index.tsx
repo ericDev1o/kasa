@@ -7,8 +7,8 @@ const Home = () => {
     const title = "Chez vous, partout et ailleurs";
     const bannerContent = {...{ bannerBackground }, ...{ title }};
     return (
-        <Layout>
-            <Banner banner = { bannerContent } />
+        <Layout page='home'>
+            <Banner banner = { bannerContent } page = 'home' />
             <Gallery />
         </Layout>
     );

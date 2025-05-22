@@ -32,7 +32,7 @@ function NavBar({ smallScreen, underlineHome, underlineAbout }:
             >{ smallScreen ? 'ACCUEIL' : 'Accueil' }</a>
             <a href = '/about' aria-label="Découvrez-en plus sur nous"
                 className='no-underline'
-            >{ smallScreen ? 'À PROPOS' : 'À propos' }</a>
+            >{ smallScreen ? 'A PROPOS' : 'A propos' }</a>
         </nav>
     else if (! underlineHome && underlineAbout)
         return <nav>
@@ -41,7 +41,7 @@ function NavBar({ smallScreen, underlineHome, underlineAbout }:
             >{smallScreen ? 'ACCUEIL' : 'Accueil' }</a>
             <a href = '/about' aria-label="Découvrez-en plus sur nous"
                 className='underline'
-            >{smallScreen ? 'À PROPOS' : 'À propos' }</a>
+            >{smallScreen ? 'A PROPOS' : 'A propos' }</a>
         </nav>
     else if (! underlineHome && ! underlineAbout)
         return <nav>
@@ -50,7 +50,7 @@ function NavBar({ smallScreen, underlineHome, underlineAbout }:
             >{ smallScreen ? 'ACCUEIL' : 'Accueil' }</a>
             <a href = '/about' aria-label="Découvrez-en plus sur nous"
                 className='no-underline'
-            >{ smallScreen ? 'À PROPOS' : 'À propos' }</a>
+            >{ smallScreen ? 'A PROPOS' : 'A propos' }</a>
         </nav>
 }
 
@@ -79,7 +79,7 @@ function Header() {
     }
 
     let smallScrn = true;
-    if(window.screen.width >= 1024) smallScrn = false;
+    if(window.innerWidth >= 1024) smallScrn = false;
     
     return (
         <header>

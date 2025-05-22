@@ -38,11 +38,11 @@ $background-color-gallery: #f6f6f6;
     @include font-family($font-family-primary);
 }
 
-%font-bold {
+%font-weight-bold {
     @include font-weight($font-weight-bold);
 }
 
-%font-medium-weight {
+%font-weight-medium {
     @include font-weight($font-weight-medium);
 }
 
