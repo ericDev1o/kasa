@@ -3,13 +3,17 @@ $font-family-primary: 'Montserrat', sans-serif;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
 
-$font-size-XL: 3rem;
+$font-size-XXXXL: 18rem;
+$font-size-XXXL: 6rem;
+$font-size-XXL: 3rem;
+$font-size-XL: 2.25rem;
 $font-size-L: 1.5rem;
 $font-size-M: 1.125rem;
 $font-size-S: 0.75rem;
 
 $color-black: black;
 $color-white: white;
+$color-red: #ff6060;
 
 $background-color-gallery: #f6f6f6;
 
@@ -46,6 +50,18 @@ $background-color-gallery: #f6f6f6;
     @include font-weight($font-weight-medium);
 }
 
+%font-XXXXL {
+    @include font-size($font-size-XXXXL);
+}
+
+%font-XXXL {
+    @include font-size($font-size-XXXL);
+}
+
+%font-XXL {
+    @include font-size($font-size-XXL);
+}
+
 %font-XL {
     @include font-size($font-size-XL);
 }
@@ -68,6 +84,10 @@ $background-color-gallery: #f6f6f6;
 
 %font-color-white {
     @include font-color($color-white);
+}
+
+%font-color-red {
+    @include font-color($color-red);
 }
 
 %background-color-white {
