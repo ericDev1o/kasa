@@ -28,28 +28,28 @@ function NavBar({ smallScreen, underlineHome, underlineAbout }:
     if (underlineHome && ! underlineAbout)
         return <nav>
             <a href = '/' aria-label="Allez à l'accueil"
-                className='underline'
+                className='header__a underline'
             >{ smallScreen ? 'ACCUEIL' : 'Accueil' }</a>
             <a href = '/about' aria-label="Découvrez-en plus sur nous"
-                className='no-underline'
+                className='header__a no-underline'
             >{ smallScreen ? 'A PROPOS' : 'A propos' }</a>
         </nav>
     else if (! underlineHome && underlineAbout)
         return <nav>
             <a href = '/' aria-label="Allez à l'accueil"
-                className='no-underline'
+                className='header__a no-underline'
             >{smallScreen ? 'ACCUEIL' : 'Accueil' }</a>
             <a href = '/about' aria-label="Découvrez-en plus sur nous"
-                className='underline'
+                className='header__a underline'
             >{smallScreen ? 'A PROPOS' : 'A propos' }</a>
         </nav>
     else if (! underlineHome && ! underlineAbout)
         return <nav>
             <a href = '/' aria-label="Allez à l'accueil"
-                className='no-underline'
+                className='header__a no-underline'
             >{ smallScreen ? 'ACCUEIL' : 'Accueil' }</a>
             <a href = '/about' aria-label="Découvrez-en plus sur nous"
-                className='no-underline'
+                className='header__a no-underline'
             >{ smallScreen ? 'A PROPOS' : 'A propos' }</a>
         </nav>
 }

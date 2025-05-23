@@ -3,13 +3,21 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.value__h2, .banner-title__h1 {
+.value__h2, .error-title__h1, .banner-title__h1 {
   font-weight: 700;
 }
 
 p,
-a {
+.header__a, .error__a, .error-title__h2 {
   font-weight: 500;
+}
+
+.error-title__h1 {
+  font-size: 6rem;
+}
+
+.error-title__h2 {
+  font-size: 2.25rem;
 }
 
 .banner-title__h1 {
@@ -21,16 +29,20 @@ a {
 }
 
 .value__p, .value__h2, p,
-a {
+.header__a {
   font-size: 0.75rem;
 }
 
-a {
+.header__a, .error__a {
   color: black;
 }
 
 footer p, .value__h2, .banner-title__h1 {
   color: white;
+}
+
+.error-title__h2, .error-title__h1 {
+  color: #ff6060;
 }
 
 #root {
@@ -49,12 +61,39 @@ footer {
   line-height: 143%;
 }
 
+.error-title__h1 {
+  line-height: 143%;
+  margin-top: 18px;
+  margin-bottom: 65px;
+  text-align: center;
+}
+
+.error-title__h2 {
+  line-height: 143%;
+  text-align: center;
+}
+
+.error__a {
+  line-height: 143%;
+  margin: 136px 0;
+  text-align: center;
+}
+
 @media (min-width: 1024px) {
   .banner-title__h1 {
     font-size: 3rem;
   }
+  .error-title__h1 {
+    font-size: 18rem;
+  }
+  .error-title__h2 {
+    font-size: 2.25rem;
+  }
+  .error__a {
+    font-size: 1.125rem;
+  }
   p,
-  a,
+  .header__a,
   .value__h2 {
     font-size: 1.5rem;
   }
@@ -272,6 +311,8 @@ body, h2 {
 
 .layout-container {
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .underline {
