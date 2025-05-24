@@ -5,10 +5,12 @@
  */
 function Card({ cover, title }: { cover: string; title: string }) {
     return (
-        <div className = 'card'>
-            <img src = { cover } alt = 'card' className = 'card-picture' />
-            <h2 className = 'card-title__h2'>{ title }</h2>
-        </div>
+        <a href='/housing/c67ab8a7'>
+            <article className = 'card'>
+                <img src = { cover } alt = 'card' className = 'card-picture' />
+                <h2 className = 'card-title__h2'>{ title }</h2>
+            </article>
+        </a>
     );
 }
 

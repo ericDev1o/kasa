@@ -12,7 +12,7 @@ import logements from '../../../data/logements.json';
 function Gallery() {   
     return (
         <section className = 'gallery'>
-            <article className = 'gallery-background'>
+            <div className = 'gallery-background'>
                 {
                     logements.map(
                         logement => (
@@ -24,7 +24,7 @@ function Gallery() {
                         )
                     )
                 }
-            </article>
+            </div>
         </section>
     );
 }
