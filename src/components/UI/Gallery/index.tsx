@@ -18,6 +18,7 @@ function Gallery() {
                         logement => (
                             <Card 
                                 key = { logement.id } 
+                                id = { logement.id }
                                 cover = { logement.cover } 
                                 title = { logement.title } 
                             />
