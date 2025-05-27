@@ -1,0 +1,16 @@
+type HousingType = {
+    title: string,
+    cover: string,
+    pictures: string[],
+    description: string,
+    host: {
+        name: string,
+        picture: string
+    },
+    rating: string,
+    location: string,
+    equipements: string[],
+    tags: string[]
+}
+
+export default HousingType;

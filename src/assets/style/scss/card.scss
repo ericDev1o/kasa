@@ -2,11 +2,11 @@
     position: relative;
     border-radius: 10px;
     overflow: hidden;
+    aspect-ratio: 1 / 1;
 
     &-picture {
         object-fit: cover;
         width: 100%;
-        height: 255px;
     }
 
     &-title__h2 {

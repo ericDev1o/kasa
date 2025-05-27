@@ -153,9 +153,15 @@ header nav a {
 }
 .banner-title__h1 {
   position: absolute;
+  bottom: 20px;
   left: 4.26667vw;
 }
 
+@media (max-width: 430px) {
+  .banner-title__h1 {
+    bottom: 0;
+  }
+}
 @media (min-width: 1024px) {
   .banner {
     height: 223px;
@@ -166,18 +172,18 @@ header nav a {
     position: relative;
     white-space: nowrap;
     bottom: 413px;
-    left: 0;
+    left: 250px;
   }
 }
 .card {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
+  aspect-ratio: 1/1;
 }
 .card-picture {
   object-fit: cover;
   width: 100%;
-  height: 255px;
 }
 .card-title__h2 {
   position: absolute;
@@ -282,6 +288,10 @@ header nav a {
     transition: max-height 6s ease-in-out;
   }
 }
+.margin-bottom {
+  margin-bottom: 150px;
+}
+
 footer {
   padding: 66px 0 58px;
   display: flex;
@@ -305,14 +315,12 @@ body, h2 {
   padding: 0;
 }
 
-#root {
-  max-width: 1440px;
-}
-
 .layout-container {
   padding: 0 20px;
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .underline {

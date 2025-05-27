@@ -2,7 +2,7 @@ import Layout from '../../components/containers/Layout';
 
 function Error404() {
     return (
-        <Layout page  =  'error'>
+        <Layout page = 'error'>
             <h1 className = 'error-title__h1'>404</h1>
             <h2 
                 className = 'error-title__h2'

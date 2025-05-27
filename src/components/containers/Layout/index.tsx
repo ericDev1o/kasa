@@ -7,7 +7,7 @@ const Layout = ({ children, page }: { children: ReactNode, page: string }) => {
     return (
         <main>
             <div className = 'layout-container'>
-                <PageContext.Provider value={page}>
+                <PageContext.Provider value = { page }>
                     <Header/>
                     { children }
                 </PageContext.Provider>
