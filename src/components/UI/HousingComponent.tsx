@@ -6,18 +6,18 @@ import Collapse from "./Collapse";
  * @param housingElement a type corresponding to backend API housing content
  * @returns a housing page content with newlined equipments content in the Collapse
  */
-const HousingComponent = ({housingElement}: {housingElement: HousingType}) => {
-    const equipementsString = 'équipement exemple';
-    alert('housingElement.equipements : ' + housingElement.equipements);
-    if(housingElement.equipements !== undefined && Array.isArray(housingElement.equipements)) {
-        if (housingElement.equipements.length > 1) {
-            housingElement.equipements.map(
-                equipement => (
-                    equipementsString.concat(equipement, '\n')
+const HousingComponent = ({ housingElement }: { housingElement: HousingType }) => {
+    let equipmentsString: string = '';
+    if(housingElement.equipments !== undefined && Array.isArray(housingElement.equipments)) {
+        if (housingElement.equipments.length > 1) {
+            housingElement.equipments.map(
+                equipment => (
+                    equipmentsString = equipmentsString.concat(equipment, '\n')
                 )
             );
-        } else if(housingElement.equipements.length == 1)
-            equipementsString.concat(housingElement.equipements[0]);
+        } else if(housingElement.equipments.length == 1)
+            equipmentsString = equipmentsString.concat(housingElement.equipments[0]);
+        alert("equipmentsString : " + equipmentsString);
     }
 
     return(
@@ -34,7 +34,7 @@ const HousingComponent = ({housingElement}: {housingElement: HousingType}) => {
                 <img src = { housingElement.host.picture } alt = 'host picture' />
             </div>
             <Collapse title='Description' content = { housingElement.description } />
-            <Collapse title='Équipements' content = { equipementsString } />
+            <Collapse title='Équipements' content = { equipmentsString } />
         </div>
     );
 };

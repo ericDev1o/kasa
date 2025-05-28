@@ -9,7 +9,7 @@ type HousingType = {
     },
     rating: string,
     location: string,
-    equipements: string[],
+    equipments: string[],
     tags: string[]
 }
 

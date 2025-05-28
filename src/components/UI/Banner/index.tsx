@@ -3,18 +3,18 @@ type bannerContent = {
     title: string;
 };
 
-const Img = ({ backGrd }: { backGrd: bannerContent }) => {
+const Img = ({ backGrdImgURL }: { backGrdImgURL: bannerContent }) => {
     return (
         <img
             className = 'banner-image'
-            src = { backGrd.bannerBackground }
+            src = { backGrdImgURL.bannerBackground }
             aria-hidden = 'true'
             alt = 'falaises'
         />
     );
 }
 
-const Title = ({ isThereTitle, banner }: { isThereTitle: boolean, banner: bannerContent } ) => {
+const Title = ({ banner, isThereTitle }: { banner: bannerContent, isThereTitle: boolean } ) => {
     if(isThereTitle)
         return (
             <h1 className = 'banner-title__h1'>
@@ -26,8 +26,8 @@ const Title = ({ isThereTitle, banner }: { isThereTitle: boolean, banner: banner
 const CommonBanner = ({ banner, isThereTitle }: { banner: bannerContent, isThereTitle: boolean }) => {
     return (
         <div>
-            <Img backGrd = { banner } /> 
-            <Title isThereTitle = { isThereTitle } banner = { banner }/>
+            <Img backGrdImgURL = { banner } /> 
+            <Title banner = { banner } isThereTitle = { isThereTitle } />
         </div>
     );
 }
