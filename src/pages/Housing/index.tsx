@@ -27,7 +27,6 @@ const Housing = () => {
     const [error, setError] = useState('');
 
     const { housingId } = useParams();
-    alert('housingId : ' + housingId);
     if(housingId)
         housingIdInURLformatChecker(housingId);
 

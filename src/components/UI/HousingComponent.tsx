@@ -1,5 +1,37 @@
 import HousingType from "../../types/HousingType";
 import Collapse from "./Collapse";
+import starFull from'../../assets/images/star-active.svg';
+import starEmpty from '../../assets/images/star-inactive.svg';
+
+const Star = ({ isActive }: { isActive: boolean }) => {
+    let starImgURL;
+    if(isActive)
+        starImgURL = starFull;
+    else starImgURL = starEmpty;
+    return (
+        <img
+            className = 'star'
+            src = { starImgURL }
+            alt = 'rating star'
+        />
+    );
+}
+
+const Stars = ({ numberOfStars }: { numberOfStars: number}) => {
+    const starsActive = Array.from({ length: numberOfStars },
+        (_, i: number) => <Star key = { i } isActive = { true } />
+    );
+    const starsInactive = Array.from({ length: 5 - numberOfStars },
+        (_, i: number) => <Star key = { 5 - i } isActive = { false } />
+    );
+    const allStars = starsActive.concat(starsInactive);
+
+    return (
+        <>
+            { allStars }
+        </>
+    );
+}
 
 /**
  * 
@@ -17,11 +49,10 @@ const HousingComponent = ({ housingElement }: { housingElement: HousingType }) =
             );
         } else if(housingElement.equipments.length == 1)
             equipmentsString = equipmentsString.concat(housingElement.equipments[0]);
-        alert("equipmentsString : " + equipmentsString);
     }
 
     return(
-        <div>
+        <>
             <img src = { housingElement.cover } alt='housing cover picture' />
             <div>
                 <h1>{ housingElement.title }</h1>
@@ -29,13 +60,13 @@ const HousingComponent = ({ housingElement }: { housingElement: HousingType }) =
                 { housingElement.tags }
             </div>
             <div>
-                { housingElement.rating }
+                <Stars numberOfStars = { Number(housingElement.rating) } />
                 { housingElement.host.name }
                 <img src = { housingElement.host.picture } alt = 'host picture' />
             </div>
             <Collapse title='Description' content = { housingElement.description } />
             <Collapse title='Équipements' content = { equipmentsString } />
-        </div>
+        </>
     );
 };
 
