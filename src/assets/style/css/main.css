@@ -7,7 +7,7 @@
   font-weight: 700;
 }
 
-p,
+.housing__h2, p,
 .header__a, .error__a, .error-title__h2 {
   font-weight: 500;
 }
@@ -28,7 +28,7 @@ p,
   font-size: 1.125rem;
 }
 
-.value__p, .value__h2, p,
+.housing__h2, .value__p, .value__h2, p,
 .header__a {
   font-size: 0.75rem;
 }
@@ -73,6 +73,10 @@ footer {
   text-align: center;
 }
 
+.housing-title__h1 {
+  text-align: left;
+}
+
 .error__a {
   line-height: 143%;
   margin: 136px 0;
@@ -98,6 +102,9 @@ footer {
     font-size: 1.5rem;
   }
   .value__p {
+    font-size: 1.125rem;
+  }
+  .housing__h2 {
     font-size: 1.125rem;
   }
 }

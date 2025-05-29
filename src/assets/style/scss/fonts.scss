@@ -25,6 +25,10 @@
     text-align: center
 }
 
+.housing-title__h1 {
+    text-align: left;
+}
+
 .error__a {
     @extend %font-color-black;
     @extend %font-weight-medium;
@@ -57,6 +61,11 @@ p,
     @extend %font-S;
 }
 
+.housing__h2 {
+    @extend %font-weight-medium;
+    @extend %font-S;
+}
+
 @media (min-width: 1024px) {
     .banner-title__h1 {
         font-size: $font-size-XXL;
@@ -81,6 +90,10 @@ p,
     }
 
     .value__p {
+        font-size: $font-size-M;
+    }
+
+    .housing__h2 {
         font-size: $font-size-M;
     }
 }
