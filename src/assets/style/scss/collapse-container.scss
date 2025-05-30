@@ -48,7 +48,7 @@
 }
 
 @media (min-width: 1024px) {
-    .values {
+    .collapse-container {
         margin-top: 38px;
         padding: 0 8.75%;
 
@@ -68,7 +68,7 @@
 }
 
 @media (prefers-reduced-motion) {
-    .values {
+    .collapse-container {
         .collapse-toggle {
             transition: transform 6s ease-in-out;
         }

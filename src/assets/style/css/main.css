@@ -292,26 +292,26 @@ header nav a {
 }
 
 @media (min-width: 1024px) {
-  .values {
+  .collapse-container {
     margin-top: 38px;
     padding: 0 8.75%;
   }
-  .values .collapse {
+  .collapse-container .collapse {
     max-width: 1023px;
     height: 54px;
   }
-  .values .collapse .material-symbols-outlined {
+  .collapse-container .collapse .material-symbols-outlined {
     font-size: 32px;
   }
-  .values .value__p-open {
+  .collapse-container .value__p-open {
     margin-bottom: 38px;
   }
 }
 @media (prefers-reduced-motion) {
-  .values .collapse-toggle {
+  .collapse-container .collapse-toggle {
     transition: transform 6s ease-in-out;
   }
-  .values .value__p {
+  .collapse-container .value__p {
     transition: max-height 6s ease-in-out;
   }
 }
