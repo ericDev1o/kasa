@@ -64,8 +64,10 @@ const HousingComponent = ({ housingElement }: { housingElement: HousingType }) =
                 { housingElement.host.name }
                 <img src = { housingElement.host.picture } alt = 'host picture' />
             </div>
-            <Collapse title='Description' content = { housingElement.description } />
-            <Collapse title='Équipements' content = { equipmentsString } />
+            <section className="collapse-container">
+                <Collapse title='Description' content = { housingElement.description } />
+                <Collapse title='Équipements' content = { equipmentsString } />
+            </section>
         </>
     );
 };

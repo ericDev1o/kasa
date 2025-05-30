@@ -33,7 +33,7 @@ function About() {
         <Layout page = 'about'>
             <Banner banner = { bannerContent } page = 'about' />
             <h1 className='headings-map-compliance'>À propos</h1>
-            <section className='values'>
+            <section className='collapse-container'>
                 {values.map(value => (
                     <Collapse 
                         key = { value.id } 

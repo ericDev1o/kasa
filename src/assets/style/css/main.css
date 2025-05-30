@@ -228,13 +228,13 @@ header nav a {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.values {
+.collapse-container {
   margin-top: 19px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.values .collapse {
+.collapse-container .collapse {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -244,24 +244,24 @@ header nav a {
   padding: 15px;
   box-sizing: border-box;
 }
-.values .collapse .material-symbols-outlined {
+.collapse-container .collapse .material-symbols-outlined {
   font-size: 24px;
 }
-.values .collapse-toggle {
+.collapse-container .collapse-toggle {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   color: white;
   height: 20px;
 }
-.values .collapse-toggle.open {
+.collapse-container .collapse-toggle.open {
   transform: rotate(180deg);
 }
-.values .value__p {
+.collapse-container .value__p {
   max-height: 0;
   transition: max-height 0.3s ease-in-out;
   overflow: hidden;
 }
-.values .value__p-open {
+.collapse-container .value__p-open {
   max-height: 150px;
   background-color: #f6f6f6;
   padding: 10px;
