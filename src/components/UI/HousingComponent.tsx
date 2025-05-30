@@ -55,16 +55,16 @@ const HousingComponent = ({ housingElement }: { housingElement: HousingType }) =
         <>
             <img src = { housingElement.cover } alt='housing cover picture' />
             <div>
-                <h1 className="error-title__h2 housing-title__h1">{ housingElement.title }</h1>
-                <h2 className="housing__h2">{ housingElement.location }</h2>
+                <h1 className='error-title__h2 housing-title__h1'>{ housingElement.title }</h1>
+                <h2 className='housing__h2'>{ housingElement.location }</h2>
                 { housingElement.tags }
             </div>
             <div>
                 <Stars numberOfStars = { Number(housingElement.rating) } />
-                { housingElement.host.name }
+                <p className='value__p font-red'>{ housingElement.host.name }</p>
                 <img src = { housingElement.host.picture } alt = 'host picture' />
             </div>
-            <section className="collapse-container">
+            <section className='collapse-container'>
                 <Collapse title='Description' content = { housingElement.description } />
                 <Collapse title='Équipements' content = { equipmentsString } />
             </section>

@@ -22,7 +22,7 @@ const Collapse = ({ title, content }: { title: string, content: string }) => {
             <article className='collapse' onClick={ toggleCollapse }>
                 <h2 className='value__h2'>{ title }</h2>
                 <span className={ `collapse-toggle ${ isOpen ? 'open' : '' }` }>
-                    <i className="material-symbols-outlined">
+                    <i className='material-symbols-outlined'>
                         keyboard_control_key
                     </i>
                 </span>

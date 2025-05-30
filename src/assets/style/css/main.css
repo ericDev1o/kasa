@@ -16,7 +16,7 @@
   font-size: 6rem;
 }
 
-.error-title__h2 {
+.error-title-size__h2 {
   font-size: 2.25rem;
 }
 
@@ -24,11 +24,19 @@
   font-size: 1.5rem;
 }
 
-.card-title__h2 {
+.card-title__h2, .housing-title__h1 {
   font-size: 1.125rem;
 }
 
-.housing__h2, .value__p, .value__h2, p,
+.housing__h2 {
+  font-size: 0.875rem;
+}
+
+.value__h2 {
+  font-size: 0.8125rem;
+}
+
+.value__p, p,
 .header__a {
   font-size: 0.75rem;
 }
@@ -41,7 +49,7 @@ footer p, .value__h2, .banner-title__h1 {
   color: white;
 }
 
-.error-title__h2, .error-title__h1 {
+.error-title__h2, .error-title__h1, .font-red {
   color: #ff6060;
 }
 
@@ -81,6 +89,18 @@ footer {
   line-height: 143%;
   margin: 136px 0;
   text-align: center;
+}
+
+.value__h2 {
+  line-height: 143%;
+}
+
+.value__p {
+  line-height: 143%;
+}
+
+.housing__h2 {
+  line-height: 143%;
 }
 
 @media (min-width: 1024px) {
@@ -299,6 +319,11 @@ header nav a {
   margin-bottom: 150px;
 }
 
+@media (min-width: 1024px) {
+  .collapse-container .collapse .value__h2 {
+    font-size: 1.125rem;
+  }
+}
 footer {
   padding: 66px 0 58px;
   display: flex;
