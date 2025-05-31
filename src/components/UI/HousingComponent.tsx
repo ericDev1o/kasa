@@ -27,10 +27,31 @@ const Stars = ({ numberOfStars }: { numberOfStars: number}) => {
     const allStars = starsActive.concat(starsInactive);
 
     return (
-        <>
+        <div className='stars'>
             { allStars }
-        </>
+        </div>
     );
+}
+
+const Tag = ({tagElement}: {tagElement: string}) => {
+    return (
+        <>
+            <span className='tag'>
+                { tagElement }
+            </span>
+        </>
+    )
+}
+
+const Tags = ({tags}: {tags: string[]}) => {
+    return (
+        <>
+            {tags.forEach(tag => {
+                <Tag tagElement = {tag} />
+            })
+        }
+        </>
+    )
 }
 
 /**
@@ -54,15 +75,22 @@ const HousingComponent = ({ housingElement }: { housingElement: HousingType }) =
     return(
         <>
             <img src = { housingElement.cover } alt='housing cover picture' />
-            <div>
-                <h1 className='error-title__h2 housing-title__h1'>{ housingElement.title }</h1>
-                <h2 className='housing__h2'>{ housingElement.location }</h2>
-                { housingElement.tags }
-            </div>
-            <div>
-                <Stars numberOfStars = { Number(housingElement.rating) } />
-                <p className='value__p font-red'>{ housingElement.host.name }</p>
-                <img src = { housingElement.host.picture } alt = 'host picture' />
+            <div className='titles-tags-stars-host'>
+                <div>
+                    <h1 className='error-title__h2 housing-title__h1'>{ housingElement.title }</h1>
+                    <h2 className='housing__h2'>{ housingElement.location }</h2>
+                    <Tags tags = { housingElement.tags } />
+                </div>
+                <div className='stars-host'>
+                    <Stars numberOfStars = { Number(housingElement.rating) } />
+                    <div className='host'>
+                        <p className='value__p font-red'>{ housingElement.host.name }</p>
+                        <img 
+                            src = { housingElement.host.picture } 
+                            className='host-picture' 
+                            alt = 'host picture' />
+                    </div>
+                </div>
             </div>
             <section className='collapse-container'>
                 <Collapse title='Description' content = { housingElement.description } />

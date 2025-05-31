@@ -319,7 +319,56 @@ header nav a {
   margin-bottom: 150px;
 }
 
+.titles-tags-stars-host {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.titles-tags-stars-host .tag {
+  background-color: #ff6060;
+}
+.titles-tags-stars-host .stars-host {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.titles-tags-stars-host .stars-host .star {
+  max-width: 18px;
+}
+.titles-tags-stars-host .stars-host .host {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.titles-tags-stars-host .stars-host .host .value__p {
+  max-width: 50%;
+}
+.titles-tags-stars-host .stars-host .host-picture {
+  max-width: 32px;
+  border-radius: 50%;
+}
+
+.collapse-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 @media (min-width: 1024px) {
+  .titles-tags-stars-host {
+    flex-direction: row;
+  }
+  .titles-tags-stars-host .stars-host .star {
+    max-width: 36px;
+  }
+  .titles-tags-stars-host .host-picture {
+    max-width: 64px;
+  }
+  .collapse-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
   .collapse-container .collapse .value__h2 {
     font-size: 1.125rem;
   }
