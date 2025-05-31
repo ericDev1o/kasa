@@ -35,11 +35,9 @@ const Stars = ({ numberOfStars }: { numberOfStars: number}) => {
 
 const Tag = ({tagElement}: {tagElement: string}) => {
     return (
-        <>
-            <span className='tag'>
-                { tagElement }
-            </span>
-        </>
+        <span className='tag'>
+            { tagElement }
+        </span>
     )
 }
 
@@ -47,7 +45,7 @@ const Tags = ({tags}: {tags: string[]}) => {
     return (
         <>
             {tags.forEach(tag => {
-                <Tag tagElement = {tag} />
+                <Tag tagElement = { tag } />
             })
         }
         </>

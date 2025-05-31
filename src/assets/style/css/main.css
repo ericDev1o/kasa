@@ -338,7 +338,7 @@ header nav a {
 .titles-tags-stars-host .stars-host .host {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: right;
 }
 .titles-tags-stars-host .stars-host .host .value__p {
   max-width: 50%;
