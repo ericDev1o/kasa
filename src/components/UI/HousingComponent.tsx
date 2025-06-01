@@ -33,7 +33,7 @@ const Stars = ({ numberOfStars }: { numberOfStars: number}) => {
     );
 }
 
-const Tag = ({tagElement}: {tagElement: string}) => {
+const Tag = ({ tagElement }: { tagElement: string }) => {
     return (
         <span className='tag'>
             { tagElement }
@@ -41,15 +41,15 @@ const Tag = ({tagElement}: {tagElement: string}) => {
     )
 }
 
-const Tags = ({tags}: {tags: string[]}) => {
+const Tags = ({ tags }: { tags: string[] }) => {
     return (
         <>
-            {tags.forEach(tag => {
-                <Tag tagElement = { tag } />
-            })
+            { tags.map(tag => (
+                 <Tag key = { tag } tagElement= { tag } />
+            ))
         }
         </>
-    )
+    );
 }
 
 /**
