@@ -7,8 +7,16 @@
     flex-direction: column;
     justify-content: space-between;
 
-    .tag {
-        background-color: $color-red;
+    .tags {
+        display: flex;
+        gap: 10px;
+        
+        .tag {
+            background-color: $color-red;
+            border-radius: 10px;
+            padding: 1% 10%;
+            max-height: 18px;
+        }
     }
 
     .stars-host {
@@ -46,6 +54,12 @@
 @media (min-width: 1024px) {
     .titles-tags-stars-host {
         flex-direction: row;
+
+        .tags {
+            .tag {
+                max-height: 25px;
+            }
+        }
 
         .stars-host {
             .star {

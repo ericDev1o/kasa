@@ -35,9 +35,9 @@ const Stars = ({ numberOfStars }: { numberOfStars: number}) => {
 
 const Tag = ({ tagElement }: { tagElement: string }) => {
     return (
-        <span className='tag'>
-            { tagElement }
-        </span>
+        <article className='tag'>
+            <p className='tag__p'>{ tagElement }</p>
+        </article>
     )
 }
 
@@ -77,7 +77,9 @@ const HousingComponent = ({ housingElement }: { housingElement: HousingType }) =
                 <div>
                     <h1 className='error-title__h2 housing-title__h1'>{ housingElement.title }</h1>
                     <h2 className='housing__h2'>{ housingElement.location }</h2>
-                    <Tags tags = { housingElement.tags } />
+                    <section className='tags'>
+                        <Tags tags = { housingElement.tags } />
+                    </section>
                 </div>
                 <div className='stars-host'>
                     <Stars numberOfStars = { Number(housingElement.rating) } />
