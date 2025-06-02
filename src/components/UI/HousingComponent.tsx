@@ -71,6 +71,17 @@ const Equipments = ({ equipments }: { equipments: string[] }) => {
     )
 }
 
+const Slider = ({ pictures }: { pictures: string[] }) => {
+    //const numberOfPictures = pictures.length;
+    return (
+        <>
+            { pictures.map(picture => (
+                <img src = { picture } alt = 'logement' />
+            ))}
+        </>
+    )
+}
+
 /**
  * 
  * @param housingElement a type corresponding to backend API housing content
@@ -82,6 +93,7 @@ const HousingComponent = ({ housingElement }: { housingElement: HousingType }) =
             <div className='cover-container'>
                 <img src = { housingElement.cover } alt = { housingElement.title } className = 'cover' />
             </div>
+            <Slider pictures = { housingElement.pictures } /> 
             <div className='titles-tags-stars-host'>
                 <div>
                     <h1 className='error-title__h2 housing-title__h1'>{ housingElement.title }</h1>
