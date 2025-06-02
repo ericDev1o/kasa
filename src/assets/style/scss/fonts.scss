@@ -80,6 +80,7 @@ p,
 .tag__p {
     @extend %font-color-white;
     @extend %font-weight-bold;
+    @extend %font-XXXS;
     line-height: 143%;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -114,5 +115,9 @@ p,
 
     .housing__h2 {
         font-size: $font-size-M;
+    }
+
+    .tag__p {
+        font-size: $font-size-S;
     }
 }
