@@ -38,7 +38,8 @@ function About() {
                     <Collapse 
                         key = { value.id } 
                         title = { value.title } 
-                        content = { value.content } 
+                        content = { value.content }
+                        description = { false } 
                     />
                 ))}
             </section>

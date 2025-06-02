@@ -1,7 +1,8 @@
-import HousingType from "../../types/HousingType";
-import Collapse from "./Collapse";
+import HousingType from '../../types/HousingType';
+import Collapse from './Collapse';
 import starFull from'../../assets/images/star-active.svg';
 import starEmpty from '../../assets/images/star-inactive.svg';
+import { CollapseContentNode } from '../UI/Collapse';
 
 const Star = ({ isActive }: { isActive: boolean }) => {
     let starImgURL;
@@ -52,9 +53,9 @@ const Tags = ({ tags }: { tags: string[] }) => {
     );
 }
 
-/*const Equipment = ({ equipmentElement }: { equipmentElement: string }) => {
+const Equipment = ({ equipmentElement }: { equipmentElement: string }) => {
     return (
-        <p>
+        <p className='equipment__p'>
             { equipmentElement }
         </p>
     )
@@ -68,7 +69,7 @@ const Equipments = ({ equipments }: { equipments: string[] }) => {
             ))}
         </>
     )
-}*/
+}
 
 /**
  * 
@@ -113,8 +114,10 @@ const HousingComponent = ({ housingElement }: { housingElement: HousingType }) =
                 </div>
             </div>
             <section className='collapse-container'>
-                <Collapse title='Description' content = { housingElement.description } />
-                <Collapse title='Équipements' content = { equipmentsString } />
+                <Collapse title='Description' content = { housingElement.description } description = { true } />
+                <CollapseContentNode 
+                    title = 'Équipements' 
+                    children = { <Equipments equipments = { housingElement.equipments } /> } />
             </section>
         </>
     );

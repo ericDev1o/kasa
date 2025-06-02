@@ -72,7 +72,9 @@ p,
     line-height: 143%;
 }
 
-.housing__h2 {
+.housing__h2, 
+.equipment__p, 
+.description__p-open {
     @extend %font-weight-medium;
     @extend %font-S;
     line-height: 143%;
@@ -104,17 +106,17 @@ p,
         font-size: $font-size-M;
     }
 
-    p,
     .header__a, 
-    .value__h2 {
+    .value__h2, 
+    p {
         font-size: $font-size-L;
     }
 
-    .value__p {
-        font-size: $font-size-M;
-    }
-
-    .housing__h2 {
+    .value__p, 
+    .housing__h2, 
+    .equipment__p, 
+    .description__p-open,
+    p {
         font-size: $font-size-M;
     }
 
