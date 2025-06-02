@@ -52,6 +52,24 @@ const Tags = ({ tags }: { tags: string[] }) => {
     );
 }
 
+/*const Equipment = ({ equipmentElement }: { equipmentElement: string }) => {
+    return (
+        <p>
+            { equipmentElement }
+        </p>
+    )
+}
+
+const Equipments = ({ equipments }: { equipments: string[] }) => {
+    return (
+        <>
+            { equipments.map(equipment => (
+                <Equipment key= { equipment } equipmentElement = { equipment } />
+            ))}
+        </>
+    )
+}*/
+
 /**
  * 
  * @param housingElement a type corresponding to backend API housing content
@@ -72,7 +90,9 @@ const HousingComponent = ({ housingElement }: { housingElement: HousingType }) =
 
     return(
         <>
-            <img src = { housingElement.cover } alt='housing cover picture' />
+            <div className='cover-container'>
+                <img src = { housingElement.cover } alt = { housingElement.title } className = 'cover' />
+            </div>
             <div className='titles-tags-stars-host'>
                 <div>
                     <h1 className='error-title__h2 housing-title__h1'>{ housingElement.title }</h1>

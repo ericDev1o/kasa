@@ -28,10 +28,34 @@ const Collapse = ({ title, content }: { title: string, content: string }) => {
                 </span>
             </article>
             <p className={ `value__p${isOpen ? '-open' : '' }` }>
-                {content}
+                { content }
             </p>
         </div>
     );
 };
+
+/*const CollapseContentNode = ({ title, children }: { title: string, children: React.ReactNode}) => {
+    const [ isOpen, setIsOpen ] = useState(false);
+
+    const toggleCollapse = () => {
+        setIsOpen( prev => ! prev );
+    };
+
+    return (
+        <div>
+            <article className='collapse' onClick={ toggleCollapse }>
+                <h2 className='value__h2'>{ title }</h2>
+                <span className={ `collapse-toggle ${ isOpen ? 'open' : '' }` }>
+                    <i className='material-symbols-outlined'>
+                        keyboard_control_key
+                    </i>
+                </span>
+            </article>
+            <div className={ `value__p${isOpen ? '-open' : '' }` }>
+                { children }
+            </div>
+        </div>
+    )
+}*/
 
 export default Collapse;
