@@ -77,18 +77,6 @@ const Equipments = ({ equipments }: { equipments: string[] }) => {
  * @returns a housing page content with newlined equipments content in the Collapse
  */
 const HousingComponent = ({ housingElement }: { housingElement: HousingType }) => {
-    let equipmentsString: string = '';
-    if(housingElement.equipments !== undefined && Array.isArray(housingElement.equipments)) {
-        if (housingElement.equipments.length > 1) {
-            housingElement.equipments.map(
-                equipment => (
-                    equipmentsString = equipmentsString.concat(equipment, '\n')
-                )
-            );
-        } else if(housingElement.equipments.length == 1)
-            equipmentsString = equipmentsString.concat(housingElement.equipments[0]);
-    }
-
     return(
         <>
             <div className='cover-container'>
