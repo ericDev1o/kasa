@@ -3,7 +3,7 @@ import Collapse from './Collapse';
 import starFull from'../../assets/images/star-active.svg';
 import starEmpty from '../../assets/images/star-inactive.svg';
 import { CollapseContentNode } from '../UI/Collapse';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Star = ({ isActive }: { isActive: boolean }) => {
     let starImgURL;
@@ -80,15 +80,27 @@ const SlideSimple = ({ picture }: { picture: string }) => {
 
 const Slider = ({ pictures }: { pictures: string[] }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [fadeClass, setFadeClass] = useState('fade-in');
+    const [slideClass, setSlideClass] = useState('slide-zoom');
     const numberOfPictures = pictures.length;
 
     const nextSlide = () => {
+        setFadeClass('');
+        setSlideClass('');
         setCurrentIndex((previndex) => (previndex + 1) % numberOfPictures);
     }
 
     const prevSlide = () => {
+        setFadeClass('');
+        setSlideClass('');
         setCurrentIndex((prevIndex) => (prevIndex - 1 + numberOfPictures) % numberOfPictures);
     }
+
+    useEffect(() => {
+        setFadeClass('fade-in');
+        setSlideClass('slide-zoom');
+    }, [currentIndex]);
+
     return (
         <div className='cover-container slider'>
         { 
@@ -100,8 +112,12 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
                     <button className = 'arrow left' onClick = { prevSlide }>
                         <span className = 'material-symbols-outlined'>arrow_back_ios</span>
                     </button>
-                    <img src = {pictures[currentIndex]} alt = 'logement' className='cover'/>
-                    <button className = 'arrow right' onClick={ nextSlide }>
+                    <img 
+                        src = { pictures[currentIndex] } 
+                        alt = 'logement' 
+                        className = { `cover ${ fadeClass } ${ slideClass }` }
+                    />
+                    <button className = 'arrow right' onClick = { nextSlide }>
                         <span className = 'material-symbols-outlined'>arrow_forward_ios</span>
                     </button>
                     <div className='counter'>{ currentIndex + 1 } / { numberOfPictures }</div>
