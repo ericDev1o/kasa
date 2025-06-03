@@ -3,6 +3,7 @@ import Collapse from './Collapse';
 import starFull from'../../assets/images/star-active.svg';
 import starEmpty from '../../assets/images/star-inactive.svg';
 import { CollapseContentNode } from '../UI/Collapse';
+import { useState } from 'react';
 
 const Star = ({ isActive }: { isActive: boolean }) => {
     let starImgURL;
@@ -71,14 +72,43 @@ const Equipments = ({ equipments }: { equipments: string[] }) => {
     )
 }
 
-const Slider = ({ pictures }: { pictures: string[] }) => {
-    //const numberOfPictures = pictures.length;
+const SlideSimple = ({ picture }: { picture: string }) => {
     return (
-        <>
-            { pictures.map(picture => (
-                <img src = { picture } alt = 'logement' />
-            ))}
-        </>
+        <img src = { picture } alt = 'logement' />
+    )
+}
+
+const Slider = ({ pictures }: { pictures: string[] }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const numberOfPictures = pictures.length;
+
+    const nextSlide = () => {
+        setCurrentIndex((previndex) => (previndex + 1) % numberOfPictures);
+    }
+
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + numberOfPictures) % numberOfPictures);
+    }
+    return (
+        <div className='cover-container slider'>
+        { 
+            numberOfPictures === 1 
+            ? 
+            <SlideSimple picture = { pictures[0] } />
+            : (
+                <div className='slider-container'>
+                    <button className = 'arrow left' onClick = { prevSlide }>
+                        <span className='material-symbols-outlined'>arrow_back_ios</span>
+                    </button>
+                    <img src = {pictures[currentIndex]} alt = 'logement' className='cover'/>
+                    <button className='arrow right' onClick={ nextSlide }>
+                        <span className='material-symbols-outlined'>arrow_forward_ios</span>
+                    </button>
+                    <div className='counter'>{ currentIndex + 1 } / { numberOfPictures }</div>
+                </div>
+            )
+        }
+        </div>
     )
 }
 
@@ -90,9 +120,6 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
 const HousingComponent = ({ housingElement }: { housingElement: HousingType }) => {
     return(
         <>
-            <div className='cover-container'>
-                <img src = { housingElement.cover } alt = { housingElement.title } className = 'cover' />
-            </div>
             <Slider pictures = { housingElement.pictures } /> 
             <div className='titles-tags-stars-host'>
                 <div>
