@@ -98,11 +98,11 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
             : (
                 <div className='slider-container'>
                     <button className = 'arrow left' onClick = { prevSlide }>
-                        <span className='material-symbols-outlined'>arrow_back_ios</span>
+                        <span className = 'material-symbols-outlined'>arrow_back_ios</span>
                     </button>
                     <img src = {pictures[currentIndex]} alt = 'logement' className='cover'/>
-                    <button className='arrow right' onClick={ nextSlide }>
-                        <span className='material-symbols-outlined'>arrow_forward_ios</span>
+                    <button className = 'arrow right' onClick={ nextSlide }>
+                        <span className = 'material-symbols-outlined'>arrow_forward_ios</span>
                     </button>
                     <div className='counter'>{ currentIndex + 1 } / { numberOfPictures }</div>
                 </div>
