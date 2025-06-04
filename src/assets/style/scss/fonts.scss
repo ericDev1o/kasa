@@ -7,6 +7,10 @@
     }
 }
 
+.font-red {
+    @extend %font-color-red;
+}
+
 .error-title__h1 {
     @extend %font-color-red;
     @extend %font-weight-bold;
@@ -20,9 +24,18 @@
 .error-title__h2 {
     @extend %font-color-red;
     @extend %font-weight-medium;
-    @extend %font-XL;
     line-height: 143%;
     text-align: center
+}
+
+.error-title-size__h2 {
+    @extend %font-XL;
+}
+
+.housing-title__h1 {
+    text-align: left;
+    @extend %font-M;
+    margin-bottom: 0;
 }
 
 .error__a {
@@ -40,13 +53,14 @@
 p,
 .header__a {
     @extend %font-weight-medium;
-    @extend %font-S;
+    @extend %font-XXS;
 }
 
 .value__h2 {
     @extend %font-weight-bold;
-    @extend %font-S;
+    @extend %font-XS;
     @extend %font-color-white;
+    line-height: 143%;
 }
 
 .header__a {
@@ -54,7 +68,25 @@ p,
 }
 
 .value__p {
+    @extend %font-XXS;
+    line-height: 143%;
+}
+
+.housing__h2, 
+.equipment__p, 
+.description__p-open {
+    @extend %font-weight-medium;
     @extend %font-S;
+    line-height: 143%;
+}
+
+.tag__p {
+    @extend %font-color-white;
+    @extend %font-weight-bold;
+    @extend %font-XXXS;
+    line-height: 143%;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 @media (min-width: 1024px) {
@@ -74,13 +106,21 @@ p,
         font-size: $font-size-M;
     }
 
-    p,
     .header__a, 
-    .value__h2 {
+    .value__h2, 
+    p {
         font-size: $font-size-L;
     }
 
-    .value__p {
+    .value__p, 
+    .housing__h2, 
+    .equipment__p, 
+    .description__p-open,
+    p {
         font-size: $font-size-M;
+    }
+
+    .tag__p {
+        font-size: $font-size-S;
     }
 }

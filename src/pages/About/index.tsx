@@ -15,7 +15,7 @@ function About() {
         {
             id: 2, 
             title: "Respect", 
-            content: " La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturabation du voisinage entraînera une exclusion de notre plateforme."
+            content: "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturabation du voisinage entraînera une exclusion de notre plateforme."
         },
         {
             id: 3, 
@@ -33,12 +33,13 @@ function About() {
         <Layout page = 'about'>
             <Banner banner = { bannerContent } page = 'about' />
             <h1 className='headings-map-compliance'>À propos</h1>
-            <section className='values'>
+            <section className='collapse-container'>
                 {values.map(value => (
                     <Collapse 
                         key = { value.id } 
                         title = { value.title } 
-                        content = { value.content } 
+                        content = { value.content }
+                        description = { false } 
                     />
                 ))}
             </section>
