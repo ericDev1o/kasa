@@ -155,6 +155,9 @@ header {
   display: flex;
   justify-content: space-between;
 }
+header img {
+  max-width: 145px;
+}
 header nav {
   display: flex;
   align-items: center;
@@ -167,6 +170,9 @@ header nav a {
 @media (min-width: 1024px) {
   header {
     padding: 45px 0;
+  }
+  header img {
+    max-width: 210px;
   }
   header nav {
     gap: 57px;

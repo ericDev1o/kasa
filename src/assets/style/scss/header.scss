@@ -4,6 +4,10 @@ header {
     display: flex;
     justify-content: space-between;
 
+    img {
+        max-width: 145px;
+    }
+
     nav {
         display: flex;
         align-items: center;
@@ -18,6 +22,10 @@ header {
 @media (min-width: 1024px) {
     header {
         padding: 45px 0;
+
+        img {
+            max-width: 210px;
+        }
 
         nav {
             gap: 57px;
