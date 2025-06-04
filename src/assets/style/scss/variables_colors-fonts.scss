@@ -9,7 +9,10 @@ $font-size-XXL: 3rem;
 $font-size-XL: 2.25rem;
 $font-size-L: 1.5rem;
 $font-size-M: 1.125rem;
-$font-size-S: 0.75rem;
+$font-size-S: 0.875rem;
+$font-size-XS: 0.8125rem;
+$font-size-XXS: 0.75rem;
+$font-size-XXXS: 0.625rem;
 
 $color-black: black;
 $color-white: white;
@@ -76,6 +79,18 @@ $background-color-gallery: #f6f6f6;
 
 %font-S {
     @include font-size($font-size-S);
+}
+
+%font-XS {
+    @include font-size($font-size-XS);
+}
+
+%font-XXS {
+    @include font-size($font-size-XXS);
+}
+
+%font-XXXS {
+    @include font-size($font-size-XXXS);
 }
 
 %font-color-black {

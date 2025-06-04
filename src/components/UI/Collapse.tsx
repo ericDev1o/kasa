@@ -6,11 +6,12 @@ import { useState } from 'react';
  * it respectively displays or hides the description.
  * @param title : a value f.ex. Respect or Service
  * @param content : value's description
+ * @param description : true on housing page
  * @returns the red rectangle with 
  *     - the value title and 
  *     - an arrow to display the value's description
  */
-const Collapse = ({ title, content }: { title: string, content: string }) => {
+const Collapse = ({ title, content, description }: { title: string, content: string, description: boolean }) => {
     const [ isOpen, setIsOpen ] = useState(false);
 
     const toggleCollapse = () => {
@@ -22,16 +23,40 @@ const Collapse = ({ title, content }: { title: string, content: string }) => {
             <article className='collapse' onClick={ toggleCollapse }>
                 <h2 className='value__h2'>{ title }</h2>
                 <span className={ `collapse-toggle ${ isOpen ? 'open' : '' }` }>
-                    <i className="material-symbols-outlined">
+                    <i className='material-symbols-outlined'>
                         keyboard_control_key
                     </i>
                 </span>
             </article>
-            <p className={ `value__p${isOpen ? '-open' : '' }` }>
-                {content}
+            <p className={ `${ description ? 'description__p' : 'value__p' }${isOpen ? '-open' : '' }` }>
+                { content }
             </p>
         </div>
     );
 };
+
+export const CollapseContentNode = ({ title, children }: { title: string, children: React.ReactNode}) => {
+    const [ isOpen, setIsOpen ] = useState(false);
+
+    const toggleCollapse = () => {
+        setIsOpen( prev => ! prev );
+    };
+
+    return (
+        <div>
+            <article className='collapse' onClick={ toggleCollapse }>
+                <h2 className='value__h2'>{ title }</h2>
+                <span className={ `collapse-toggle ${ isOpen ? 'open' : '' }` }>
+                    <i className='material-symbols-outlined'>
+                        keyboard_control_key
+                    </i>
+                </span>
+            </article>
+            <div className = { `value__div${isOpen ? '-open' : '' }` }>
+                { children }
+            </div>
+        </div>
+    )
+}
 
 export default Collapse;

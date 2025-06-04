@@ -12,19 +12,20 @@ import logements from '../../../data/logements.json';
 function Gallery() {   
     return (
         <section className = 'gallery'>
-            <article className = 'gallery-background'>
+            <div className = 'gallery-background'>
                 {
                     logements.map(
                         logement => (
                             <Card 
                                 key = { logement.id } 
+                                id = { logement.id }
                                 cover = { logement.cover } 
                                 title = { logement.title } 
                             />
                         )
                     )
                 }
-            </article>
+            </div>
         </section>
     );
 }

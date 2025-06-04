@@ -4,7 +4,8 @@
 @import 'banner.scss';
 @import 'card.scss';
 @import 'gallery.scss';
-@import 'about.scss';
+@import 'collapse-container.scss';
+@import 'housing.scss';
 @import 'footer.scss';
 
 body, h2 {
@@ -15,13 +16,14 @@ body, h2 {
 #root {
     @extend %font-family-primary;
     @extend %background-color-white;
-    max-width: 1440px;
 }
 
 .layout-container {
     padding: 0 20px;
     display: flex;
     flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .underline {

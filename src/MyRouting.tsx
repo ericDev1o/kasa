@@ -10,7 +10,7 @@ function MyRouting() {
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/about' element={<About />} />
-                <Route path='/housing/:accomodation' element={<Housing />} />
+                <Route path='/housing/:housingId' element={<Housing />} />
                 <Route path='*' element={<Error404 />} />
             </Routes>
         </BrowserRouter>
