@@ -72,12 +72,6 @@ const Equipments = ({ equipments }: { equipments: string[] }) => {
     )
 }
 
-const SlideSimple = ({ picture }: { picture: string }) => {
-    return (
-        <img src = { picture } alt = 'logement' />
-    )
-}
-
 const Slider = ({ pictures }: { pictures: string[] }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [fadeClass, setFadeClass] = useState('fade-in');
@@ -139,7 +133,7 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
         { 
             numberOfPictures === 1 
             ? 
-            <SlideSimple picture = { pictures[0] } />
+            <img src = { pictures[0] } alt = 'logement' />
             : (
                 <div className='slider-container'>
                     <button onClick = { prevSlide }>
