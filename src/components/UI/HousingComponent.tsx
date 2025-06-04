@@ -3,7 +3,7 @@ import Collapse from './Collapse';
 import starFull from'../../assets/images/star-active.svg';
 import starEmpty from '../../assets/images/star-inactive.svg';
 import { CollapseContentNode } from '../UI/Collapse';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 const Star = ({ isActive }: { isActive: boolean }) => {
     let starImgURL;
@@ -83,6 +83,8 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
     const [fadeClass, setFadeClass] = useState('fade-in');
     const [slideClass, setSlideClass] = useState('slide-zoom');
     const numberOfPictures = pictures.length;
+    const imageRef = useRef<HTMLImageElement>(null);
+    const [bottomPosition, setBottomPosition] = useState(10);
 
     const nextSlide = () => {
         setFadeClass('');
@@ -101,6 +103,37 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
         setSlideClass('slide-zoom');
     }, [currentIndex]);
 
+    useEffect(() => {
+        const handleResize = () => {
+            if(imageRef.current) {
+                    const imageHeight = imageRef.current.clientHeight;
+                    const imageWidth = imageRef.current.clientWidth;
+                    let heightMultiplier = 0;
+
+                    if(imageWidth > 900 && imageWidth < 1024)
+                        heightMultiplier = 0.35;
+                    else if(
+                        imageWidth > 1024
+                        ||
+                        (imageWidth > 700 && imageWidth < 900)
+                    )
+                        heightMultiplier = 0.3;
+                     else if (imageWidth > 500 && imageWidth < 700)
+                        heightMultiplier = 0.25;
+                    else if (imageWidth < 500)
+                        heightMultiplier = 0.1;
+                    setBottomPosition(imageHeight * heightMultiplier);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize();
+
+        return () => {
+             window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <div className='cover-container slider'>
         { 
@@ -113,14 +146,20 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
                         <span className = 'material-symbols-outlined'>arrow_back_ios</span>
                     </button>
                     <img 
+                        ref = { imageRef }
                         src = { pictures[currentIndex] } 
                         alt = 'logement' 
                         className = { `cover ${ fadeClass } ${ slideClass }` }
                     />
+                    <div 
+                        className='counter'
+                        style={{ bottom: `${ bottomPosition }px` }}
+                    >
+                            { currentIndex + 1 } / { numberOfPictures }
+                    </div>
                     <button className = 'arrow right' onClick = { nextSlide }>
                         <span className = 'material-symbols-outlined'>arrow_forward_ios</span>
                     </button>
-                    <div className='counter'>{ currentIndex + 1 } / { numberOfPictures }</div>
                 </div>
             )
         }
