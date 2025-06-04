@@ -142,8 +142,8 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
             <SlideSimple picture = { pictures[0] } />
             : (
                 <div className='slider-container'>
-                    <button className = 'arrow left' onClick = { prevSlide }>
-                        <span className = 'material-symbols-outlined'>arrow_back_ios</span>
+                    <button onClick = { prevSlide }>
+                        <span className = 'arrow left material-symbols-outlined'>arrow_back_ios</span>
                     </button>
                     <img 
                         ref = { imageRef }
@@ -157,8 +157,8 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
                     >
                             { currentIndex + 1 } / { numberOfPictures }
                     </div>
-                    <button className = 'arrow right' onClick = { nextSlide }>
-                        <span className = 'material-symbols-outlined'>arrow_forward_ios</span>
+                    <button onClick = { nextSlide }>
+                        <span className = 'arrow right material-symbols-outlined'>arrow_forward_ios</span>
                     </button>
                 </div>
             )

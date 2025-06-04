@@ -415,12 +415,13 @@ header nav a {
   top: 50%;
   transform: translateY(-50%);
   color: white;
+  z-index: 1;
 }
 .slider-container .left {
-  left: 10px;
+  left: 7px;
 }
 .slider-container .right {
-  right: 10px;
+  right: 0;
 }
 .slider-container .counter {
   position: absolute;
@@ -477,6 +478,12 @@ header nav a {
   .cover-container {
     border-radius: 25px;
     max-height: 415px;
+  }
+  .slider-container .arrow {
+    font-size: 96px;
+  }
+  .slider-container .left {
+    left: 20px;
   }
   .titles-tags-stars-host {
     flex-direction: row;
