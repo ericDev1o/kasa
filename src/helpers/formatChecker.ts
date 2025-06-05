@@ -1,11 +1,14 @@
+/**
+ * 
+ * @param housingId housing id in URL for example https://host:port/housing/id
+ * @returns false if the format is not a valid housing id.
+ * It must be exactly 8 caracters long including only lower case letters
+ * and digits. An example of valid id is b9123946.
+ */
 const housingIdInURLformatChecker = (housingId: string) => {
     if( ! new RegExp('^([a-z0-9]){8}$').test(housingId))
-        alert(`Le format d'identifant de logement que vous avez écrit dans l'URL est invalide.
-            Le format attendu est:
-            1) 8 caractères parmi
-                a) des lettres en minsucules
-                b) des chiffres
-            Veuillez recommencer s'il vous plaît.`);
+        return false;
+    else return true;
 }
 
 export default housingIdInURLformatChecker;
