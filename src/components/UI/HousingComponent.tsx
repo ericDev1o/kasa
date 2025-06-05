@@ -189,7 +189,7 @@ const HousingComponent = ({ housingElement }: { housingElement: HousingType }) =
                     </div>
                 </div>
             </div>
-            <section className='collapse-container-housing'>
+            <section className='collapse-container collapse-container-housing'>
                 <Collapse title='Description' content = { housingElement.description } description = { true } />
                 <CollapseContentNode 
                     title = 'Équipements' 

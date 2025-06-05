@@ -36,7 +36,7 @@
 
     &-container {
         border-radius: 10px;
-        max-height: 255px;
+        height: 255px;
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -141,7 +141,7 @@
     .cover {
         &-container {
             border-radius: 25px;
-            max-height: 415px;
+            height: 415px;
         }
     }
 
