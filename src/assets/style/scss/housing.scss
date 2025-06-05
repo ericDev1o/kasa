@@ -131,7 +131,7 @@
     }
 }
 
-.collapse-container {
+.collapse-container-housing {
     display: flex;
     width: 100%;
     align-items: stretch;
@@ -181,7 +181,7 @@
         }
     }
 
-    .collapse-container {
+    .collapse-container-housing {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
