@@ -89,15 +89,16 @@ footer {
   text-align: center;
 }
 
-.housing-title__h1 {
-  text-align: left;
-  margin-bottom: 0;
-}
-
 .error__a {
   line-height: 143%;
   margin: 108px 0;
   text-align: center;
+}
+
+.housing-title__h1 {
+  text-align: left;
+  margin-top: 7px;
+  margin-bottom: 8px;
 }
 
 .value__h2 {
@@ -132,6 +133,10 @@ footer {
   }
   .error__a {
     font-size: 1.125rem;
+  }
+  .housing-title__h1 {
+    margin-top: 31px;
+    margin-bottom: 5px;
   }
   .header__a,
   .value__h2,
@@ -448,8 +453,10 @@ header nav a {
 }
 .titles-tags-stars-host .tags {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
+  margin-bottom: 5px;
 }
 .titles-tags-stars-host .tags .tag {
   background-color: #ff6060;
@@ -483,6 +490,7 @@ header nav a {
   display: flex;
   width: 100%;
   align-items: stretch;
+  margin-top: 1px;
 }
 
 @media (min-width: 1024px) {
@@ -499,16 +507,22 @@ header nav a {
   .titles-tags-stars-host {
     flex-direction: row;
   }
+  .titles-tags-stars-host .tags {
+    margin-top: 17px;
+    margin-bottom: 25px;
+  }
   .titles-tags-stars-host .tags .tag {
     max-height: 25px;
   }
   .titles-tags-stars-host .stars-host {
     flex-direction: column-reverse;
+    padding-top: 11px;
+    padding-bottom: 25px;
   }
   .titles-tags-stars-host .stars-host .star {
     max-width: 36px;
   }
-  .titles-tags-stars-host .host-picture {
+  .titles-tags-stars-host .stars-host .host-picture {
     max-width: 64px;
   }
   .collapse-container-housing {
@@ -516,6 +530,7 @@ header nav a {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 0;
+    margin-bottom: 14px;
   }
   .collapse-container-housing .collapse .value__h2 {
     font-size: 1.125rem;
