@@ -164,6 +164,9 @@
         flex-direction: row;
 
         .tags {
+            margin-top: 17px;
+            margin-bottom: 25px;
+
             .tag {
                 max-height: 25px;
             }
@@ -171,15 +174,17 @@
 
         .stars-host {
             flex-direction: column-reverse;
+            padding-top: 11px;
+            padding-bottom: 25px;
 
             .star {
                 max-width: 36px;
             }
-        }
 
-        .host {
-            &-picture {
-                max-width: 64px;
+            .host {
+                &-picture {
+                    max-width: 64px;
+                }
             }
         }
     }
@@ -189,6 +194,7 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         padding: 0;
+        margin-bottom: 14px;
 
         .collapse {
             .value__h2 {
