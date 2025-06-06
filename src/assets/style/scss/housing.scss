@@ -96,6 +96,7 @@
         flex-wrap: wrap;
         gap: 10px;
         margin-top: 10px;
+        margin-bottom: 5px;
         
         .tag {
             background-color: $color-red;
@@ -136,6 +137,7 @@
     display: flex;
     width: 100%;
     align-items: stretch;
+    margin-top: 1px;
 }
 
 @media (min-width: 1024px) {

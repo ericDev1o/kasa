@@ -91,7 +91,8 @@ footer {
 
 .housing-title__h1 {
   text-align: left;
-  margin-bottom: 0;
+  margin-top: 7px;
+  margin-bottom: 8px;
 }
 
 .error__a {
@@ -451,6 +452,7 @@ header nav a {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
+  margin-bottom: 5px;
 }
 .titles-tags-stars-host .tags .tag {
   background-color: #ff6060;
@@ -484,6 +486,7 @@ header nav a {
   display: flex;
   width: 100%;
   align-items: stretch;
+  margin-top: 1px;
 }
 
 @media (min-width: 1024px) {
