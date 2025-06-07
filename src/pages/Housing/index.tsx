@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Layout from '../../components/containers/Layout';
 import HousingType from '../../types/HousingType';
 import HousingComponent from '../../components/UI/HousingComponent';
@@ -28,6 +28,8 @@ const Housing = () => {
 
     const { housingId } = useParams();
 
+    const navigate = useNavigate();
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -52,11 +54,7 @@ const Housing = () => {
                             Pourriez-vous vérifier l'identifiant et recommencer s'il vous plaît?`
                         );
                 } else if(! housingId)
-                    /* 
-                        default error page in case of technical error 
-                        where no id couldn't be used from URL
-                    */
-                    setError(''); 
+                    setError("Erreur à la récupération de l'identifiant logement depuis l'URL"); 
             } catch (error) {
                 if(
                     error instanceof ReferenceError ||
@@ -82,17 +80,7 @@ const Housing = () => {
     }
 
     if (error) {
-	    return <Layout page = 'error'>
-            <h1 className = 'error-title__h1'>404</h1>
-            <h2 
-                className = 'error-title__h2 error-title-size__h2'
-            >Oups! La page que vous demandez n'existe pas.  { error }</h2>
-            <a 
-                className = 'error__a'
-                href = '/' 
-                aria-label = "Retourner sur la page d'accueil"
-             >Retourner sur la page d'accueil</a>
-        </Layout>
+        navigate('/error');
     }
 
     return(
