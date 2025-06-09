@@ -18,15 +18,11 @@
   font-size: 6rem;
 }
 
-.error-title-size__h2 {
-  font-size: 2.25rem;
-}
-
 .banner-title__h1 {
   font-size: 1.5rem;
 }
 
-.card-title__h2, .housing-title__h1 {
+.card-title__h2, .housing-title__h1, .error-title-size__h2 {
   font-size: 1.125rem;
 }
 
@@ -293,6 +289,7 @@ header nav a {
   align-items: center;
 }
 .collapse-container .collapse {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -306,7 +303,8 @@ header nav a {
   font-size: 24px;
 }
 .collapse-container .collapse-toggle {
-  cursor: pointer;
+  pointer-events: none;
+  cursor: none;
   transition: transform 0.3s ease-in-out;
   color: white;
   height: 20px;
@@ -398,8 +396,8 @@ header nav a {
 
 .cover {
   object-fit: cover;
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .cover-container {
   border-radius: 10px;
@@ -421,27 +419,32 @@ header nav a {
   justify-content: center;
   align-items: center;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 .slider-container .arrow {
   background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 24px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   color: white;
   z-index: 1;
 }
-.slider-container .left {
+.slider-container .arrow span {
+  font-size: 24px;
+}
+.slider-container .arrow.left {
   left: 7px;
 }
-.slider-container .right {
+.slider-container .arrow.right {
   right: 0;
 }
 .slider-container .counter {
   position: absolute;
   left: 50%;
+  bottom: 20px;
   transform: translateX(-50%);
   color: white;
 }
@@ -498,10 +501,10 @@ header nav a {
     border-radius: 25px;
     height: 415px;
   }
-  .slider-container .arrow {
+  .slider-container .arrow span {
     font-size: 96px;
   }
-  .slider-container .left {
+  .slider-container .arrow.left {
     left: 20px;
   }
   .titles-tags-stars-host {
