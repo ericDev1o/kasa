@@ -1,7 +1,7 @@
 import Layout from '../../components/containers/Layout';
 import Banner from '../../components/UI/Banner';
 import Collapse from '../../components/UI/Collapse';
-import bannerBackground from '../../assets/images/ba_bckgrd.jpg';
+import bannerBackground from '/images/ba_bckgrd.jpg';
 
 function About() {
     const title = '';

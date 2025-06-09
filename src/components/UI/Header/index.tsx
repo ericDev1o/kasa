@@ -1,7 +1,7 @@
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { PageContext } from '../../../contexts/UI/PageContext';
-
-import logo_mobile from '/src/assets/images/mh_logo.png';
+import logoSmall from '/images/mh_logo.png';
+import logoLarge from '/images/dh_logo.png';
 
 /**
  * This component returns header's
@@ -66,6 +66,7 @@ function NavBar({ smallScreen, underlineHome, underlineAbout }:
  */
 function Header() {
     const page = useContext(PageContext);
+    const [logo, setLogo] = useState(logoSmall);
 
     let underlnHome = false;
     let underlnAbout = false;
@@ -80,13 +81,27 @@ function Header() {
 
     let smallScrn = true;
     if(window.innerWidth >= 1024) smallScrn = false;
+
+    useEffect(() => {
+        const updateLogo = () => {
+            if(window.innerWidth > 1023)
+                setLogo(logoLarge);
+            else
+                setLogo(logoSmall);
+        };
+
+        window.addEventListener('resize', updateLogo);
+        updateLogo();
+
+        return () => {
+            window.removeEventListener('resize', updateLogo);
+        };
+    }, []);
     
     return (
         <header>
             <img 
-                src = { logo_mobile }
-                srcSet= '/src/assets/images/mh_logo.png 1023w, /src/assets/images/dh_logo.png 1024w'
-                sizes='(max-width: 375px) 190vw, (max-width: 1024px) 720px'
+                src = { logo }
                 alt = 'logo Kasa' 
                 aria-hidden = 'true' 
             />

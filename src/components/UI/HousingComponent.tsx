@@ -1,7 +1,7 @@
 import HousingType from '../../types/HousingType';
 import Collapse from './Collapse';
-import starFull from'../../assets/images/star-active.svg';
-import starEmpty from '../../assets/images/star-inactive.svg';
+import starFull from'/images/star-active.svg';
+import starEmpty from '/images/star-inactive.svg';
 import { CollapseContentNode } from '../UI/Collapse';
 import { useEffect, useState, useRef } from 'react';
 

@@ -1,5 +1,11 @@
+import { useEffect, useState } from 'react';
 import Card from '../Card';
-import logements from '../../../data/logements.json';
+
+interface Logement {
+    id: string;
+    cover: string;
+    title: string;
+}
 
 /**
  * This function displays the home page gallery cards.
@@ -9,7 +15,19 @@ import logements from '../../../data/logements.json';
  * props.
  * @returns the cards with their call to click titled cover
  */
-function Gallery() {   
+function Gallery() {  
+    const [logements, setLogements] = useState<Logement[]>([]);
+
+    useEffect(() => {
+        const fetchLogements = async () => {
+            const response = await fetch("/data/logements.json");
+            const data = await response.json();
+            setLogements(data);
+        };
+
+        fetchLogements();
+    }, []);
+    
     return (
         <section className = 'gallery'>
             <div className = 'gallery-background'>
