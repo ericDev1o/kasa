@@ -78,7 +78,6 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
     const [slideClass, setSlideClass] = useState('slide-zoom');
     const numberOfPictures = pictures.length;
     const imageRef = useRef<HTMLImageElement>(null);
-    const [bottomPosition, setBottomPosition] = useState(10);
 
     const nextSlide = () => {
         setFadeClass('');
@@ -97,37 +96,6 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
         setSlideClass('slide-zoom');
     }, [currentIndex]);
 
-    useEffect(() => {
-        const handleResize = () => {
-            if(imageRef.current) {
-                    const imageHeight = imageRef.current.clientHeight;
-                    const imageWidth = imageRef.current.clientWidth;
-                    let heightMultiplier = 0;
-
-                    if(imageWidth > 900 && imageWidth < 1024)
-                        heightMultiplier = 0.35;
-                    else if(
-                        imageWidth > 1024
-                        ||
-                        (imageWidth > 700 && imageWidth < 900)
-                    )
-                        heightMultiplier = 0.3;
-                     else if (imageWidth > 500 && imageWidth < 700)
-                        heightMultiplier = 0.25;
-                    else if (imageWidth < 500)
-                        heightMultiplier = 0.1;
-                    setBottomPosition(imageHeight * heightMultiplier);
-            }
-        };
-
-        window.addEventListener('resize', handleResize);
-        handleResize();
-
-        return () => {
-             window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
     return (
         <div className='cover-container slider'>
         { 
@@ -136,8 +104,8 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
             <img src = { pictures[0] } alt = 'logement' />
             : (
                 <div className='slider-container'>
-                    <button onClick = { prevSlide }>
-                        <span className = 'arrow left material-symbols-outlined'>arrow_back_ios</span>
+                    <button className = 'arrow left' onClick = { prevSlide }>
+                        <span className = 'material-symbols-outlined'>arrow_back_ios</span>
                     </button>
                     <img 
                         ref = { imageRef }
@@ -147,12 +115,11 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
                     />
                     <div 
                         className='counter'
-                        style={{ bottom: `${ bottomPosition }px` }}
                     >
                             { currentIndex + 1 } / { numberOfPictures }
                     </div>
-                    <button onClick = { nextSlide }>
-                        <span className = 'arrow right material-symbols-outlined'>arrow_forward_ios</span>
+                    <button className='arrow right' onClick = { nextSlide }>
+                        <span className = 'material-symbols-outlined'>arrow_forward_ios</span>
                     </button>
                 </div>
             )

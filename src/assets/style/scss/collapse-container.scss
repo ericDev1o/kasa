@@ -6,6 +6,7 @@
     align-items: center;
 
     .collapse {
+        cursor: pointer;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -20,7 +21,8 @@
         }
 
         &-toggle {
-            cursor: pointer;
+            pointer-events: none;
+            cursor: none;
             transition: transform 0.3s ease-in-out;
             color: white;
             height: 20px;
