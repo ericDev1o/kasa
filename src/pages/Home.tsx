@@ -1,6 +1,6 @@
-import Layout from '../../components/containers/Layout';
-import Banner from '../../components/UI/Banner';
-import Gallery from '../../components/UI/Gallery';
+import Layout from '../components/containers/Layout';
+import Banner from '../components/UI/Banner';
+import Gallery from '../components/UI/Gallery';
 import bannerBackground from '/images/bh_bckgrd.jpg';
 
 const Home = () => {

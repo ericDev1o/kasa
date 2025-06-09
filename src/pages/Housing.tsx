@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Layout from '../../components/containers/Layout';
-import HousingType from '../../types/HousingType';
-import HousingComponent from '../../components/UI/HousingComponent';
-import housingIdInURLformatChecker from '../../helpers/formatChecker';
+import Layout from '../components/containers/Layout';
+import HousingType from '../types/HousingType';
+import HousingComponent from '../components/UI/HousingComponent';
+import housingIdInURLformatChecker from '../helpers/formatChecker';
 
 let housing: HousingType;
 
