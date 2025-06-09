@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect } from 'react';
-import { PageContext } from '../../../contexts/UI/PageContext';
+import { PageContext } from '../../contexts/UI/PageContext';
 import logoSmall from '/images/mh_logo.png';
 import logoLarge from '/images/dh_logo.png';
 
