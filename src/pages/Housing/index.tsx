@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Layout from '../../components/containers/Layout';
 import HousingType from '../../types/HousingType';
 import HousingComponent from '../../components/UI/HousingComponent';
@@ -28,8 +28,6 @@ const Housing = () => {
 
     const { housingId } = useParams();
 
-    const navigate = useNavigate();
-
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -38,7 +36,7 @@ const Housing = () => {
                     Il doit contenir exactement 8 caractères incluant des lettres minsucules et des chiffres.
                     Pourriez-vous s'il vous plaît rectifier et recommencer?`);
                 else if (housingId) {
-                    const response = await fetch("/src/data/logements.json");
+                    const response = await fetch("/data/logements.json");
                     if ( ! response.ok )
                         throw new Error(`Les données n'ont pu être obtenues.
                             Vérifiez 
@@ -80,7 +78,17 @@ const Housing = () => {
     }
 
     if (error) {
-        navigate('/error');
+         return <Layout page = 'error'>
+            <h1 className = 'error-title__h1'>404</h1>
+            <h2 
+                className = 'error-title__h2 error-title-size__h2'
+            >Oups! La page que vous demandez n'existe pas.  { error }</h2>
+            <a 
+                className = 'error__a'
+                href = '/' 
+                aria-label = "Retourner sur la page d'accueil"
+             >Retourner sur la page d'accueil</a>
+        </Layout>
     }
 
     return(
