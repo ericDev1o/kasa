@@ -3,7 +3,7 @@ import Collapse from './Collapse';
 import starFull from'/images/star-active.svg';
 import starEmpty from '/images/star-inactive.svg';
 import { CollapseContentNode } from '../UI/Collapse';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 const Star = ({ isActive }: { isActive: boolean }) => {
     let starImgURL;
@@ -77,7 +77,6 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
     const [fadeClass, setFadeClass] = useState('fade-in');
     const [slideClass, setSlideClass] = useState('slide-zoom');
     const numberOfPictures = pictures.length;
-    const imageRef = useRef<HTMLImageElement>(null);
 
     const nextSlide = () => {
         setFadeClass('');
@@ -107,8 +106,7 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
                     <button className = 'arrow left' onClick = { prevSlide }>
                         <span className = 'material-symbols-outlined'>arrow_back_ios</span>
                     </button>
-                    <img 
-                        ref = { imageRef }
+                    <img
                         src = { pictures[currentIndex] } 
                         alt = 'logement' 
                         className = { `cover ${ fadeClass } ${ slideClass }` }
