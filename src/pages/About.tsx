@@ -5,7 +5,8 @@ import bannerBackground from '/images/ba_bckgrd.jpg';
 
 function About() {
     const title = '';
-    const bannerContent = {...{ bannerBackground }, ...{ title }};
+    const page = 'about';
+    const bannerContent = { bannerBackground , title ,  page };
     const values = [
         {
             id: 1, 
@@ -30,8 +31,8 @@ function About() {
     ];
     
     return (
-        <Layout page = 'about'>
-            <Banner banner = { bannerContent } page = 'about' />
+        <Layout page = { page }>
+            <Banner banner = { bannerContent } />
             <h1 className='headings-map-compliance'>À propos</h1>
             <section className='collapse-container'>
                 {values.map(value => (
