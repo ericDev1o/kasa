@@ -3,7 +3,7 @@
  * It is a call to click on it to rent.
  * @returns the housing cover.
  */
-function Card(
+export default function Card(
     { 
         id,
         cover, 
@@ -15,6 +15,7 @@ function Card(
         title: string,
      }) {
         const housingURL = '/housing/' + id;
+        
         return (
             <a href={housingURL}>
                 <article className = 'card'>
@@ -24,5 +25,3 @@ function Card(
             </a>
         );
 }
-
-export default Card;

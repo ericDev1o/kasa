@@ -3,7 +3,7 @@ import Banner from '../components/UI/Banner';
 import Collapse from '../components/UI/Collapse';
 import bannerBackground from '/images/ba_bckgrd.jpg';
 
-function About() {
+export default function About() {
     const title = '';
     const page = 'about';
     const bannerContent = { bannerBackground , title ,  page };
@@ -47,5 +47,3 @@ function About() {
         </Layout>
     );
 }
-
-export default About;

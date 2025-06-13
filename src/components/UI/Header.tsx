@@ -64,12 +64,13 @@ function NavBar({ smallScreen, underlineHome, underlineAbout }:
             sizes='100vw' 
             src={logo_mobile} ...
  */
-function Header() {
+export default function Header() {
     const page = useContext(PageContext);
     const [logo, setLogo] = useState(logoSmall);
 
     let underlnHome = false;
     let underlnAbout = false;
+    
     switch (page) {
         case 'home':
             underlnHome = true;
@@ -113,5 +114,3 @@ function Header() {
         </header>
     );
 }
-
-export default Header;

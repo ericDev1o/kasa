@@ -3,10 +3,11 @@ import Banner from '../components/UI/Banner';
 import Gallery from '../components/UI/Gallery';
 import bannerBackground from '/images/bh_bckgrd.jpg';
 
-const Home = () => {
+export default function Home() {
     const title = 'Chez vous, partout et ailleurs';
     const page = 'home';
     const bannerContent = { bannerBackground ,  title ,  page  };
+    
     return (
         <Layout page = { page }>
             <Banner banner = { bannerContent } />
@@ -14,5 +15,3 @@ const Home = () => {
         </Layout>
     );
 };
-
-export default Home;
