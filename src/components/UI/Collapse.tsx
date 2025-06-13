@@ -20,15 +20,15 @@ const Collapse = ({ title, content, description }: { title: string, content: str
 
     return (
         <div>
-            <article className='collapse' onClick={ toggleCollapse }>
-                <h2 className='value__h2'>{ title }</h2>
-                <span className={ `collapse-toggle ${ isOpen ? 'open' : '' }` }>
-                    <i className='material-symbols-outlined'>
+            <article className = 'collapse' onClick = { toggleCollapse }>
+                <h2 className = 'value__h2'>{ title }</h2>
+                <span className = { `collapse-toggle ${ isOpen ? 'open' : '' }` }>
+                    <i className = 'material-symbols-outlined'>
                         keyboard_control_key
                     </i>
                 </span>
             </article>
-            <p className={ `${ description ? 'description__p' : 'value__p' }${isOpen ? '-open' : '' }` }>
+            <p className = { `${ description ? 'description__p' : 'value__p' }${isOpen ? '-open' : '' }` }>
                 { content }
             </p>
         </div>
@@ -44,10 +44,10 @@ export const CollapseContentNode = ({ title, children }: { title: string, childr
 
     return (
         <div>
-            <article className='collapse' onClick={ toggleCollapse }>
-                <h2 className='value__h2'>{ title }</h2>
-                <span className={ `collapse-toggle ${ isOpen ? 'open' : '' }` }>
-                    <i className='material-symbols-outlined'>
+            <article className = 'collapse' onClick = { toggleCollapse }>
+                <h2 className = 'value__h2'>{ title }</h2>
+                <span className = { `collapse-toggle ${ isOpen ? 'open' : '' }` }>
+                    <i className = 'material-symbols-outlined'>
                         keyboard_control_key
                     </i>
                 </span>

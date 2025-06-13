@@ -116,7 +116,7 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
                     <div 
                         className='counter'
                     >
-                            { currentIndex + 1 } / { numberOfPictures }
+                        { currentIndex + 1 } / { numberOfPictures }
                     </div>
                     <button className='arrow right' onClick = { nextSlide }>
                         <span className = 'material-symbols-outlined'>arrow_forward_ios</span>
