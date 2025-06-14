@@ -131,37 +131,34 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
  * @param housingElement a type corresponding to backend API housing content
  * @returns a housing page content with newlined equipments content in the Collapse
  */
-const HousingComponent = ({ housingElement }: { housingElement: HousingType }) => {
-    return(
-        <>
-            <Slider pictures = { housingElement.pictures } /> 
-            <div className='titles-tags-stars-host'>
-                <div>
-                    <h1 className='error-title__h2 housing-title__h1'>{ housingElement.title }</h1>
-                    <h2 className='housing__h2'>{ housingElement.location }</h2>
-                    <section className='tags'>
-                        <Tags tags = { housingElement.tags } />
-                    </section>
-                </div>
-                <div className='stars-host'>
-                    <Stars numberOfStars = { Number(housingElement.rating) } />
-                    <div className='host'>
-                        <p className='value__p font-red'>{ housingElement.host.name }</p>
-                        <img 
-                            src = { housingElement.host.picture } 
-                            className='host-picture' 
-                            alt = 'host picture' />
-                    </div>
+const HousingComponent = ({ housingElement }: { housingElement: HousingType }) => (
+    <>
+        <Slider pictures = { housingElement.pictures } /> 
+        <div className='titles-tags-stars-host'>
+            <div>
+                <h1 className='error-title__h2 housing-title__h1'>{ housingElement.title }</h1>
+                <h2 className='housing__h2'>{ housingElement.location }</h2>
+                <section className='tags'>
+                    <Tags tags = { housingElement.tags } />
+                </section>
+            </div>
+            <div className='stars-host'>
+                <Stars numberOfStars = { Number(housingElement.rating) } />
+                <div className='host'>
+                    <p className='value__p font-red'>{ housingElement.host.name }</p>
+                    <img 
+                        src = { housingElement.host.picture } 
+                        className='host-picture' 
+                        alt = 'host picture' />
                 </div>
             </div>
-            <section className='collapse-container collapse-container-housing'>
-                <Collapse title='Description' content = { housingElement.description } description = { true } />
-                <CollapseContentNode 
-                    title = 'Équipements' 
-                    children = { <Equipments equipments = { housingElement.equipments } /> } />
-            </section>
-        </>
-    );
-};
-
+        </div>
+        <section className='collapse-container collapse-container-housing'>
+            <Collapse titleArgument = 'Description' content = { housingElement.description } description = { true } />
+            <CollapseContentNode 
+                titleArgument = 'Équipements' 
+                children = { <Equipments equipments = { housingElement.equipments } /> } />
+        </section>
+    </>
+);
 export default HousingComponent;

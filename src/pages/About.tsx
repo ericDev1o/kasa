@@ -38,7 +38,7 @@ export default function About() {
                 {values.map(value => (
                     <Collapse 
                         key = { value.id } 
-                        title = { value.title } 
+                        titleArgument = { value.title } 
                         content = { value.content }
                         description = { false } 
                     />

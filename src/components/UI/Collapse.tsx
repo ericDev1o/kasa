@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { MouseEventHandler, useState } from 'react';
 
 /**
  * Each value on the about page has its Collapse.
@@ -11,39 +11,70 @@ import { useState } from 'react';
  *     - the value title and 
  *     - an arrow to display the value's description
  */
-const Collapse = ({ title, content, description }: { title: string, content: string, description: boolean }) => {
-    const [ isOpen, setIsOpen ] = useState(false);
-
-    const toggleCollapse = () => {
-        setIsOpen( prev => ! prev );
-    };
+export default function Collapse ({ 
+    titleArgument, 
+    content, 
+    description 
+    }: { 
+        titleArgument: string, 
+        content: string, 
+        description: boolean 
+    }) 
+{
+    const [ isOpenLocalFunction, setIsOpenLocalFunction ] = useState(false);
+    const toggleCollapseLocalFunction = () => {
+        setIsOpenLocalFunction( prev => ! prev );
+    }
 
     return (
-        <div>
-            <article className = 'collapse' onClick = { toggleCollapse }>
-                <h2 className = 'value__h2'>{ title }</h2>
-                <span className = { `collapse-toggle ${ isOpen ? 'open' : '' }` }>
-                    <i className = 'material-symbols-outlined'>
-                        keyboard_control_key
-                    </i>
-                </span>
-            </article>
-            <p className = { `${ description ? 'description__p' : 'value__p' }${isOpen ? '-open' : '' }` }>
+        <CommonCollapse
+            toggleCollapse = { toggleCollapseLocalFunction }
+            title = { titleArgument }
+            isOpen = { isOpenLocalFunction }
+        >
+            <p className = { `${ description ? 'description__p' : 'value__p' }${isOpenLocalFunction ? '-open' : '' }` }>
                 { content }
             </p>
-        </div>
+        </CommonCollapse>
     );
-};
+}
 
-export const CollapseContentNode = ({ title, children }: { title: string, children: React.ReactNode}) => {
-    const [ isOpen, setIsOpen ] = useState(false);
-
-    const toggleCollapse = () => {
-        setIsOpen( prev => ! prev );
-    };
+export const CollapseContentNode = ({ 
+    titleArgument, 
+    children }: { 
+        titleArgument: string, 
+        children: React.ReactNode
+    }) => 
+{
+    const [ isOpenLocalConst, setIsOpenLocalConst ] = useState(false);
+    const toggleCollapseLocalConst = () => {
+        setIsOpenLocalConst( prev => ! prev );
+    }
 
     return (
-        <div>
+        <CommonCollapse
+            toggleCollapse = { toggleCollapseLocalConst }
+            title = { titleArgument }
+            isOpen = { isOpenLocalConst }
+        >
+            <div className = { `value__div${isOpenLocalConst ? '-open' : '' }` }>
+                { children }
+            </div>
+        </CommonCollapse>
+    );
+}
+
+const CommonCollapse = ({ 
+    toggleCollapse, 
+    title, 
+    isOpen,
+     children }: { 
+        toggleCollapse: MouseEventHandler,
+        title: string,
+        isOpen: boolean,
+        children: React.ReactNode 
+    }) => (
+    <div>
             <article className = 'collapse' onClick = { toggleCollapse }>
                 <h2 className = 'value__h2'>{ title }</h2>
                 <span className = { `collapse-toggle ${ isOpen ? 'open' : '' }` }>
@@ -52,11 +83,6 @@ export const CollapseContentNode = ({ title, children }: { title: string, childr
                     </i>
                 </span>
             </article>
-            <div className = { `value__div${isOpen ? '-open' : '' }` }>
-                { children }
-            </div>
+            { children }
         </div>
-    )
-}
-
-export default Collapse;
+);
