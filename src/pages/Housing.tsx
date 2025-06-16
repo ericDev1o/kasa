@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Layout from '../components/containers/Layout';
-import housingType from '../types/HousingType';
+import housingType from '../types/housingType';
 import HousingComponent from '../components/UI/HousingComponent';
 import housingIdInURLformatChecker from '../helpers/formatChecker';
 
