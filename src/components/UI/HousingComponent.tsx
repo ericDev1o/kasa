@@ -1,37 +1,26 @@
-import HousingType from '../../types/HousingType';
+import housingType from '../../types/HousingType';
 import Collapse from './Collapse';
 import starFull from'/images/star-active.svg';
 import starEmpty from '/images/star-inactive.svg';
 import { useEffect, useState } from 'react';
 
-const Star = ({ isActive }: { isActive: boolean }) => {
-    let starImgURL;
-    if(isActive)
-        starImgURL = starFull;
-    else starImgURL = starEmpty;
-    return (
-        <img
-            className = 'star'
-            src = { starImgURL }
-            alt = 'rating star'
-        />
-    );
-}
+const numberOfStars = 5;
 
-const Stars = ({ numberOfStars }: { numberOfStars: number}) => {
-    const starsActive = Array.from({ length: numberOfStars },
-        (_, i: number) => <Star key = { i } isActive = { true } />
-    );
-    const starsInactive = Array.from({ length: 5 - numberOfStars },
-        (_, i: number) => <Star key = { 5 - i } isActive = { false } />
-    );
-    const allStars = starsActive.concat(starsInactive);
+const stars = (numberOfActiveStars: number, numberOfInactiveStars: number) => 
+{
+    let stars: Array<string> = Array.prototype;
 
-    return (
-        <div className='stars'>
-            { allStars }
-        </div>
-    );
+    for( let j = 0; j < numberOfActiveStars; j++)
+    {
+        stars.push(starFull);
+    }
+
+    for( let j = 5 - numberOfInactiveStars; j += 1; j++)
+    {
+        stars.push(starEmpty);
+    }
+
+    return <div className='stars'> { stars }</div>;
 }
 
 const Tag = ({ tagElement }: { tagElement: string }) => {
@@ -130,7 +119,10 @@ const Slider = ({ pictures }: { pictures: string[] }) => {
  * @param housingElement a type corresponding to backend API housing content
  * @returns a housing page content with newlined equipments content in the Collapse
  */
-const HousingComponent = ({ housingElement }: { housingElement: HousingType }) => (
+export default HousingComponent (housingElement: housingType) => {
+    const numberOfActiveStars = Number(housingElement.rating);
+
+    return (
     <>
         <Slider pictures = { housingElement.pictures } /> 
         <div className='titles-tags-stars-host'>
@@ -142,7 +134,7 @@ const HousingComponent = ({ housingElement }: { housingElement: HousingType }) =
                 </section>
             </div>
             <div className='stars-host'>
-                <Stars numberOfStars = { Number(housingElement.rating) } />
+                { stars(numberOfActiveStars) }
                 <div className='host'>
                     <p className='value__p font-red'>{ housingElement.host.name }</p>
                     <img 
@@ -165,5 +157,5 @@ const HousingComponent = ({ housingElement }: { housingElement: HousingType }) =
              />
         </section>
     </>
-);
-export default HousingComponent;
+    )
+}

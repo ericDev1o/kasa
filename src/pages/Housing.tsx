@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Layout from '../components/containers/Layout';
-import HousingType from '../types/HousingType';
+import housingType from '../types/HousingType';
 import HousingComponent from '../components/UI/HousingComponent';
 import housingIdInURLformatChecker from '../helpers/formatChecker';
 
-let housing: HousingType;
+let housing: housingType;
 
 /**
  * 
@@ -83,11 +83,13 @@ export default function Housing() {
     }, [housingId, navigate]);
 
     if (loading) {
-        return <Layout page = { page }>
-            <h1 className='error-title__h1 margin-bottom'>
-                Chargement en cours...
-            </h1>
-        </Layout>;
+        return (
+            <Layout page = { page }>
+                <h1 className='error-title__h1 margin-bottom'>
+                    Chargement en cours...
+                </h1>
+            </Layout>
+        );
     }
     else if(! error)
         return(
