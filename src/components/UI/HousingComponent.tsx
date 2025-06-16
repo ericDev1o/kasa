@@ -2,7 +2,6 @@ import HousingType from '../../types/HousingType';
 import Collapse from './Collapse';
 import starFull from'/images/star-active.svg';
 import starEmpty from '/images/star-inactive.svg';
-import { CollapseContentNode } from '../UI/Collapse';
 import { useEffect, useState } from 'react';
 
 const Star = ({ isActive }: { isActive: boolean }) => {
@@ -154,10 +153,16 @@ const HousingComponent = ({ housingElement }: { housingElement: HousingType }) =
             </div>
         </div>
         <section className='collapse-container collapse-container-housing'>
-            <Collapse titleArgument = 'Description' content = { housingElement.description } description = { true } />
-            <CollapseContentNode 
+            <Collapse 
+                titleArgument = 'Description' 
+                children = { housingElement.description } 
+                description = { true }
+             />
+            <Collapse
                 titleArgument = 'Équipements' 
-                children = { <Equipments equipments = { housingElement.equipments } /> } />
+                children = { <Equipments equipments = { housingElement.equipments } /> }
+                description = { false }
+             />
         </section>
     </>
 );

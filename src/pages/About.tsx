@@ -35,14 +35,14 @@ export default function About() {
             <Banner banner = { bannerContent } />
             <h1 className='headings-map-compliance'>À propos</h1>
             <section className='collapse-container'>
-                {values.map(value => (
+                { values.map(value => (
                     <Collapse 
                         key = { value.id } 
                         titleArgument = { value.title } 
-                        content = { value.content }
                         description = { false } 
+                        children = { value.content }
                     />
-                ))}
+                )) }
             </section>
         </Layout>
     );
