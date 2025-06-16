@@ -22,7 +22,8 @@ let housing: HousingType;
  *         a) lower case letters
  *         b) digits
  */
-const Housing = () => {
+export default function Housing() {
+    const page = 'housing';
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
 
@@ -82,7 +83,7 @@ const Housing = () => {
     }, [housingId, navigate]);
 
     if (loading) {
-        return <Layout page = 'housing'>
+        return <Layout page = { page }>
             <h1 className='error-title__h1 margin-bottom'>
                 Chargement en cours...
             </h1>
@@ -90,10 +91,8 @@ const Housing = () => {
     }
     else if(! error)
         return(
-            <Layout page = 'housing'>
+            <Layout page = { page }>
                 <HousingComponent housingElement = { housing } />
             </Layout>
         );
 };
-
-export default Housing;
