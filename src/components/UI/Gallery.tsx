@@ -15,7 +15,7 @@ interface Logement {
  * props.
  * @returns the cards with their call to click titled cover
  */
-function Gallery() {  
+export default function Gallery() {  
     const [logements, setLogements] = useState<Logement[]>([]);
 
     useEffect(() => {
@@ -47,5 +47,3 @@ function Gallery() {
         </section>
     );
 }
-
-export default Gallery;

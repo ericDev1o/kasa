@@ -5,58 +5,47 @@ import { useState } from 'react';
  * Depending on its state open or closed,
  * it respectively displays or hides the description.
  * @param title : a value f.ex. Respect or Service
- * @param content : value's description
  * @param description : true on housing page
+ * @param children : value or housing description
  * @returns the red rectangle with 
  *     - the value title and 
  *     - an arrow to display the value's description
  */
-const Collapse = ({ title, content, description }: { title: string, content: string, description: boolean }) => {
+export default function Collapse ({ 
+    titleArgument, 
+    description,
+    children
+    }: { 
+        titleArgument: string, 
+        description: boolean,
+        children: React.ReactNode
+    }) 
+{
     const [ isOpen, setIsOpen ] = useState(false);
-
     const toggleCollapse = () => {
         setIsOpen( prev => ! prev );
-    };
+    }
 
     return (
         <div>
-            <article className='collapse' onClick={ toggleCollapse }>
-                <h2 className='value__h2'>{ title }</h2>
-                <span className={ `collapse-toggle ${ isOpen ? 'open' : '' }` }>
-                    <i className='material-symbols-outlined'>
+            <article className = 'collapse' onClick = { toggleCollapse }>
+                <h2 className = 'value__h2'>{ titleArgument }</h2>
+                <span className = { `collapse-toggle ${ isOpen ? 'open' : '' }` }>
+                    <i className = 'material-symbols-outlined'>
                         keyboard_control_key
                     </i>
                 </span>
             </article>
-            <p className={ `${ description ? 'description__p' : 'value__p' }${isOpen ? '-open' : '' }` }>
-                { content }
-            </p>
+            { description 
+                ? 
+                <p className = { `description__p${ isOpen ? '-open' : '' }` }>
+                    { children }
+                </p>
+                :
+                <div className = { `value__div${ isOpen ? '-open' : '' }` }>
+                    { children }
+                </div>
+            }
         </div>
     );
-};
-
-export const CollapseContentNode = ({ title, children }: { title: string, children: React.ReactNode}) => {
-    const [ isOpen, setIsOpen ] = useState(false);
-
-    const toggleCollapse = () => {
-        setIsOpen( prev => ! prev );
-    };
-
-    return (
-        <div>
-            <article className='collapse' onClick={ toggleCollapse }>
-                <h2 className='value__h2'>{ title }</h2>
-                <span className={ `collapse-toggle ${ isOpen ? 'open' : '' }` }>
-                    <i className='material-symbols-outlined'>
-                        keyboard_control_key
-                    </i>
-                </span>
-            </article>
-            <div className = { `value__div${isOpen ? '-open' : '' }` }>
-                { children }
-            </div>
-        </div>
-    )
 }
-
-export default Collapse;

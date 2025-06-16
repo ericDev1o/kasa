@@ -1,29 +1,4 @@
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateY(20px) scale(0.8);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
-}
-
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 0.6s forwards;
-    animation-timing-function: ease-in-out;
-}
-
-.slide-zoom {
-    animation: slideIn 0.6s forwards;
-}
+@import './animations/slider.scss';
 
 .margin-bottom {
     margin-bottom: 150px;
@@ -138,13 +113,6 @@
     }
 }
 
-.collapse-container-housing {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-    margin-top: 1px;
-}
-
 @media (min-width: 1024px) {
     .cover {
         &-container {
@@ -208,15 +176,5 @@
                 font-size: $font-size-M;
             }
         }
-    }
-}
-
-@media (prefers-reduced-motion) {
-    .fade-in {
-    animation: fadeIn 6s forwards;
-}
-
-    .slide-zoom {
-        animation: slideIn 6s forwards;
     }
 }

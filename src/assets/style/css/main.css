@@ -208,8 +208,7 @@ header nav a {
 }
 .banner-title__h1 {
   position: absolute;
-  bottom: 20px;
-  left: 4.26667vw;
+  left: 4.27vw;
 }
 
 @media (max-width: 430px) {
@@ -227,7 +226,7 @@ header nav a {
     position: relative;
     white-space: nowrap;
     bottom: 413px;
-    left: 250px;
+    left: 0;
   }
 }
 .card {
@@ -282,11 +281,18 @@ header nav a {
   }
 }
 .collapse-container {
-  margin-top: 19px;
-  margin-bottom: 25px;
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px 0;
+}
+.collapse-container-housing {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  margin-top: 0;
+  gap: 0;
 }
 .collapse-container .collapse {
   cursor: pointer;
@@ -327,7 +333,6 @@ header nav a {
   border-radius: 5px;
   margin-block-start: 0;
   margin-block-end: 0;
-  margin-bottom: 20px;
 }
 .collapse-container .value__p-open p,
 .collapse-container .value__div-open p,
@@ -335,11 +340,14 @@ header nav a {
   margin-block-start: 0;
   margin-block-end: 0;
 }
+.collapse-container .description__p-open {
+  margin-bottom: 20px;
+}
 
 @media (min-width: 1024px) {
   .collapse-container {
-    margin-top: 38px;
-    margin-bottom: 0;
+    margin: 38px 0;
+    gap: 28px 0;
     padding: 0 8.75%;
   }
   .collapse-container .collapse {
@@ -352,8 +360,10 @@ header nav a {
   .collapse-container .value__p-open,
   .collapse-container .value__div-open,
   .collapse-container .description__p-open {
-    margin-bottom: 38px;
     padding: 20px;
+  }
+  .collapse-container .description__p-open {
+    margin-bottom: 28px;
   }
 }
 @media (prefers-reduced-motion) {
@@ -361,7 +371,8 @@ header nav a {
     transition: transform 6s ease-in-out;
   }
   .collapse-container .value__p,
-  .collapse-container .value__div {
+  .collapse-container .value__div,
+  .collapse-container .description__p {
     transition: max-height 6s ease-in-out;
   }
 }
@@ -390,6 +401,14 @@ header nav a {
   animation: slideIn 0.6s forwards;
 }
 
+@media (prefers-reduced-motion) {
+  .fade-in {
+    animation: fadeIn 6s forwards;
+  }
+  .slide-zoom {
+    animation: slideIn 6s forwards;
+  }
+}
 .margin-bottom {
   margin-bottom: 150px;
 }
@@ -489,13 +508,6 @@ header nav a {
   border-radius: 50%;
 }
 
-.collapse-container-housing {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-  margin-top: 1px;
-}
-
 @media (min-width: 1024px) {
   .cover-container {
     border-radius: 25px;
@@ -537,14 +549,6 @@ header nav a {
   }
   .collapse-container-housing .collapse .value__h2 {
     font-size: 1.125rem;
-  }
-}
-@media (prefers-reduced-motion) {
-  .fade-in {
-    animation: fadeIn 6s forwards;
-  }
-  .slide-zoom {
-    animation: slideIn 6s forwards;
   }
 }
 footer {

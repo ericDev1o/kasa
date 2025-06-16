@@ -3,9 +3,10 @@ import Banner from '../components/UI/Banner';
 import Collapse from '../components/UI/Collapse';
 import bannerBackground from '/images/ba_bckgrd.jpg';
 
-function About() {
+export default function About() {
     const title = '';
-    const bannerContent = {...{ bannerBackground }, ...{ title }};
+    const page = 'about';
+    const bannerContent = { bannerBackground , title ,  page };
     const values = [
         {
             id: 1, 
@@ -30,21 +31,19 @@ function About() {
     ];
     
     return (
-        <Layout page = 'about'>
-            <Banner banner = { bannerContent } page = 'about' />
+        <Layout page = { page }>
+            <Banner banner = { bannerContent } />
             <h1 className='headings-map-compliance'>À propos</h1>
             <section className='collapse-container'>
-                {values.map(value => (
+                { values.map(value => (
                     <Collapse 
                         key = { value.id } 
-                        title = { value.title } 
-                        content = { value.content }
+                        titleArgument = { value.title } 
                         description = { false } 
+                        children = { value.content }
                     />
-                ))}
+                )) }
             </section>
         </Layout>
     );
 }
-
-export default About;
