@@ -1,4 +1,4 @@
-import { useState, MouseEventHandler } from 'react';
+import { useState } from 'react';
 
 /**
  * Each value on the about page has its Collapse.
