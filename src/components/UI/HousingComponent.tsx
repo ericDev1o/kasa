@@ -36,42 +36,34 @@ const Stars = (
     );
 }
 
-const Tag = ({ tagElement }: { tagElement: string }) => {
-    return (
-        <article className='tag'>
-            <p className='tag__p'>{ tagElement }</p>
-        </article>
-    )
-}
+const Tag = ({ tagElement }: { tagElement: string }) => (
+    <article className='tag'>
+        <p className='tag__p'>{ tagElement }</p>
+    </article>
+);
 
-const Tags = ({ tags }: { tags: string[] }) => {
-    return (
-        <>
-            { tags.map(tag => (
-                 <Tag key = { tag } tagElement= { tag } />
-            ))
-        }
-        </>
-    );
-}
+const Tags = ({ tags }: { tags: string[] }) => (
+    <>
+        { tags.map(tag => (
+                <Tag key = { tag } tagElement= { tag } />
+        ))
+    }
+    </>
+);
 
-const Equipment = ({ equipmentElement }: { equipmentElement: string }) => {
-    return (
-        <p className='equipment__p'>
-            { equipmentElement }
-        </p>
-    )
-}
+const Equipment = ({ equipmentElement }: { equipmentElement: string }) => (
+    <p className='equipment__p'>
+        { equipmentElement }
+    </p>
+);
 
-const Equipments = ({ equipments }: { equipments: string[] }) => {
-    return (
-        <>
-            { equipments.map(equipment => (
-                <Equipment key= { equipment } equipmentElement = { equipment } />
-            ))}
-        </>
-    )
-}
+const Equipments = ({ equipments }: { equipments: string[] }) => (
+    <>
+        { equipments.map(equipment => (
+            <Equipment key= { equipment } equipmentElement = { equipment } />
+        ))}
+    </>
+);
 
 const Slider = ({ pictures }: { pictures: string[]}) => 
 {
