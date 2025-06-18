@@ -8,7 +8,6 @@ import housingIdInURLformatChecker from '../helpers/formatChecker';
 let housing: housingType;
 
 /**
- * 
  * @returns the housing page of requested housingId.
  * It must exist in 
  *     1) the backend API or here simple
@@ -65,15 +64,7 @@ export default function Housing() {
                     setError("Erreur à la récupération de l'identifiant logement depuis l'URL");
                 }
             } catch (error) {
-                if(
-                    error instanceof ReferenceError ||
-                    error instanceof TypeError ||
-                    error instanceof SyntaxError ||
-                    error instanceof Error
-                ) {
-                    navigate('/error');
-                    setError(error.message);
-                }
+                navigate('/error');
             } finally {
                 setLoading(false);
             }

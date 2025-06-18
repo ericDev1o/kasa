@@ -80,13 +80,13 @@ const Slider = ({ pictures }: { pictures: string[]}) =>
             const nextSlide = () => {
                 setFadeClass('');
                 setSlideClass('');
-                setCurrentIndex((previndex) => (previndex + 1) % numberOfPictures);
+                setCurrentIndex(previndex => (previndex + 1) % numberOfPictures);
             }
 
             const prevSlide = () => {
                 setFadeClass('');
                 setSlideClass('');
-                setCurrentIndex((prevIndex) => (prevIndex - 1 + numberOfPictures) % numberOfPictures);
+                setCurrentIndex(prevIndex => (prevIndex - 1 + numberOfPictures) % numberOfPictures);
             }
 
             useEffect(() => {
@@ -134,7 +134,6 @@ const Slider = ({ pictures }: { pictures: string[]}) =>
 }
 
 /**
- * 
  * @param housingElement a type corresponding to backend API housing content
  * @returns a housing page content with newlined equipments content in the Collapse
  */

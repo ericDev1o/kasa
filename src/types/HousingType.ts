@@ -1,4 +1,4 @@
- type housingType = {
+type housingType = {
     title: string,
     cover: string,
     pictures: string[],
