@@ -24,10 +24,10 @@ export default async function housingFetcher_all(housingsURL: string) {
  * ./formatChecker.ts
  * @returns the found housing see ../types/housingType.ts
  */
-export async function housingFetcher_id(housingsURL: string, id: string) {
+export async function housingFetcher_id(housingsURL: string, idArgument: string) {
     const data = await housingFetcher_all(housingsURL);
 
-    const housing = data.find((item: { id: string }) => item.id ===  id );
+    const housing = data.find((item: { id: string }) => item.id ===  idArgument );
     
     if (! housing) return `erreur: le logement n'a pas été trouvé. 
             Il doit correspondre à un identifant existant de logement connu de Kasa.

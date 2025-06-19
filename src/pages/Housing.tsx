@@ -4,6 +4,7 @@ import Layout from '../components/containers/Layout';
 import housingType from '../types/housingType';
 import HousingComponent from '../components/UI/HousingComponent';
 import housingIdInURLformatChecker from '../helpers/formatChecker';
+import { housingFetcher_id } from '../helpers/housingFetcher';
 
 let housing: housingType;
 
@@ -40,25 +41,7 @@ export default function Housing() {
                     Pourriez-vous s'il vous plaît rectifier et recommencer?`);
                 }
                 else if (housingId) {
-                    const response = await fetch("/data/logements.json");
-                    if ( ! response.ok ) {
-                        navigate('/error');
-                        setError(`Les données n'ont pu être obtenues.
-                            Vérifiez 
-                                1) l'URL si vous l'avez tapée, 
-                                2) votre connexion réseau ou 
-                                3) réessayez plus tard s'il vous plaît.`
-                        );
-                    }
-                    const data = await response.json();
-                    housing = data.find((item: { id: string }) => item.id ===  housingId );
-                    if (! housing) {
-                        navigate('/error');
-                        setError(`Le logement n'a pas été trouvé. 
-                            Il doit correspondre à un identifant existant de logement connu de Kasa.
-                            Pourriez-vous vérifier l'identifiant et recommencer s'il vous plaît?`
-                        );
-                    }
+                    housing = await housingFetcher_id('/data/logements.json', housingId);
                 } else if(! housingId) {
                     navigate('/error');
                     setError("Erreur à la récupération de l'identifiant logement depuis l'URL");
