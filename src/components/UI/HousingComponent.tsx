@@ -1,9 +1,10 @@
+import { useEffect, useState, ReactNode } from 'react';
+import { useNavigate } from 'react-router-dom';
 import housingType from '../../types/housingType';
 import Collapse from './Collapse';
 import starFull from '/images/star-active.svg';
 import starEmpty from '/images/star-inactive.svg';
-import { useEffect, useState, ReactNode } from 'react';
-import { useNavigate } from 'react-router-dom';
+import housingRatingChecker_isOk from '../../helpers/housingChecker';
 
 const numberOfStars = 5;
 
@@ -15,25 +16,38 @@ const Star = ({ imgURI }: { imgURI: string }) => (
     />
 );
 
+/**
+ * @param numberOfActiveStars: after rating check it is 
+ * -> either the rating or 
+ * -> an error message
+ * @returns 
+ * -> 1 or ... or 5
+ * -> 'erreur de donnée: la note doit être un chiffre de 1 à 5 inclus'
+ * i.e. 'data error: rating must be a digit between 1 and 5 included'
+ */
 const Stars = (
-    { numberOfActiveStars }: { numberOfActiveStars: number }
+    { numberOfActiveStars }: { numberOfActiveStars: number | string }
 ) => 
 {
-    let stars: Array<ReactNode> = new Array<ReactNode>(5);
+    if(typeof numberOfActiveStars == 'string')
+        return <p className='stars-rating-error'>{ numberOfActiveStars }</p>
+    else {
+        let stars: Array<ReactNode> = new Array<ReactNode>(5);
 
-    for( let j = 0; j < numberOfActiveStars; j++)
-    {
-        stars.push(<Star key = { j } imgURI = { starFull } />);
+        for( let j = 0; j < numberOfActiveStars; j++)
+        {
+            stars.push(<Star key = { j } imgURI = { starFull } />);
+        }
+
+        for( let j = 0; j < numberOfStars - numberOfActiveStars; j++)
+        {
+            stars.push(<Star key = { numberOfStars - j } imgURI = { starEmpty } />);
+        }
+
+        return (
+            <div className='stars'>{ stars }</div>
+        );
     }
-
-    for( let j = 0; j < numberOfStars - numberOfActiveStars; j++)
-    {
-        stars.push(<Star key = { numberOfStars - j } imgURI = { starEmpty } />);
-    }
-
-    return (
-        <div className='stars'>{ stars }</div>
-    );
 }
 
 const Tag = ({ tagElement }: { tagElement: string }) => (
@@ -137,43 +151,47 @@ const Slider = ({ pictures }: { pictures: string[]}) =>
  * @param housingElement a type corresponding to backend API housing content
  * @returns a housing page content with newlined equipments content in the Collapse
  */
-export default function HousingComponent ({ housingElement }: { housingElement: housingType }) {
-    const numberOfActiveStars = Number(housingElement.rating);
+export default function HousingComponent ({ housingElement }: { housingElement: housingType }) 
+    {
+        let numberOfActiveStarsAfterCheck;
+        if(housingRatingChecker_isOk(housingElement))
+            numberOfActiveStarsAfterCheck = Number(housingElement.rating);
+        else numberOfActiveStarsAfterCheck = 'erreur de donnée: la note doit être un chiffre de 1 à 5';
 
-    return (
-    <>
-        <Slider pictures = { housingElement.pictures } /> 
-        <div className='titles-tags-stars-host'>
-            <div>
-                <h1 className='error-title__h2 housing-title__h1'>{ housingElement.title }</h1>
-                <h2 className='housing__h2'>{ housingElement.location }</h2>
-                <section className='tags'>
-                    <Tags tags = { housingElement.tags } />
-                </section>
-            </div>
-            <div className='stars-host'>
-                <Stars numberOfActiveStars = { numberOfActiveStars} />
-                <div className='host'>
-                    { <p className='value__p font-red'>{ housingElement.host.name }</p> }
-                    <img 
-                        src = { housingElement.host.picture } 
-                        className='host-picture' 
-                        alt = 'host picture' />
+        return (
+        <>
+            <Slider pictures = { housingElement.pictures } /> 
+            <div className='titles-tags-stars-host'>
+                <div>
+                    <h1 className='error-title__h2 housing-title__h1'>{ housingElement.title }</h1>
+                    <h2 className='housing__h2'>{ housingElement.location }</h2>
+                    <section className='tags'>
+                        <Tags tags = { housingElement.tags } />
+                    </section>
+                </div>
+                <div className='stars-host'>
+                    <Stars numberOfActiveStars = { numberOfActiveStarsAfterCheck} />
+                    <div className='host'>
+                        { <p className='value__p font-red'>{ housingElement.host.name }</p> }
+                        <img 
+                            src = { housingElement.host.picture } 
+                            className='host-picture' 
+                            alt = 'host picture' />
+                    </div>
                 </div>
             </div>
-        </div>
-        <section className='collapse-container collapse-container-housing'>
-            <Collapse 
-                titleArgument = 'Description' 
-                children = { housingElement.description } 
-                description = { true }
-             />
-            <Collapse
-                titleArgument = 'Équipements' 
-                children = { <Equipments equipments = { housingElement.equipments } /> }
-                description = { false }
-             />
-        </section>
-    </>
-    )
+            <section className='collapse-container collapse-container-housing'>
+                <Collapse 
+                    titleArgument = 'Description' 
+                    children = { housingElement.description } 
+                    description = { true }
+                />
+                <Collapse
+                    titleArgument = 'Équipements' 
+                    children = { <Equipments equipments = { housingElement.equipments } /> }
+                    description = { false }
+                />
+            </section>
+        </>
+        );
 }
