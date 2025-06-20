@@ -1,5 +1,4 @@
 /**
- * 
  * @param housingId housing id in URL for example https://host:port/housing/id
  * @returns false if the format is not a valid housing id.
  * It must be exactly 8 caracters long including only lower case letters

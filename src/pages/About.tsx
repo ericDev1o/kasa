@@ -4,9 +4,8 @@ import Collapse from '../components/UI/Collapse';
 import bannerBackground from '/images/ba_bckgrd.jpg';
 
 export default function About() {
-    const title = '';
     const page = 'about';
-    const bannerContent = { bannerBackground , title ,  page };
+    const bannerContent = { bannerBackground ,  page };
     const values = [
         {
             id: 1, 
