@@ -491,7 +491,10 @@ header nav a {
   align-items: center;
   justify-content: space-between;
 }
-.titles-tags-stars-host .stars-host .star {
+.titles-tags-stars-host .stars-host .stars {
+  max-width: 60%;
+}
+.titles-tags-stars-host .stars-host .stars .star {
   max-width: 18px;
 }
 .titles-tags-stars-host .stars-host .host {
@@ -534,7 +537,13 @@ header nav a {
     padding-top: 11px;
     padding-bottom: 25px;
   }
-  .titles-tags-stars-host .stars-host .star {
+  .titles-tags-stars-host .stars-host .stars-rating-error {
+    max-width: 189px;
+  }
+  .titles-tags-stars-host .stars-host .stars {
+    max-width: 100%;
+  }
+  .titles-tags-stars-host .stars-host .stars .star {
     max-width: 36px;
   }
   .titles-tags-stars-host .stars-host .host-picture {

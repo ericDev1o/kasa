@@ -1,4 +1,4 @@
-type HousingType = {
+type housingType = {
     title: string,
     cover: string,
     pictures: string[],
@@ -11,6 +11,6 @@ type HousingType = {
     location: string,
     equipments: string[],
     tags: string[]
-}
+};
 
-export default HousingType;
+export default housingType;

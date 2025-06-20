@@ -1,3 +1,9 @@
+type bannerContent = {
+    bannerBackground: string;
+    page: string;
+    title?: string;
+};
+
 /**
  * The banner is the image between
  *     1) header &
@@ -17,37 +23,21 @@
  */
 const Banner = ({ banner }: { banner: bannerContent }) => (
     <>
-        { banner.page === 'home' 
-        ?
-        <section className = 'banner banner-home'>
-            <CommonBanner banner = { banner } />
-            <h1 className = 'banner-title__h1'>
-                { banner.title }
-            </h1>
+        <section className = { `banner banner-${ banner.page }` }>
+            <img
+                className = 'banner-image'
+                src = { banner.bannerBackground }
+                aria-hidden = 'true'
+                alt = 'falaises'
+            />
+            { 
+                banner.title && 
+                <h1 className = 'banner-title__h1'>
+                    { banner.title } 
+                </h1>
+            }
         </section> 
-        :
-        <section className = 'banner banner-about'>
-            <CommonBanner banner = { banner } />
-        </section>
-        }
     </>
 );
 
 export default Banner;
-
-type bannerContent = {
-    bannerBackground: string;
-    title: string;
-    page: string;
-};
-
-const CommonBanner = ({ banner }: { banner: bannerContent }) => (
-    <div>
-        <img
-            className = 'banner-image'
-            src = { banner.bannerBackground }
-            aria-hidden = 'true'
-            alt = 'falaises'
-        />
-    </div>
-);
