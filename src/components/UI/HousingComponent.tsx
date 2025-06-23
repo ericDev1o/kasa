@@ -4,7 +4,7 @@ import housingType from '../../types/housingType';
 import Collapse from './Collapse';
 import starFull from '/images/star-active.svg';
 import starEmpty from '/images/star-inactive.svg';
-import housingRatingChecker_isOk from '../../helpers/housingChecker';
+import housingRatingChecker_toNumber from '../../helpers/housingChecker';
 
 const numberOfStars = 5;
 
@@ -19,11 +19,10 @@ const Star = ({ imgURI }: { imgURI: string }) => (
 /**
  * @param numberOfActiveStars: after rating check it is 
  * -> either the rating or 
- * -> an error message
+ * -> nothing
  * @returns 
  * -> 1 or ... or 5
- * -> 'erreur de donnée: la note doit être un chiffre de 1 à 5 inclus'
- * i.e. 'data error: rating must be a digit between 1 and 5 included'
+ * -> ''
  */
 const Stars = (
     { numberOfActiveStars }: { numberOfActiveStars: number | string }
@@ -153,10 +152,7 @@ const Slider = ({ pictures }: { pictures: string[]}) =>
  */
 export default function HousingComponent ({ housingElement }: { housingElement: housingType }) 
     {
-        let numberOfActiveStarsAfterCheck;
-        if(housingRatingChecker_isOk(housingElement))
-            numberOfActiveStarsAfterCheck = Number(housingElement.rating);
-        else numberOfActiveStarsAfterCheck = 'erreur de donnée: la note doit être un chiffre de 1 à 5';
+        let numberOfActiveStarsAfterCheck = housingRatingChecker_toNumber(housingElement);
 
         return (
         <>

@@ -2,22 +2,28 @@ import housingType from "../types/housingType";
 
 /**
  * @param housing see ../types/housingType.ts
- * @returns false if the lazy checked rating isn't a number between 1 and 5,
- * else true it is Ok.
+ * @returns 
+ * => the rating as a number if the checked rating is a number between 1 and 5 as expected.
+ * => else an empty string to display nothing. No error, no default rating.
  */
-export default function housingRatingChecker_isOk(housing: housingType) {
+export default function housingRatingChecker_toNumber(housing: housingType) {
     try {
-        const ratingNumber = Number(housing.rating);
+        if(housing.rating != undefined && 
+            housing.rating != null && 
+            housing.rating !== '' ) {
+            const ratingNumber = Number(housing.rating);
 
-        if( typeof ratingNumber == typeof Number && ratingNumber >= 1 && ratingNumber <= 5)
-            return true;
-        return false;
+            if(ratingNumber >= 1 && ratingNumber <= 5)
+                return ratingNumber;
+            else return '';
+        }
+        else return '';
     }
     catch(error){
-        const castingError = 'API rating must be a number.';
+        const conversionError = 'Rating must be a number.';
 
         if(typeof error == typeof TypeError)
-            throw new TypeError(castingError);
-        else throw new Error(`${ castingError } Please finally check root error message and stack trace.`)
+            throw new TypeError(conversionError);
+        else throw new Error(`${ conversionError } Please check error message and stack trace.`);
     }
 }
