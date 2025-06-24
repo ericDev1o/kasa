@@ -33,7 +33,7 @@ export default function About() {
         <Layout page = { page }>
             <Banner banner = { bannerContent } />
             <h1 className='headings-map-compliance'>À propos</h1>
-            <section className='collapse-container'>
+            <section className='collapse-container collapse-container-about'>
                 { values.map(value => (
                     <Collapse 
                         key = { value.id } 

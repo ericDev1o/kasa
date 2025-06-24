@@ -281,18 +281,17 @@ header nav a {
   }
 }
 .collapse-container {
-  margin: 20px 0;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px 0;
 }
 .collapse-container-housing {
   display: flex;
   width: 100%;
   align-items: stretch;
   margin-top: 0;
-  gap: 0;
+  margin-bottom: 20px;
 }
 .collapse-container .collapse {
   cursor: pointer;
@@ -346,9 +345,10 @@ header nav a {
 
 @media (min-width: 1024px) {
   .collapse-container {
-    margin: 38px 0;
-    gap: 28px 0;
     padding: 0 8.75%;
+  }
+  .collapse-container-about {
+    margin-top: 38px;
   }
   .collapse-container .collapse {
     max-width: 1023px;
@@ -362,7 +362,8 @@ header nav a {
   .collapse-container .description__p-open {
     padding: 20px;
   }
-  .collapse-container .description__p-open {
+  .collapse-container .description__p-open,
+  .collapse-container .value__div-open {
     margin-bottom: 28px;
   }
 }
