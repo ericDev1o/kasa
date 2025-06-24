@@ -559,6 +559,9 @@ header nav a {
     padding: 0;
     margin-bottom: 14px;
   }
+  .collapse-container-housing .collapse {
+    border-radius: 10px;
+  }
   .collapse-container-housing .collapse .value__h2 {
     font-size: 1.125rem;
   }
