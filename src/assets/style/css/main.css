@@ -15,34 +15,34 @@
 }
 
 .error-title__h1 {
-  font-size: 6rem;
+  font-size: 96px;
 }
 
 .banner-title__h1 {
-  font-size: 1.5rem;
+  font-size: 24px;
 }
 
 .card-title__h2, .housing-title__h1, .error-title-size__h2 {
-  font-size: 1.125rem;
+  font-size: 18px;
 }
 
 .housing__h2,
 .equipment__p,
 .description__p-open {
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 .value__h2 {
-  font-size: 0.8125rem;
+  font-size: 13px;
 }
 
 .value__p, p,
 .header__a {
-  font-size: 0.75rem;
+  font-size: 12px;
 }
 
 .tag__p {
-  font-size: 0.625rem;
+  font-size: 10px;
 }
 
 .header__a, .error__a {
@@ -119,16 +119,16 @@ footer {
 
 @media (min-width: 1024px) {
   .banner-title__h1 {
-    font-size: 3rem;
+    font-size: 48px;
   }
   .error-title__h1 {
-    font-size: 18rem;
+    font-size: 288px;
   }
   .error-title__h2 {
-    font-size: 2.25rem;
+    font-size: 36px;
   }
   .error__a {
-    font-size: 1.125rem;
+    font-size: 18px;
   }
   .housing-title__h1 {
     margin-top: 31px;
@@ -137,17 +137,17 @@ footer {
   .header__a,
   .value__h2,
   p {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
   .value__p,
   .housing__h2,
   .equipment__p,
   .description__p-open,
   p {
-    font-size: 1.125rem;
+    font-size: 18px;
   }
   .tag__p {
-    font-size: 0.875rem;
+    font-size: 14px;
   }
 }
 header {
@@ -281,18 +281,17 @@ header nav a {
   }
 }
 .collapse-container {
-  margin: 20px 0;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px 0;
 }
 .collapse-container-housing {
   display: flex;
   width: 100%;
   align-items: stretch;
   margin-top: 0;
-  gap: 0;
+  margin-bottom: 20px;
 }
 .collapse-container .collapse {
   cursor: pointer;
@@ -346,9 +345,10 @@ header nav a {
 
 @media (min-width: 1024px) {
   .collapse-container {
-    margin: 38px 0;
-    gap: 28px 0;
     padding: 0 8.75%;
+  }
+  .collapse-container-about {
+    margin-top: 38px;
   }
   .collapse-container .collapse {
     max-width: 1023px;
@@ -362,7 +362,8 @@ header nav a {
   .collapse-container .description__p-open {
     padding: 20px;
   }
-  .collapse-container .description__p-open {
+  .collapse-container .description__p-open,
+  .collapse-container .value__div-open {
     margin-bottom: 28px;
   }
 }
@@ -473,18 +474,21 @@ header nav a {
   flex-direction: column;
   justify-content: space-between;
 }
-.titles-tags-stars-host .tags {
+.titles-tags-stars-host .titles-tags {
+  max-width: 80%;
+}
+.titles-tags-stars-host .titles-tags .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
   margin-bottom: 5px;
 }
-.titles-tags-stars-host .tags .tag {
+.titles-tags-stars-host .titles-tags .tags .tag {
+  max-height: 18px;
   background-color: #ff6060;
   border-radius: 5px;
-  padding: 2px 30px 1px 30px;
-  max-height: 18px;
+  padding: 3px 28px 2px 26px;
 }
 .titles-tags-stars-host .stars-host {
   display: flex;
@@ -496,6 +500,7 @@ header nav a {
 }
 .titles-tags-stars-host .stars-host .stars .star {
   max-width: 18px;
+  overflow: auto;
 }
 .titles-tags-stars-host .stars-host .host {
   display: flex;
@@ -525,20 +530,19 @@ header nav a {
   .titles-tags-stars-host {
     flex-direction: row;
   }
-  .titles-tags-stars-host .tags {
+  .titles-tags-stars-host .titles-tags .tags {
     margin-top: 17px;
     margin-bottom: 25px;
   }
-  .titles-tags-stars-host .tags .tag {
+  .titles-tags-stars-host .titles-tags .tags .tag {
     max-height: 25px;
+    border-radius: 10px;
+    padding: 3px 37px 2px 36px;
   }
   .titles-tags-stars-host .stars-host {
     flex-direction: column-reverse;
     padding-top: 11px;
     padding-bottom: 25px;
-  }
-  .titles-tags-stars-host .stars-host .stars-rating-error {
-    max-width: 189px;
   }
   .titles-tags-stars-host .stars-host .stars {
     max-width: 100%;
@@ -556,8 +560,11 @@ header nav a {
     padding: 0;
     margin-bottom: 14px;
   }
+  .collapse-container-housing .collapse {
+    border-radius: 10px;
+  }
   .collapse-container-housing .collapse .value__h2 {
-    font-size: 1.125rem;
+    font-size: 18px;
   }
 }
 footer {

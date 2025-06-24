@@ -1,16 +1,15 @@
 .collapse-container {
-    margin: 20px 0;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px 0;
 
     &-housing {
         display: flex;
         width: 100%;
         align-items: stretch;
         margin-top: 0;
-        gap: 0;
+        margin-bottom: 20px;
     }
 
     .collapse {
@@ -69,9 +68,11 @@
 
 @media (min-width: 1024px) {
     .collapse-container {
-        margin: 38px 0;
-        gap: 28px 0;
         padding: 0 8.75%;
+
+        &-about {
+            margin-top: 38px;
+        }
 
         .collapse {
             max-width: 1023px;
@@ -90,9 +91,11 @@
             }
         }
 
-        .description__p-open {
+        .description__p-open,
+        .value__div-open {
             margin-bottom: 28px;
         }
+
     }
 }
 

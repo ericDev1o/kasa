@@ -69,20 +69,24 @@
 .titles-tags-stars-host {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
 
-    .tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 10px;
-        margin-bottom: 5px;
-        
-        .tag {
-            background-color: $color-red;
-            border-radius: 5px;
-            padding: 2px 30px 1px 30px;
-            max-height: 18px;
+    .titles-tags {
+        max-width: 80%;
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            
+            .tag {
+                max-height: 18px;
+                background-color: $color-red;
+                border-radius: 5px;
+                padding: 3px 28px 2px 26px;
+            }
         }
     }
 
@@ -96,6 +100,7 @@
 
             .star {
                 max-width: 18px;
+                  overflow: auto;
             }
         }
 
@@ -142,12 +147,16 @@
     .titles-tags-stars-host {
         flex-direction: row;
 
-        .tags {
-            margin-top: 17px;
-            margin-bottom: 25px;
+        .titles-tags {
+            .tags {
+                margin-top: 17px;
+                margin-bottom: 25px;
 
-            .tag {
-                max-height: 25px;
+                .tag {
+                    max-height: 25px;
+                    border-radius: 10px;
+                    padding: 3px 37px 2px 36px;
+                }
             }
         }
 
@@ -155,10 +164,6 @@
             flex-direction: column-reverse;
             padding-top: 11px;
             padding-bottom: 25px;
-
-            .stars-rating-error { 
-                max-width: 189px;
-            }
 
             .stars {
                 max-width: 100%;
@@ -184,6 +189,8 @@
         margin-bottom: 14px;
 
         .collapse {
+            border-radius: 10px;
+            
             .value__h2 {
                 font-size: $font-size-M;
             }
