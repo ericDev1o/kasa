@@ -5,15 +5,20 @@
  * an error message.
  */
 export default async function housingFetcher_all(housingsURL: string) {
-    const response = await fetch(housingsURL);
+    try {
+        const response = await fetch(housingsURL);
 
-    if ( ! response.ok ) return `erreur: les données n'ont pu être obtenues. 
-        Vérifiez  
-            1) l'URL si vous l'avez tapée, 
-            2) votre connexion réseau ou 
-            3) réessayez plus tard s'il vous plaît.`;
+        if ( ! response.ok ) return `erreur: les données n'ont pu être obtenues. 
+            Vérifiez  
+                1) l'URL si vous l'avez tapée, 
+                2) votre connexion réseau ou 
+                3) réessayez plus tard s'il vous plaît.`;
 
-    return await response.json();
+        return await response.json();
+    } catch(error) {
+        return `erreur: un dysfonctionnement, réseau par exemple, empêche de récupérer les données.
+            Veuillez réessayer plus tard s'il vous plaît.`
+    }
 }
 
 /**

@@ -33,10 +33,11 @@
             transition: transform 0.3s ease-in-out;
             color: white;
             height: 20px;
-        }
 
-        &-toggle.open {
-            transform: rotate(180deg);
+            &-open {
+                transform: rotate(180deg);
+                color: white;
+            }
         }
     }
 

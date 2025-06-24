@@ -314,8 +314,9 @@ header nav a {
   color: white;
   height: 20px;
 }
-.collapse-container .collapse-toggle.open {
+.collapse-container .collapse-toggle-open {
   transform: rotate(180deg);
+  color: white;
 }
 .collapse-container .value__p,
 .collapse-container .value__div,
