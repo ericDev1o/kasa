@@ -23,12 +23,8 @@ let housing: housingType;
  *         b) digits
  */
 export default function Housing() {
-    const page = 'housing';
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState('');
-
     const { housingId } = useParams();
-
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -36,15 +32,11 @@ export default function Housing() {
             try {
                 if(housingId && ! housingIdInURLformatChecker(housingId)) {
                     navigate('/error');
-                    setError(`Le format d'identifant de logement que vous avez écrit dans l'URL est invalide.
-                    Il doit contenir exactement 8 caractères incluant des lettres minsucules et des chiffres.
-                    Pourriez-vous s'il vous plaît rectifier et recommencer?`);
                 }
                 else if (housingId) {
                     housing = await housingFetcher_id('/data/logements.json', housingId);
                 } else if(! housingId) {
                     navigate('/error');
-                    setError("Erreur à la récupération de l'identifiant logement depuis l'URL");
                 }
             } catch (error) {
                 navigate('/error');
@@ -56,19 +48,16 @@ export default function Housing() {
         fetchData();
     }, [housingId, navigate]);
 
-    if (loading) {
-        return (
-            <Layout page = { page }>
+    return (
+        <Layout page = { 'housing' }>
+            { loading 
+                ? 
                 <h1 className='error-title__h1 margin-bottom'>
                     Chargement en cours...
                 </h1>
-            </Layout>
-        );
-    }
-    else if(! error)
-        return(
-            <Layout page = { page }>
+                :
                 <HousingComponent housingElement = { housing } />
-            </Layout>
-        );
+            }
+        </Layout>
+    );
 };

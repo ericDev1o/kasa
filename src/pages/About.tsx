@@ -6,7 +6,7 @@ import { values } from '../assets/data/values';
 
 export default function About() {
     const page = 'about';
-    const bannerContent = { bannerBackground ,  page };
+    const bannerContent = { bannerBackground,  page };
     
     return (
         <Layout page = { page }>
