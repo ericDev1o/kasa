@@ -484,10 +484,10 @@ header nav a {
   margin-bottom: 5px;
 }
 .titles-tags-stars-host .titles-tags .tags .tag {
+  max-height: 18px;
   background-color: #ff6060;
   border-radius: 5px;
-  padding: 2px 30px 1px 30px;
-  max-height: 18px;
+  padding: 3px 28px 2px 26px;
 }
 .titles-tags-stars-host .stars-host {
   display: flex;
@@ -529,12 +529,14 @@ header nav a {
   .titles-tags-stars-host {
     flex-direction: row;
   }
-  .titles-tags-stars-host .tags {
+  .titles-tags-stars-host .titles-tags .tags {
     margin-top: 17px;
     margin-bottom: 25px;
   }
-  .titles-tags-stars-host .tags .tag {
+  .titles-tags-stars-host .titles-tags .tags .tag {
     max-height: 25px;
+    border-radius: 10px;
+    padding: 3px 37px 2px 36px;
   }
   .titles-tags-stars-host .stars-host {
     flex-direction: column-reverse;
