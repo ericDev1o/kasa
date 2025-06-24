@@ -15,34 +15,34 @@
 }
 
 .error-title__h1 {
-  font-size: 6rem;
+  font-size: 96px;
 }
 
 .banner-title__h1 {
-  font-size: 1.5rem;
+  font-size: 24px;
 }
 
 .card-title__h2, .housing-title__h1, .error-title-size__h2 {
-  font-size: 1.125rem;
+  font-size: 18px;
 }
 
 .housing__h2,
 .equipment__p,
 .description__p-open {
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 .value__h2 {
-  font-size: 0.8125rem;
+  font-size: 13px;
 }
 
 .value__p, p,
 .header__a {
-  font-size: 0.75rem;
+  font-size: 12px;
 }
 
 .tag__p {
-  font-size: 0.625rem;
+  font-size: 10px;
 }
 
 .header__a, .error__a {
@@ -119,16 +119,16 @@ footer {
 
 @media (min-width: 1024px) {
   .banner-title__h1 {
-    font-size: 3rem;
+    font-size: 48px;
   }
   .error-title__h1 {
-    font-size: 18rem;
+    font-size: 288px;
   }
   .error-title__h2 {
-    font-size: 2.25rem;
+    font-size: 36px;
   }
   .error__a {
-    font-size: 1.125rem;
+    font-size: 18px;
   }
   .housing-title__h1 {
     margin-top: 31px;
@@ -137,17 +137,17 @@ footer {
   .header__a,
   .value__h2,
   p {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
   .value__p,
   .housing__h2,
   .equipment__p,
   .description__p-open,
   p {
-    font-size: 1.125rem;
+    font-size: 18px;
   }
   .tag__p {
-    font-size: 0.875rem;
+    font-size: 14px;
   }
 }
 header {
@@ -563,7 +563,7 @@ header nav a {
     border-radius: 10px;
   }
   .collapse-container-housing .collapse .value__h2 {
-    font-size: 1.125rem;
+    font-size: 18px;
   }
 }
 footer {

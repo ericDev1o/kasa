@@ -38,7 +38,7 @@ export default function About() {
                     <Collapse 
                         key = { value.id } 
                         titleArgument = { value.title } 
-                        description = { false } 
+                        description = { true } 
                         children = { value.content }
                     />
                 )) }
