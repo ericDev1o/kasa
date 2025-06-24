@@ -8,14 +8,6 @@ import housingRatingChecker_toNumber from '../../helpers/housingChecker';
 
 const numberOfStars = 5;
 
-const Star = ({ imgURI }: { imgURI: string }) => (
-    <img
-        className = 'star'
-        src = { imgURI }
-        alt = 'rating star'
-    />
-);
-
 /**
  * @param numberOfActiveStars: after rating check it is 
  * -> either the rating or 
@@ -33,14 +25,15 @@ const Stars = (
     else {
         let stars: Array<ReactNode> = new Array<ReactNode>(5);
 
-        for( let j = 0; j < numberOfActiveStars; j++)
+        for( let j = 0; j < numberOfStars; j++)
         {
-            stars.push(<Star key = { j } imgURI = { starFull } />);
-        }
-
-        for( let j = 0; j < numberOfStars - numberOfActiveStars; j++)
-        {
-            stars.push(<Star key = { numberOfStars - j } imgURI = { starEmpty } />);
+            stars.push(
+                <img
+                    className = 'star'
+                    src = { j < numberOfActiveStars ? starFull : starEmpty }
+                    alt = 'rating star'
+                />
+            );
         }
 
         return (
@@ -48,35 +41,6 @@ const Stars = (
         );
     }
 }
-
-const Tag = ({ tagElement }: { tagElement: string }) => (
-    <article className='tag'>
-        <p className='tag__p'>{ tagElement }</p>
-    </article>
-);
-
-const Tags = ({ tags }: { tags: string[] }) => (
-    <>
-        { tags.map(tag => (
-                <Tag key = { tag } tagElement= { tag } />
-        ))
-    }
-    </>
-);
-
-const Equipment = ({ equipmentElement }: { equipmentElement: string }) => (
-    <p className='equipment__p'>
-        { equipmentElement }
-    </p>
-);
-
-const Equipments = ({ equipments }: { equipments: string[] }) => (
-    <>
-        { equipments.map(equipment => (
-            <Equipment key= { equipment } equipmentElement = { equipment } />
-        ))}
-    </>
-);
 
 const Slider = ({ pictures }: { pictures: string[]}) => 
 {
@@ -163,7 +127,12 @@ export default function HousingComponent ({ housingElement }: { housingElement: 
                         <h1 className='error-title__h2 housing-title__h1'>{ housingElement.title }</h1>
                         <h2 className='housing__h2'>{ housingElement.location }</h2>
                         <section className='tags'>
-                            <Tags tags = { housingElement.tags } />
+                            { housingElement.tags.map(tag => (
+                                    <article className='tag'>
+                                        <p className='tag__p'>{ tag }</p>
+                                    </article>
+                                ))
+                            }
                         </section>
                     </div>
                     <div className='stars-host'>
@@ -185,7 +154,11 @@ export default function HousingComponent ({ housingElement }: { housingElement: 
                     />
                     <Collapse
                         titleArgument = 'Équipements' 
-                        children = { <Equipments equipments = { housingElement.equipments } /> }
+                        children = { housingElement.equipments.map(equipment => (
+                            <p className='equipment__p'>
+                                { equipment }
+                            </p>
+                        ))}
                         description = { false }
                     />
                 </section>
