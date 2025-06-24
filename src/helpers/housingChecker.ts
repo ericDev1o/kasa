@@ -10,7 +10,8 @@ export default function housingRatingChecker_toNumber(housing: housingType) {
     try {
         if(housing.rating != undefined && 
             housing.rating != null && 
-            housing.rating !== '' ) {
+            housing.rating !== '' &&
+            ! isNaN(Number(housing.rating)) ) {
             const ratingNumber = Number(housing.rating);
 
             if(ratingNumber >= 1 && ratingNumber <= 5)
