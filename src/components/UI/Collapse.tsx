@@ -30,7 +30,7 @@ export default function Collapse ({
         <div>
             <article className = 'collapse' onClick = { toggleCollapse }>
                 <h2 className = 'value__h2'>{ titleArgument }</h2>
-                <span className = { `collapse-toggle ${ isOpen ? 'open' : '' }` }>
+                <span className = { `collapse-toggle${ isOpen ? '-open' : '' }` }>
                     <i className = 'material-symbols-outlined'>
                         keyboard_control_key
                     </i>
