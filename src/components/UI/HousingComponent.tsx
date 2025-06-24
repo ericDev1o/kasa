@@ -158,7 +158,7 @@ export default function HousingComponent ({ housingElement }: { housingElement: 
         <>
             <Slider pictures = { housingElement.pictures } /> 
             <div className='titles-tags-stars-host'>
-                <div>
+                <div className='titles-tags'>
                     <h1 className='error-title__h2 housing-title__h1'>{ housingElement.title }</h1>
                     <h2 className='housing__h2'>{ housingElement.location }</h2>
                     <section className='tags'>

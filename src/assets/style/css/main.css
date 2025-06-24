@@ -473,14 +473,17 @@ header nav a {
   flex-direction: column;
   justify-content: space-between;
 }
-.titles-tags-stars-host .tags {
+.titles-tags-stars-host .titles-tags {
+  max-width: 80%;
+}
+.titles-tags-stars-host .titles-tags .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
   margin-bottom: 5px;
 }
-.titles-tags-stars-host .tags .tag {
+.titles-tags-stars-host .titles-tags .tags .tag {
   background-color: #ff6060;
   border-radius: 5px;
   padding: 2px 30px 1px 30px;
@@ -496,6 +499,7 @@ header nav a {
 }
 .titles-tags-stars-host .stars-host .stars .star {
   max-width: 18px;
+  overflow: auto;
 }
 .titles-tags-stars-host .stars-host .host {
   display: flex;
@@ -536,9 +540,6 @@ header nav a {
     flex-direction: column-reverse;
     padding-top: 11px;
     padding-bottom: 25px;
-  }
-  .titles-tags-stars-host .stars-host .stars-rating-error {
-    max-width: 189px;
   }
   .titles-tags-stars-host .stars-host .stars {
     max-width: 100%;

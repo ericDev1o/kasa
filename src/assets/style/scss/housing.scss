@@ -69,20 +69,24 @@
 .titles-tags-stars-host {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
 
-    .tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 10px;
-        margin-bottom: 5px;
-        
-        .tag {
-            background-color: $color-red;
-            border-radius: 5px;
-            padding: 2px 30px 1px 30px;
-            max-height: 18px;
+    .titles-tags {
+        max-width: 80%;
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            
+            .tag {
+                background-color: $color-red;
+                border-radius: 5px;
+                padding: 2px 30px 1px 30px;
+                max-height: 18px;
+            }
         }
     }
 
@@ -96,6 +100,7 @@
 
             .star {
                 max-width: 18px;
+                  overflow: auto;
             }
         }
 
@@ -155,10 +160,6 @@
             flex-direction: column-reverse;
             padding-top: 11px;
             padding-bottom: 25px;
-
-            .stars-rating-error { 
-                max-width: 189px;
-            }
 
             .stars {
                 max-width: 100%;
