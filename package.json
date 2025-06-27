@@ -1,7 +1,7 @@
 {
     "name": "kasa",
     "private": true,
-    "version": "0.1.4",
+    "version": "0.1.7",
     "type": "module",
     "scripts": {
         "lint": "eslint .",
@@ -12,17 +12,17 @@
     "dependencies": {
         "react": "^19.1.0",
         "react-dom": "^19.1.0",
-        "react-router-dom": "^7.6.2",
-        "@types/react": "^19.0.10",
+        "react-router-dom": "^7.6.2"
+    },
+    "devDependencies": {
+        "@types/react": "^19.1.8",
         "@types/react-dom": "^19.1.6",
-        "@vitejs/plugin-react": "^4.5.2",
+        "@vitejs/plugin-react": "^4.6.0",
         "eslint": "^9.29.0",
         "eslint-plugin-react-hooks": "^5.2.0",
         "eslint-plugin-react-refresh": "^0.4.20",
-        "typescript": "~5.8.3",
-        "typescript-eslint": "^8.31.1"
-    },
-    "devDependencies": {
-        "vite": "^6.3.5"
+        "typescript": "^5.8.3",
+        "typescript-eslint": "^8.35.0",
+        "vite": "^7.0.0"
     }
 }
