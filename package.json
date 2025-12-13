@@ -1,14 +1,14 @@
 {
     "name": "kasa",
     "private": true,
-    "version": "0.1.9",
+    "version": "0.2.0",
     "type": "module",
     "scripts": {
         "lint": "eslint .",
         "dev": "vite",
         "build": "tsc -b && vite build",
         "start": "vite preview",
-        "preview:serve": "serve dist"
+        "preview:serve": "serve -s dist"
     },
     "dependencies": {
         "react": "^19.1.0",
